@@ -7,6 +7,7 @@ import { ExerciseBox } from "@/components/content/ExerciseBox";
 import { DemoCallout } from "@/components/content/DemoCallout";
 import { StatGroup } from "@/components/interactive/StatGroup";
 import { ModelTable } from "@/components/interactive/ModelTable";
+import { EmailRaceAnimation } from "@/components/interactive/EmailRaceAnimation";
 import { PHASE_META, IMAGE_TOOLS } from "@/lib/constants";
 import Link from "next/link";
 
@@ -271,6 +272,9 @@ export default function Phase1Page() {
             88% of companies are here. Only 6% are seeing real impact.
           </p>
           <QuoteBlock quote="The factory still has the same belts, the same layout, the same bottlenecks. The email still sits in the mailbox for a day." />
+          <div className="mt-8 mb-6">
+            <EmailRaceAnimation />
+          </div>
           <Link
             href="/phase-2"
             className="inline-flex items-center gap-2 rounded-full bg-sflow-gold px-6 py-3 font-semibold text-sflow-dark hover:bg-sflow-gold-hover transition-colors"

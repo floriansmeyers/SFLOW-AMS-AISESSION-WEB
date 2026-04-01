@@ -6,6 +6,7 @@ import { QuoteBlock } from "@/components/content/QuoteBlock";
 import { ExerciseBox } from "@/components/content/ExerciseBox";
 import { DemoCallout } from "@/components/content/DemoCallout";
 import { StoryCard } from "@/components/interactive/StoryCard";
+import { DeathOfUIAnimation } from "@/components/interactive/DeathOfUIAnimation";
 import { PHASE_META, STORIES } from "@/lib/constants";
 import Link from "next/link";
 
@@ -73,6 +74,11 @@ export default function Phase2Page() {
         <div className="max-w-3xl space-y-4 text-sflow-cream-muted">
           <p>Everyone sees data the way THEY want or need. Lower systems enforce integrity, authentication, authorization. The interface becomes a preference, not a constraint.</p>
         </div>
+
+        <div className="my-8">
+          <DeathOfUIAnimation />
+        </div>
+
         <QuoteBlock quote="Your UI is only a reference implementation. If your APIs and data structures are clean, customers will generate their own interfaces." />
         <p className="text-sflow-cream-muted max-w-3xl">
           Example: MES/SCADA/ERP enforce data integrity. AI becomes the personalization layer.

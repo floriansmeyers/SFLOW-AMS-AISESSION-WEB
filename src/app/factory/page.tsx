@@ -6,6 +6,7 @@ import { QuoteBlock } from "@/components/content/QuoteBlock";
 import { StatGroup } from "@/components/interactive/StatGroup";
 import { FunnelChart } from "@/components/interactive/FunnelChart";
 import { Timeline } from "@/components/interactive/Timeline";
+import { FactoryEvolutionAnimation } from "@/components/interactive/FactoryEvolutionAnimation";
 import { PHASE_META } from "@/lib/constants";
 import Link from "next/link";
 
@@ -61,6 +62,14 @@ export default function FactoryPage() {
           Satya Nadella calls AI a &ldquo;compressed Industrial Revolution&rdquo; &mdash; what took
           200 years with electricity could take 20&ndash;25 years with AI.
         </p>
+      </Section>
+
+      <Section>
+        <h2 className="text-2xl font-bold mb-6">From Workshop to Agent System</h2>
+        <p className="text-sflow-cream-muted mb-8 max-w-3xl">
+          The pattern repeats every industrial revolution: individual skill gets encoded into process, then process gets automated at scale.
+        </p>
+        <FactoryEvolutionAnimation />
       </Section>
 
       <Section>
