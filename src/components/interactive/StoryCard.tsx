@@ -59,6 +59,17 @@ export function StoryCard({ story }: { story: Story }) {
                   The Lesson
                 </p>
                 <p className="text-sflow-cream">{story.lesson}</p>
+                {story.sourceUrl && (
+                  <a
+                    href={story.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="inline-block mt-2 text-xs text-sflow-gold/70 hover:text-sflow-gold transition-colors"
+                  >
+                    Source ↗
+                  </a>
+                )}
               </div>
             </div>
           </motion.div>
