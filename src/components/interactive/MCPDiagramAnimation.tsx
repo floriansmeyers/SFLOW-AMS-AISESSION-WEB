@@ -5,13 +5,13 @@ import { useRef, useState } from "react";
 import { RotateCcw } from "lucide-react";
 
 /**
- * MCPDiagramAnimation — Shows how MCP connects AI to real systems:
+ * MCPDiagramAnimation - Shows how MCP connects AI to real systems:
  *   AI Agent → (tool_call) → MCP Server (with tools: read_file, query_db,
  *   send_msg, create_pr) → External Systems (File System, Database, Slack/GitHub)
  *   + danger warning: "If permissions are wrong..."
  *
  * Teaching point: MCP is the standardized protocol that lets AI agents
- * interact with your real infrastructure. It's powerful — and dangerous
+ * interact with your real infrastructure. It's powerful - and dangerous
  * if permissions aren't scoped correctly.
  *
  * Infinite loop ~14s.

@@ -28,7 +28,7 @@ export default function Phase3Page() {
       <PageHero {...meta} />
 
       <Section>
-        <h2 className="text-2xl font-bold mb-6">Agentic AI &mdash; Current State</h2>
+        <h2 className="text-2xl font-bold mb-6">Agentic AI - Current State</h2>
         <StatGroup
           stats={[
             { value: 57, suffix: "%", label: "Companies with AI agents in production" },
@@ -40,7 +40,7 @@ export default function Phase3Page() {
       </Section>
 
       <Section>
-        <h2 className="text-2xl font-bold mb-4">Agentic vs Agent &mdash; They&apos;re Not the Same</h2>
+        <h2 className="text-2xl font-bold mb-4">Agentic vs Agent - They&apos;re Not the Same</h2>
         <div className="grid gap-4 sm:grid-cols-2 max-w-3xl mx-auto mb-8">
           <div className="rounded-xl border border-sflow-gold/30 bg-sflow-gold/5 p-5">
             <h3 className="font-semibold text-sflow-gold mb-2">&ldquo;Agentic&rdquo;</h3>
@@ -64,7 +64,7 @@ export default function Phase3Page() {
           </div>
         </div>
         <p className="text-sflow-cream-muted max-w-3xl mb-8">
-          The magic isn&apos;t the agent &mdash; it&apos;s the <strong className="text-sflow-gold">process</strong>{" "}it&apos;s embedded in.
+          The magic isn&apos;t the agent - it&apos;s the <strong className="text-sflow-gold">process</strong>{" "}it&apos;s embedded in.
           And the surprising truth: tool selection is still just text generation.
         </p>
         <AgenticToolSelectionAnimation />
@@ -101,12 +101,12 @@ export default function Phase3Page() {
           ))}
         </div>
         <p className="mt-6 text-sflow-cream-muted max-w-3xl">
-          These tools don&apos;t just answer questions &mdash; they <strong className="text-sflow-cream">DO things</strong>.
+          These tools don&apos;t just answer questions - they <strong className="text-sflow-cream">DO things</strong>.
           Browse the web. Open files. Write code. Send emails. All autonomously, with permission controls.
         </p>
         <DemoCallout
           title="Parallel research with Claude Code"
-          description="Running multiple research tasks in parallel from the CLI — real-time autonomous execution."
+          description="Running multiple research tasks in parallel from the CLI - real-time autonomous execution."
         />
       </Section>
 
@@ -129,20 +129,20 @@ export default function Phase3Page() {
           />
         </div>
         <p className="mt-4 text-sm text-sflow-gold max-w-3xl">
-          Result: Lead intake → personalized email draft — human only reviews and sends.
+          Result: Lead intake → personalized email draft - human only reviews and sends.
         </p>
       </Section>
 
       <Section>
         <DemoCallout
           title="Google AI Studio App with Database"
-          description="Link the CSV from the lead pipeline into Google AI Studio. AI builds a full app to browse leads, view research, edit outreach drafts. Built entirely for free — no code."
+          description="Link the CSV from the lead pipeline into Google AI Studio. AI builds a full app to browse leads, view research, edit outreach drafts. Built entirely for free - no code."
         />
       </Section>
 
       {/* AI for deterministic code */}
       <Section>
-        <h2 className="text-2xl font-bold mb-4">Don&apos;t Ask AI to DO Finance &mdash; Ask It to BUILD the Tool</h2>
+        <h2 className="text-2xl font-bold mb-4">Don&apos;t Ask AI to DO Finance - Ask It to BUILD the Tool</h2>
         <div className="max-w-3xl space-y-4 text-sflow-cream-muted">
           <p>
             AI makes mistakes. Math doesn&apos;t. The solution:{" "}
@@ -173,14 +173,14 @@ export default function Phase3Page() {
         </div>
         <DemoCallout
           title="Azure DevOps KPI automation"
-          description="Using Claude Code / AI Studio to build a Python script that pulls Azure DevOps data and generates KPI dashboards — deterministic code, not AI guesswork."
+          description="Using Claude Code / AI Studio to build a Python script that pulls Azure DevOps data and generates KPI dashboards - deterministic code, not AI guesswork."
         />
       </Section>
 
       <Section>
         <DemoCallout
           title="Connecting Claude to your tools"
-          description="MCP servers, connectors, and app integrations — giving Claude access to email, databases, and APIs."
+          description="MCP servers, connectors, and app integrations - giving Claude access to email, databases, and APIs."
         />
       </Section>
 

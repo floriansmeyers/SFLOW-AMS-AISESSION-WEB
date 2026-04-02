@@ -5,10 +5,10 @@ import { useRef, useState } from "react";
 import { Check, RotateCcw } from "lucide-react";
 
 /**
- * ToolCallingAnimation — Shows the invisible orchestration layer when AI uses tools:
+ * ToolCallingAnimation - Shows the invisible orchestration layer when AI uses tools:
  *   Context → AI Decides (generates tool call as text) → Tool Executes → Final Response
  *
- * Teaching point: AI doesn't "execute" anything — it generates text describing what
+ * Teaching point: AI doesn't "execute" anything - it generates text describing what
  * it wants to do, and the system carries it out. All hidden from the user.
  *
  * Infinite loop ~14.5s.
@@ -127,11 +127,11 @@ export function ToolCallingAnimation() {
                 transition={{ delay: 3.5, duration: 0.4 }}
                 className="flex flex-col gap-1.5"
               >
-                {/* search — dimmed */}
+                {/* search - dimmed */}
                 <div className="rounded border border-sflow-glass-border bg-sflow-glass px-2.5 py-1.5 opacity-40">
                   <p className="text-[10px] font-mono text-sflow-cream-muted">search</p>
                 </div>
-                {/* weather — highlighted with pulse */}
+                {/* weather - highlighted with pulse */}
                 <motion.div
                   animate={{ scale: [1, 1.03, 1] }}
                   transition={{ delay: 4.2, duration: 0.6, repeat: 2, repeatType: "mirror" }}
@@ -139,7 +139,7 @@ export function ToolCallingAnimation() {
                 >
                   <p className="text-[10px] font-mono text-sflow-gold font-bold inline-flex items-center gap-0.5">weather <Check size={10} strokeWidth={3} /></p>
                 </motion.div>
-                {/* calculator — dimmed */}
+                {/* calculator - dimmed */}
                 <div className="rounded border border-sflow-glass-border bg-sflow-glass px-2.5 py-1.5 opacity-40">
                   <p className="text-[10px] font-mono text-sflow-cream-muted">calculator</p>
                 </div>
@@ -187,7 +187,7 @@ export function ToolCallingAnimation() {
                   transition={{ delay: 7.5, duration: 0.4 }}
                   className="mt-3 text-[9px] italic text-sflow-cream-muted/60"
                 >
-                  The user never sees the tool call &mdash; only the final answer.
+                  The user never sees the tool call - only the final answer.
                 </motion.p>
               </motion.div>
             </div>

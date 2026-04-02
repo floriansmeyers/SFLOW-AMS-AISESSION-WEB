@@ -25,7 +25,7 @@ export default function Phase2Page() {
       <Section>
         <h2 className="text-2xl font-bold mb-4">Don&apos;t Write Prompts From Scratch</h2>
         <div className="max-w-3xl space-y-4 text-sflow-cream-muted">
-          <p>Ask AI to generate a prompt for you. Then iterate on that &mdash; much faster, much better.</p>
+          <p>Ask AI to generate a prompt for you. Then iterate on that - much faster, much better.</p>
           <p>The meta-skill: <strong className="text-sflow-gold">using AI to make AI better</strong>.</p>
         </div>
         <ExerciseBox
@@ -56,7 +56,7 @@ export default function Phase2Page() {
               text: "Ask the AI to turn it into a reusable document:",
               copyText: "Turn this into a reusable instruction document I can paste at the start of any conversation. Add sections for: Role, Context, Task, Format, Constraints.",
             },
-            { text: `Save the result — this is your first \u201cskill\u201d` },
+            { text: `Save the result - this is your first \u201cskill\u201d` },
           ]}
         />
       </Section>
@@ -74,7 +74,7 @@ export default function Phase2Page() {
         <h2 className="text-2xl font-bold mb-4">How Tool Calling Works</h2>
         <p className="text-sflow-cream-muted mb-6 max-w-3xl">
           When AI &ldquo;searches the web&rdquo; or &ldquo;reads a file,&rdquo; there&apos;s an invisible orchestration layer
-          between the chat and the action. The AI doesn&apos;t execute anything &mdash; it generates text that describes
+          between the chat and the action. The AI doesn&apos;t execute anything - it generates text that describes
           what it wants to do, and the system carries it out.
         </p>
         <ToolCallingAnimation />
@@ -83,7 +83,7 @@ export default function Phase2Page() {
       <Section>
         <h2 className="text-2xl font-bold mb-4">AI-to-AI Prompt Chain</h2>
         <p className="text-sflow-cream-muted mb-6 max-w-3xl">
-          This is Phase 2 thinking: AI is no longer a standalone tool &mdash; it&apos;s a workflow component.
+          This is Phase 2 thinking: AI is no longer a standalone tool - it&apos;s a workflow component.
           The output of one step becomes the input for the next.
         </p>
         <div className="mb-6">
@@ -102,11 +102,11 @@ export default function Phase2Page() {
         />
       </Section>
 
-      {/* CoWork — workflow integration */}
+      {/* CoWork - workflow integration */}
       <Section>
         <h2 className="text-2xl font-bold mb-4">Claude in Your Workflow (CoWork)</h2>
         <p className="text-sflow-cream-muted mb-6 max-w-3xl">
-          This is Phase 2 in action: AI isn&apos;t a standalone chat &mdash; it&apos;s embedded in your daily tools.
+          This is Phase 2 in action: AI isn&apos;t a standalone chat - it&apos;s embedded in your daily tools.
           {" "}<strong className="text-sflow-cream">CoWork</strong>{" "}(launched January 2026) is a persistent agent inside the Claude Desktop app.
           The key differentiator: <strong className="text-sflow-gold">shared context</strong>{" "}. Claude sees your Excel, PowerPoint, AND Gmail simultaneously.
         </p>
@@ -118,21 +118,21 @@ export default function Phase2Page() {
         </div>
         <DemoCallout
           title="CoWork cross-app workflow"
-          description="Claude reading an email attachment, analyzing it in Excel, and drafting a reply — all in one conversation."
+          description="Claude reading an email attachment, analyzing it in Excel, and drafting a reply - all in one conversation."
         />
         <p className="mt-6 text-sm text-sflow-cream-muted max-w-3xl">
-          CoWork is about <strong className="text-sflow-gold">ripping out the belts</strong>{" "}&mdash;
+          CoWork is about <strong className="text-sflow-gold">ripping out the belts</strong>{" "}-
           instead of copy-pasting between apps, AI flows across your entire toolkit.
         </p>
       </Section>
 
-      {/* Dispatch — phone to desktop */}
+      {/* Dispatch - phone to desktop */}
       <Section>
         <h2 className="text-2xl font-bold mb-4">Dispatch</h2>
         <p className="text-sflow-cream-muted mb-6 max-w-3xl">
           Send tasks from your <strong className="text-sflow-cream">phone</strong> to your{" "}
           <strong className="text-sflow-cream">desktop</strong>{" "}Claude. Scan a QR code, connected in 2 taps.
-          Note: tasks are routed through Anthropic&apos;s cloud &mdash; not fully local processing.
+          Note: tasks are routed through Anthropic&apos;s cloud - not fully local processing.
         </p>
         <DemoCallout
           title="Dispatch from phone"
@@ -146,7 +146,7 @@ export default function Phase2Page() {
         <div className="max-w-3xl space-y-4 text-sflow-cream-muted mb-8">
           <p>
             More context isn&apos;t always better. Long conversations <strong className="text-sflow-cream">dilute</strong>{" "}your
-            original instructions. The AI doesn&apos;t ignore them on purpose &mdash; they just become
+            original instructions. The AI doesn&apos;t ignore them on purpose - they just become
             a tiny fraction of what it&apos;s paying attention to.
           </p>
           <p>

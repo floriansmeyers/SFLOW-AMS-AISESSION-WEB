@@ -10,19 +10,19 @@ const SECTIONS = [
     href: "/factory",
     badge: "Introduction",
     title: "The Factory Paradigm",
-    description: "Why AI adoption mirrors the Industrial Revolution — and what the 6% who succeed do differently.",
+    description: "Why AI adoption mirrors the Industrial Revolution, and what the 6% who succeed do differently.",
   },
   {
     href: "/phase-1",
     badge: "Phase 1",
     title: "The Factory with a New Motor",
-    description: "ChatGPT, Copilot, image generation, Google AI Studio — tools you can use today.",
+    description: "ChatGPT, Copilot, image generation, Google AI Studio - tools you can use today.",
   },
   {
     href: "/phase-2",
     badge: "Phase 2",
     title: "Ripping Out the Belts",
-    description: "Meta-prompting, reusable skills, prompt chains — AI as a workflow component.",
+    description: "Meta-prompting, reusable skills, prompt chains. AI as a workflow component.",
   },
   {
     href: "/phase-3",
@@ -46,7 +46,7 @@ const SECTIONS = [
     href: "/takeaways",
     badge: "Closing",
     title: "Key Takeaways",
-    description: "9 principles to take home — and remember that email.",
+    description: "9 principles to take home. And remember that email.",
   },
 ];
 
@@ -64,17 +64,17 @@ export default function Home() {
             className="max-w-3xl"
           >
             <span className="inline-block rounded-full bg-sflow-gold/15 px-3 py-1 text-sm font-medium text-sflow-gold mb-6">
-              AMS &mdash; April 2, 2026
+              AMS - April 2, 2026
             </span>
             <h1 className="text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
               AI Session
             </h1>
             <p className="mt-4 text-xl text-sflow-cream-muted sm:text-2xl">
-              From ChatGPT basics to agentic workflows &mdash; practical tools you can use{" "}
+              From ChatGPT basics to agentic workflows - practical tools you can use{" "}
               <span className="text-sflow-gold">tomorrow</span>.
             </p>
             <p className="mt-2 text-sflow-muted">
-              By Florian Smeyers &mdash; Antwerp Management School
+              By Florian Smeyers - Antwerp Management School
             </p>
           </motion.div>
         </div>
@@ -95,7 +95,7 @@ export default function Home() {
             </h2>
             <div className="mt-6 space-y-4 text-sflow-cream-muted max-w-3xl">
               <p>A client sends a change request by email.</p>
-              <p>AI drafts the reply in 10 seconds &mdash; great.</p>
+              <p>AI drafts the reply in 10 seconds - great.</p>
               <p>But it still sits in a mailbox for a day.</p>
               <p className="text-sflow-cream font-semibold text-lg">
                 So what did we actually gain?
@@ -105,7 +105,7 @@ export default function Home() {
               quote="The bottleneck was never the typing."
             />
             <p className="text-sflow-cream-muted max-w-3xl">
-              McKinsey found: AI saves <strong className="text-sflow-cream">5.7 hours per week</strong>{" "}per employee &mdash;
+              McKinsey found: AI saves <strong className="text-sflow-cream">5.7 hours per week</strong>{" "}per employee -
               but only <strong className="text-sflow-gold">1.7 of those</strong> go to high-value work.
               The rest is lost to the same old bottlenecks.
             </p>

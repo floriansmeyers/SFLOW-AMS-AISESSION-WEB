@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import { User, RotateCcw } from "lucide-react";
 
 /**
- * DeathOfUIAnimation — Two-state transition showing the shift from
+ * DeathOfUIAnimation - Two-state transition showing the shift from
  * monolithic "one UI for everyone" to personalized AI-driven interfaces.
  *
  * Teaching point: when AI becomes the interface layer, you don't build
@@ -19,7 +19,7 @@ import { User, RotateCcw } from "lucide-react";
  *   4.5s – 6.0s : Hold the "today" state
  *   6.0s – 6.8s : Orange "AI layer" arrow sweeps across
  *   6.8s – 7.5s : Old world dims to 50%
- *   7.5s – 9.5s : New world slides in from right — three personalized UIs
+ *   7.5s – 9.5s : New world slides in from right - three personalized UIs
  *   9.5s – 10.2s: AI Personalization Layer label appears
  *  10.2s – 10.8s: Large SECURE DATA LAYER appears at bottom
  *  10.8s – 12.5s: Hold

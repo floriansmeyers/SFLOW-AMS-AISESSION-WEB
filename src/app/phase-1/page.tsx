@@ -34,7 +34,7 @@ export default function Phase1Page() {
             { step: "1", title: "Tokenization", desc: `Text is broken into small pieces (\u201ctokens\u201d, roughly 3/4 of a word).` },
             { step: "2", title: "Pattern Recognition", desc: "Trained on massive text, it learned statistical patterns about which tokens follow others." },
             { step: "3", title: "Probability", desc: "Given a sequence, it predicts the most likely next token. Repeats. That's it." },
-            { step: "4", title: "Emergent Capabilities", desc: `At scale, surprising abilities arise: reasoning, coding, analysis. It doesn\u2019t \u201cknow\u201d — but the results can be remarkable.` },
+            { step: "4", title: "Emergent Capabilities", desc: `At scale, surprising abilities arise: reasoning, coding, analysis. It doesn\u2019t \u201cknow\u201d - but the results can be remarkable.` },
           ].map((item) => (
             <div key={item.step} className="rounded-xl border border-sflow-glass-border bg-sflow-glass p-5">
               <span className="flex h-8 w-8 items-center justify-center rounded-full bg-sflow-gold/20 text-sm font-bold text-sflow-gold mb-3">
@@ -59,19 +59,19 @@ export default function Phase1Page() {
             <h3 className="font-semibold text-red-400 mb-2">Stateless</h3>
             <p className="text-sm text-sflow-cream-muted">
               Every conversation starts from zero. The AI has <strong className="text-sflow-cream">no memory</strong>{" "}of
-              yesterday&apos;s chat. It&apos;s not being difficult &mdash; it literally doesn&apos;t know.
+              yesterday&apos;s chat. It&apos;s not being difficult - it literally doesn&apos;t know.
             </p>
           </div>
           <div className="rounded-xl border border-red-500/30 bg-red-500/5 p-5">
             <h3 className="font-semibold text-red-400 mb-2">Autoregressive</h3>
             <p className="text-sm text-sflow-cream-muted">
               Tokens are generated left-to-right, one at a time. It <strong className="text-sflow-cream">can&apos;t revise</strong>{" "}earlier
-              tokens once written. That&apos;s why your feedback matters &mdash; the AI literally can&apos;t go back and fix it on its own.
+              tokens once written. That&apos;s why your feedback matters - the AI literally can&apos;t go back and fix it on its own.
             </p>
           </div>
         </div>
         <p className="text-sflow-cream-muted max-w-3xl mb-8 mx-auto">
-          <strong className="text-sflow-gold">This is not a flaw &mdash; it&apos;s the architecture.</strong>{" "}
+          <strong className="text-sflow-gold">This is not a flaw - it&apos;s the architecture.</strong>{" "}
           Pattern matching at scale, not reasoning. The results can be brilliant, but
           it&apos;s statistics all the way down.
         </p>
@@ -88,7 +88,7 @@ export default function Phase1Page() {
         <div className="mt-4 rounded-xl border border-sflow-gold/20 bg-sflow-gold/5 p-4 max-w-3xl mx-auto">
           <p className="text-sm text-sflow-cream-muted">
             <strong className="text-sflow-gold">Watch out for thinking overhead:</strong>{" "}Reasoning models
-            burn tokens on simple tasks &mdash; thinking thinking thinking&hellip; &ldquo;hello.&rdquo;
+            burn tokens on simple tasks - thinking thinking thinking&hellip; &ldquo;hello.&rdquo;
             An &ldquo;expensive&rdquo; model isn&rsquo;t always better. Match complexity to the task.
           </p>
         </div>
@@ -98,7 +98,7 @@ export default function Phase1Page() {
       <Section>
         <h2 className="text-2xl font-bold mb-4">The #1 Rule: Context Is Everything</h2>
         <p className="text-sflow-cream-muted mb-6 max-w-3xl">
-          Don&apos;t rely on AI &ldquo;knowing&rdquo; &mdash; it doesn&apos;t.{" "}
+          Don&apos;t rely on AI &ldquo;knowing&rdquo; - it doesn&apos;t.{" "}
           <strong className="text-sflow-cream">Research first. Always. Ground it in reality.</strong>
         </p>
         <div className="grid gap-4 sm:grid-cols-2 max-w-3xl mx-auto">
@@ -179,13 +179,13 @@ export default function Phase1Page() {
           </table>
         </div>
         <p className="mt-4 text-sm text-sflow-cream-muted">
-          <strong className="text-sflow-cream">Note:</strong>{" "}Claude does NOT generate images &mdash; it excels at image analysis/vision only.
+          <strong className="text-sflow-cream">Note:</strong>{" "}Claude does NOT generate images - it excels at image analysis/vision only.
         </p>
         <div className="mt-6 rounded-xl border border-sflow-glass-border bg-sflow-glass p-5 max-w-3xl">
           <h4 className="font-semibold text-sflow-cream mb-2">The Ghibli Story (March 2025)</h4>
           <p className="text-sm text-sflow-cream-muted">
             GPT-4o went viral with Studio Ghibli-style images. Miyazaki had called AI animation &ldquo;an insult to life itself.&rdquo;
-            Sam Altman: &ldquo;our GPUs are melting.&rdquo; Major copyright debate &mdash; style is NOT explicitly protected by copyright.
+            Sam Altman: &ldquo;our GPUs are melting.&rdquo; Major copyright debate - style is NOT explicitly protected by copyright.
           </p>
         </div>
         <DemoCallout
@@ -198,8 +198,8 @@ export default function Phase1Page() {
       <Section>
         <h2 className="text-2xl font-bold mb-4">Gamma &amp; Presentation Tools</h2>
         <p className="text-sflow-cream-muted mb-6 max-w-3xl">
-          <strong className="text-sflow-cream">Gamma.app</strong>{" "}&mdash; AI-powered presentations. Agent researches, generates,
-          and restyles entire decks via conversation. Good for quick first drafts &mdash; always review and refine.
+          <strong className="text-sflow-cream">Gamma.app</strong>{" "}- AI-powered presentations. Agent researches, generates,
+          and restyles entire decks via conversation. Good for quick first drafts - always review and refine.
         </p>
         <DemoCallout
           title="Gamma presentation"
@@ -214,7 +214,7 @@ export default function Phase1Page() {
           {[
             { title: "Universal", desc: "Every AI tool reads and writes Markdown natively." },
             { title: "Portable", desc: "Works in any text editor, converts to HTML/PDF/slides." },
-            { title: "Structured", desc: "Headings, lists, tables, code blocks — AI understands the structure." },
+            { title: "Structured", desc: "Headings, lists, tables, code blocks - AI understands the structure." },
             { title: "Version-friendly", desc: "Plain text = easy to diff, track changes, collaborate." },
           ].map((item) => (
             <div key={item.title} className="rounded-xl border border-sflow-glass-border bg-sflow-glass p-4">
@@ -252,7 +252,7 @@ export default function Phase1Page() {
             { label: "Free", detail: "1,000 daily requests across all Gemini models" },
             { label: "Vibe Coding", detail: "Describe an app → get a working app → deploy to Cloud Run" },
 { label: "localStorage", detail: "5–10MB persistence for personal apps, no backend needed" },
-            { label: "Context", detail: "2M context window (Gemini 3 Pro) — entire codebases or document sets" },
+            { label: "Context", detail: "2M context window (Gemini 3 Pro) - entire codebases or document sets" },
             { label: "System Instructions", detail: "Persistent context for consistent behavior" },
           ].map((item) => (
             <div key={item.label} className="flex gap-3">
@@ -296,7 +296,7 @@ export default function Phase1Page() {
           </div>
         </div>
         <p className="mt-6 text-sm text-sflow-gold max-w-3xl">
-          This is a teaser &mdash; in Phase 2, we&apos;ll turn this into a full meta-prompting workflow.
+          This is a teaser - in Phase 2, we&apos;ll turn this into a full meta-prompting workflow.
         </p>
         <DemoCallout
           title="Meta-questioning demo"

@@ -47,7 +47,7 @@ export function NewHireContextAnimation() {
           transition={{ duration: 0.5 }}
         >
           <div className="grid grid-cols-2 gap-6">
-            {/* LEFT LANE — Bad */}
+            {/* LEFT LANE - Bad */}
             <div className="flex flex-col items-center gap-3">
               {/* Label */}
               <motion.p
@@ -96,7 +96,7 @@ export function NewHireContextAnimation() {
               </motion.div>
             </div>
 
-            {/* RIGHT LANE — Good */}
+            {/* RIGHT LANE - Good */}
             <div className="flex flex-col items-center gap-3">
               {/* Label */}
               <motion.p
@@ -162,7 +162,7 @@ export function NewHireContextAnimation() {
                 className="w-full rounded-lg border border-green-500/30 bg-green-500/5 px-3 py-3 text-center"
               >
                 <p className="text-xs font-semibold text-green-400">Precise, actionable output</p>
-                <p className="text-[10px] text-sflow-cream-muted mt-1 italic">&ldquo;Invoice #2847: €12,400 due 15 Jan — 3 items flagged...&rdquo;</p>
+                <p className="text-[10px] text-sflow-cream-muted mt-1 italic">&ldquo;Invoice #2847: €12,400 due 15 Jan - 3 items flagged...&rdquo;</p>
               </motion.div>
             </div>
           </div>

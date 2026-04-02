@@ -22,7 +22,7 @@ const ROWS: ComparisonRow[] = [
     human: "Attention Span",
     ai: "Token Limit",
     explanation:
-      "Humans lose focus after extended concentration. LLMs degrade as conversations grow long — early instructions get 'forgotten' as context fills up.",
+      "Humans lose focus after extended concentration. LLMs degrade as conversations grow long - early instructions get 'forgotten' as context fills up.",
     icon: <FocusIcon />,
   },
   {
@@ -50,7 +50,7 @@ const ROWS: ComparisonRow[] = [
     human: "Hands, voice, actions",
     ai: "Tools (APIs, code, search)",
     explanation:
-      "Humans act on the world physically. LLMs act through tool calls — running code, searching the web, calling APIs. No tools = just text.",
+      "Humans act on the world physically. LLMs act through tool calls - running code, searching the web, calling APIs. No tools = just text.",
     icon: <WrenchIcon />,
   },
 ];

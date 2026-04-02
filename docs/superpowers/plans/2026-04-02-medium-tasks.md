@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Implement all 15 medium-effort [M] tasks from TODO.md — new sections, content moves, new animations, and content additions across all pages.
+**Goal:** Implement all 15 medium-effort [M] tasks from TODO.md  - new sections, content moves, new animations, and content additions across all pages.
 
 **Architecture:** Each task creates or modifies one page file and optionally adds new animation components in `src/components/interactive/`. All animations follow the established pattern: `useInView` + `setInterval` looping with a `key` remount, framer-motion for all transitions, `~14.5s` cycle times. Pages are all `"use client"` components using the Section/PageHero layout system.
 
@@ -14,26 +14,26 @@
 
 | Task | Creates | Modifies |
 |------|---------|----------|
-| 1 - Process is King theme | — | `src/app/factory/page.tsx`, `src/app/takeaways/page.tsx` |
+| 1 - Process is King theme |  - | `src/app/factory/page.tsx`, `src/app/takeaways/page.tsx` |
 | 2 - AI vs Human diagram | `src/components/interactive/HumanAIComparisonDiagram.tsx` | `src/app/factory/page.tsx` |
 | 3 - Expand How LLMs Work | `src/components/interactive/LLMPipelineAnimation.tsx` | `src/app/phase-1/page.tsx` |
 | 4 - Context "new hire" analogy | `src/components/interactive/NewHireContextAnimation.tsx` | `src/app/phase-1/page.tsx` |
-| 5 - Ask AI to help formulate | — | `src/app/phase-1/page.tsx` |
-| 6 - Move CoWork/Dispatch to Phase 2 | — | `src/app/phase-1/page.tsx`, `src/app/phase-2/page.tsx` |
-| 7 - Receive CoWork/Dispatch in Phase 2 | — | (covered by Task 6) |
+| 5 - Ask AI to help formulate |  - | `src/app/phase-1/page.tsx` |
+| 6 - Move CoWork/Dispatch to Phase 2 |  - | `src/app/phase-1/page.tsx`, `src/app/phase-2/page.tsx` |
+| 7 - Receive CoWork/Dispatch in Phase 2 |  - | (covered by Task 6) |
 | 8 - When More Context Hurts | `src/components/interactive/ContextDilutionAnimation.tsx` | `src/app/phase-2/page.tsx` |
 | 9 - Tool Calling diagram | `src/components/interactive/ToolCallingAnimation.tsx` | `src/app/phase-2/page.tsx` |
 | 10 - Clarify Agentic vs Agent | `src/components/interactive/AgenticToolSelectionAnimation.tsx` | `src/app/phase-3/page.tsx` |
-| 11 - AI for deterministic scripts | — | `src/app/phase-3/page.tsx` |
-| 12 - Security screenshots | — | `src/app/security/page.tsx`, `src/lib/constants.ts` |
-| 13 - Google less RAM article | — | `src/app/landscape/page.tsx` |
-| 14 - Local models outperform original ChatGPT | — | `src/app/landscape/page.tsx` |
+| 11 - AI for deterministic scripts |  - | `src/app/phase-3/page.tsx` |
+| 12 - Security screenshots |  - | `src/app/security/page.tsx`, `src/lib/constants.ts` |
+| 13 - Google less RAM article |  - | `src/app/landscape/page.tsx` |
+| 14 - Local models outperform original ChatGPT |  - | `src/app/landscape/page.tsx` |
 
 > **Note:** Tasks 6 and 7 are two sides of the same move (remove from Phase 1, add to Phase 2) and are combined into a single task.
 
 ---
 
-## Task 1: "Process is King" Theme — Factory Intro & Takeaways
+## Task 1: "Process is King" Theme  - Factory Intro & Takeaways
 
 **Files:**
 - Modify: `src/app/factory/page.tsx:36-49` (intro narrative)
@@ -56,7 +56,7 @@ In `src/app/factory/page.tsx`, replace the existing intro narrative (the `<div c
     You&apos;d think factories would immediately become more productive, right?
   </p>
   <p className="text-xl font-bold text-sflow-cream">
-    For 40 years &mdash; nothing.
+    For 40 years - nothing.
   </p>
   <p>
     Factories were designed for steam power: one big steam engine, connected to every machine
@@ -69,7 +69,7 @@ In `src/app/factory/page.tsx`, replace the existing intro narrative (the `<div c
   <p>
     The breakthrough came when engineers stopped asking &ldquo;how do we use this motor?&rdquo;
     and started asking &ldquo;how should the factory work?&rdquo; They redesigned the process
-    from scratch &mdash; single-floor layouts, each machine with its own motor, arranged by
+    from scratch - single-floor layouts, each machine with its own motor, arranged by
     workflow instead of power source. <strong className="text-sflow-cream">Process redesign, not tool adoption,
     is what doubled productivity.</strong>
   </p>
@@ -83,7 +83,7 @@ In the same file, after the StatGroup in the Adoption Gap section (~line 132), a
 ```tsx
 <p className="mt-6 text-sflow-cream-muted max-w-3xl">
   <strong className="text-sflow-gold">Process is king.</strong> The 6% who see real impact
-  aren&apos;t the ones with the best AI tools &mdash; they&apos;re the ones who redesigned
+  aren&apos;t the ones with the best AI tools - they&apos;re the ones who redesigned
   their workflows around AI. The tool is the motor. The process is the factory.
 </p>
 ```
@@ -110,7 +110,7 @@ git commit -m "content(factory): weave 'Process is King' theme into intro and ad
 
 ---
 
-## Task 2: "Are AI and Humans More Alike Than We Think?" — Interactive Comparison Diagram
+## Task 2: "Are AI and Humans More Alike Than We Think?"  - Interactive Comparison Diagram
 
 **Files:**
 - Create: `src/components/interactive/HumanAIComparisonDiagram.tsx`
@@ -146,7 +146,7 @@ const COMPARISONS: ComparisonRow[] = [
     ai: "Token Limit",
     icon: "focus",
     explanation:
-      "Humans lose focus after extended concentration. LLMs degrade as conversations grow long — early instructions get 'forgotten' as context fills up.",
+      "Humans lose focus after extended concentration. LLMs degrade as conversations grow long  - early instructions get 'forgotten' as context fills up.",
   },
   {
     human: "Creativity vs Focus",
@@ -174,7 +174,7 @@ const COMPARISONS: ComparisonRow[] = [
     ai: "Tools (APIs, code, search)",
     icon: "tools",
     explanation:
-      "Humans act on the world physically. LLMs act through tool calls — running code, searching the web, calling APIs. No tools = just text.",
+      "Humans act on the world physically. LLMs act through tool calls  - running code, searching the web, calling APIs. No tools = just text.",
   },
 ];
 
@@ -297,7 +297,7 @@ Then add a new Section **after** the "From Workshop to Agent System" section (af
   <h2 className="text-2xl font-bold mb-4">Are AI and Humans More Alike Than We Think?</h2>
   <p className="text-sflow-cream-muted mb-8 max-w-3xl">
     Understanding how LLMs work starts with a surprising insight: many AI limitations
-    mirror human cognition. This isn&apos;t a coincidence &mdash; it&apos;s a useful mental model
+    mirror human cognition. This isn&apos;t a coincidence - it&apos;s a useful mental model
     for building better workflows. <span className="text-sflow-gold">(Phase 1 goes deeper.)</span>
   </p>
   <HumanAIComparisonDiagram />
@@ -318,7 +318,7 @@ git commit -m "feat(factory): add interactive Human vs AI comparison diagram"
 
 ---
 
-## Task 3: Expand "How LLMs Work" — Phase 1 Combined Deeper Section
+## Task 3: Expand "How LLMs Work"  - Phase 1 Combined Deeper Section
 
 **Files:**
 - Create: `src/components/interactive/LLMPipelineAnimation.tsx`
@@ -335,7 +335,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 
 /**
- * LLMPipelineAnimation — Shows the full request lifecycle:
+ * LLMPipelineAnimation  - Shows the full request lifecycle:
  *   1. User types tokens (left)
  *   2. Context wraps around them (system prompt, files, history)
  *   3. Payload sent to API (center arrow)
@@ -451,7 +451,7 @@ export function LLMPipelineAnimation() {
               >
                 <p className="text-[10px] font-bold text-sflow-cream mb-1">Neural Network</p>
                 <p className="text-[9px] text-sflow-cream-muted">Token-by-token generation</p>
-                <p className="text-[9px] text-sflow-cream-muted italic">(autoregressive — can&apos;t go back)</p>
+                <p className="text-[9px] text-sflow-cream-muted italic">(autoregressive  - can&apos;t go back)</p>
               </motion.div>
             </div>
 
@@ -480,7 +480,7 @@ export function LLMPipelineAnimation() {
           >
             <p className="text-xs text-sflow-cream-muted">
               Each token is generated <strong className="text-sflow-gold">one at a time</strong>, left to right.
-              The model can&apos;t revise earlier tokens &mdash; that&apos;s why feedback and iteration matter.
+              The model can&apos;t revise earlier tokens - that&apos;s why feedback and iteration matter.
             </p>
           </motion.div>
         </motion.div>
@@ -501,7 +501,7 @@ import { LLMPipelineAnimation } from "@/components/interactive/LLMPipelineAnimat
 Then replace the existing `{/* How LLMs Work */}` Section (lines 23–49) with this expanded version. Keep the existing 4-step grid and LLMTokenAnimation, but add deeper content below:
 
 ```tsx
-{/* How LLMs Work — Deeper */}
+{/* How LLMs Work  - Deeper */}
 <Section>
   <h2 className="text-2xl font-bold mb-6">How the Machine Works</h2>
   <p className="text-sflow-cream-muted mb-6 max-w-3xl mx-auto">
@@ -512,7 +512,7 @@ Then replace the existing `{/* How LLMs Work */}` Section (lines 23–49) with t
       { step: "1", title: "Tokenization", desc: `Text is broken into small pieces (\u201ctokens\u201d, roughly 3/4 of a word).` },
       { step: "2", title: "Pattern Recognition", desc: "Trained on massive text, it learned statistical patterns about which tokens follow others." },
       { step: "3", title: "Probability", desc: "Given a sequence, it predicts the most likely next token. Repeats. That's it." },
-      { step: "4", title: "Emergent Capabilities", desc: `At scale, surprising abilities arise: reasoning, coding, analysis. It doesn\u2019t \u201cknow\u201d — but the results can be remarkable.` },
+      { step: "4", title: "Emergent Capabilities", desc: `At scale, surprising abilities arise: reasoning, coding, analysis. It doesn\u2019t \u201cknow\u201d  - but the results can be remarkable.` },
     ].map((item) => (
       <div key={item.step} className="rounded-xl border border-sflow-glass-border bg-sflow-glass p-5">
         <span className="flex h-8 w-8 items-center justify-center rounded-full bg-sflow-gold/20 text-sm font-bold text-sflow-gold mb-3">
@@ -537,19 +537,19 @@ Then replace the existing `{/* How LLMs Work */}` Section (lines 23–49) with t
       <h3 className="font-semibold text-red-400 mb-2">Stateless</h3>
       <p className="text-sm text-sflow-cream-muted">
         Every conversation starts from zero. The AI has <strong className="text-sflow-cream">no memory</strong> of
-        yesterday&apos;s chat. It&apos;s not being difficult &mdash; it literally doesn&apos;t know.
+        yesterday&apos;s chat. It&apos;s not being difficult - it literally doesn&apos;t know.
       </p>
     </div>
     <div className="rounded-xl border border-red-500/30 bg-red-500/5 p-5">
       <h3 className="font-semibold text-red-400 mb-2">Autoregressive</h3>
       <p className="text-sm text-sflow-cream-muted">
         Tokens are generated left-to-right, one at a time. It <strong className="text-sflow-cream">can&apos;t revise</strong> earlier
-        tokens once written. That&apos;s why your feedback matters &mdash; the AI literally can&apos;t go back and fix it on its own.
+        tokens once written. That&apos;s why your feedback matters - the AI literally can&apos;t go back and fix it on its own.
       </p>
     </div>
   </div>
   <p className="text-sflow-cream-muted max-w-3xl mb-8 mx-auto">
-    <strong className="text-sflow-gold">This is not a flaw &mdash; it&apos;s the architecture.</strong>{" "}
+    <strong className="text-sflow-gold">This is not a flaw - it&apos;s the architecture.</strong>{" "}
     Pattern matching at scale, not reasoning. The results can be brilliant, but
     it&apos;s statistics all the way down.
   </p>
@@ -588,7 +588,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 
 /**
- * NewHireContextAnimation — Side-by-side comparison:
+ * NewHireContextAnimation  - Side-by-side comparison:
  *   Left (Bad): pile of files → direct arrow → confused output
  *   Right (Good): pile of files → instruction doc → clear output
  *
@@ -795,12 +795,12 @@ git commit -m "feat(phase-1): add 'new hire' context analogy with side-by-side a
 
 ---
 
-## Task 5: "Ask AI to Help You Formulate Your Question" — Phase 1 Teaser
+## Task 5: "Ask AI to Help You Formulate Your Question"  - Phase 1 Teaser
 
 **Files:**
 - Modify: `src/app/phase-1/page.tsx` (add new section before Instruction Documents)
 
-Content-only task. No new components — uses existing DemoCallout.
+Content-only task. No new components  - uses existing DemoCallout.
 
 - [ ] **Step 1: Add new section to Phase 1**
 
@@ -836,7 +836,7 @@ In `src/app/phase-1/page.tsx`, add a new Section **before** the `{/* Instruction
     </div>
   </div>
   <p className="mt-6 text-sm text-sflow-gold max-w-3xl">
-    This is a teaser &mdash; in Phase 2, we&apos;ll turn this into a full meta-prompting workflow.
+    This is a teaser - in Phase 2, we&apos;ll turn this into a full meta-prompting workflow.
   </p>
   <DemoCallout
     title="Meta-questioning demo"
@@ -869,9 +869,9 @@ This task covers both TODO items: "Move CoWork & Dispatch to Phase 2" and "Recei
 
 - [ ] **Step 1: Remove CoWork & Dispatch from Phase 1**
 
-In `src/app/phase-1/page.tsx`, delete the entire `{/* CoWork & Dispatch */}` Section (lines 114–143 approximately — the Section containing "Claude in Office Tools (CoWork)"). This is the Section starting with `<h2>Claude in Office Tools (CoWork)</h2>` and ending with the Dispatch DemoCallout.
+In `src/app/phase-1/page.tsx`, delete the entire `{/* CoWork & Dispatch */}` Section (lines 114–143 approximately  - the Section containing "Claude in Office Tools (CoWork)"). This is the Section starting with `<h2>Claude in Office Tools (CoWork)</h2>` and ending with the Dispatch DemoCallout.
 
-Also remove the `DemoCallout` import if it's no longer used elsewhere on this page. Check: DemoCallout is also used in GitHub Copilot, Image Generation, Gamma, and Google AI Studio sections, **and** the new Task 5 section — so keep the import.
+Also remove the `DemoCallout` import if it's no longer used elsewhere on this page. Check: DemoCallout is also used in GitHub Copilot, Image Generation, Gamma, and Google AI Studio sections, **and** the new Task 5 section  - so keep the import.
 
 - [ ] **Step 2: Add CoWork & Dispatch to Phase 2**
 
@@ -881,16 +881,16 @@ In `src/app/phase-2/page.tsx`, add the `DemoCallout` import (it's not currently 
 import { DemoCallout } from "@/components/content/DemoCallout";
 ```
 
-Wait — check the existing imports. `DemoCallout` IS already imported on Phase 2 (line 8). Good, no import change needed.
+Wait  - check the existing imports. `DemoCallout` IS already imported on Phase 2 (line 8). Good, no import change needed.
 
 Add a new Section **after** the "AI-to-AI Prompt Chain" section (after the PipelineAnimation/DemoCallout Section, before the "Death of the UI" Section):
 
 ```tsx
-{/* CoWork & Dispatch — workflow integration */}
+{/* CoWork & Dispatch  - workflow integration */}
 <Section>
   <h2 className="text-2xl font-bold mb-4">Claude in Your Workflow (CoWork &amp; Dispatch)</h2>
   <p className="text-sflow-cream-muted mb-6 max-w-3xl">
-    This is Phase 2 in action: AI isn&apos;t a standalone chat &mdash; it&apos;s embedded in your daily tools.
+    This is Phase 2 in action: AI isn&apos;t a standalone chat - it&apos;s embedded in your daily tools.
     <strong className="text-sflow-cream"> CoWork</strong> (launched January 2026) is a persistent agent inside the Claude Desktop app.
     The key differentiator: <strong className="text-sflow-gold">shared context</strong>. Claude sees your Excel, PowerPoint, AND Gmail simultaneously.
   </p>
@@ -902,14 +902,14 @@ Add a new Section **after** the "AI-to-AI Prompt Chain" section (after the Pipel
   </div>
   <DemoCallout
     title="CoWork cross-app workflow"
-    description="Claude reading an email attachment, analyzing it in Excel, and drafting a reply — all in one conversation."
+    description="Claude reading an email attachment, analyzing it in Excel, and drafting a reply  - all in one conversation."
   />
   <div className="mt-8">
     <h3 className="text-xl font-bold mb-2">Dispatch</h3>
     <p className="text-sflow-cream-muted max-w-3xl">
       Send tasks from your <strong className="text-sflow-cream">phone</strong> to your{" "}
       <strong className="text-sflow-cream">desktop</strong> Claude. Scan a QR code, connected in 2 taps.
-      Note: tasks are routed through Anthropic&apos;s cloud &mdash; not fully local processing.
+      Note: tasks are routed through Anthropic&apos;s cloud - not fully local processing.
     </p>
     <DemoCallout
       title="Dispatch from phone"
@@ -917,7 +917,7 @@ Add a new Section **after** the "AI-to-AI Prompt Chain" section (after the Pipel
     />
   </div>
   <p className="mt-6 text-sm text-sflow-cream-muted max-w-3xl">
-    CoWork and Dispatch are about <strong className="text-sflow-gold">ripping out the belts</strong> &mdash;
+    CoWork and Dispatch are about <strong className="text-sflow-gold">ripping out the belts</strong> -
     instead of copy-pasting between apps, AI flows across your entire toolkit.
   </p>
 </Section>
@@ -937,7 +937,7 @@ git commit -m "refactor: move CoWork & Dispatch section from Phase 1 to Phase 2"
 
 ---
 
-## Task 7: "When More Context Hurts" — Phase 2 New Section
+## Task 7: "When More Context Hurts"  - Phase 2 New Section
 
 **Files:**
 - Create: `src/components/interactive/ContextDilutionAnimation.tsx`
@@ -945,7 +945,7 @@ git commit -m "refactor: move CoWork & Dispatch section from Phase 1 to Phase 2"
 
 - [ ] **Step 1: Create the ContextDilutionAnimation component**
 
-Create `src/components/interactive/ContextDilutionAnimation.tsx`. Shows a conversation growing longer — the initial system prompt shrinks as a percentage of the total context. Animated bar that fills up over time.
+Create `src/components/interactive/ContextDilutionAnimation.tsx`. Shows a conversation growing longer  - the initial system prompt shrinks as a percentage of the total context. Animated bar that fills up over time.
 
 ```tsx
 "use client";
@@ -954,7 +954,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 
 /**
- * ContextDilutionAnimation — Shows how initial instructions get "diluted"
+ * ContextDilutionAnimation  - Shows how initial instructions get "diluted"
  * as a conversation grows. A vertical bar fills up with messages while
  * the system prompt at the top shrinks proportionally.
  *
@@ -1142,7 +1142,7 @@ export function ContextDilutionAnimation() {
                 <p className="text-xs font-bold text-red-400 mb-1">The result:</p>
                 <p className="text-[11px] text-sflow-cream-muted">
                   Contradictions, ignored constraints, hallucinations.
-                  The AI isn&apos;t broken &mdash; it&apos;s drowning in context.
+                  The AI isn&apos;t broken - it&apos;s drowning in context.
                 </p>
               </motion.div>
             </div>
@@ -1171,7 +1171,7 @@ Add a new Section **after** the CoWork/Dispatch section (from Task 6) and **befo
   <div className="max-w-3xl space-y-4 text-sflow-cream-muted mb-8">
     <p>
       More context isn&apos;t always better. Long conversations <strong className="text-sflow-cream">dilute</strong> your
-      original instructions. The AI doesn&apos;t ignore them on purpose &mdash; they just become
+      original instructions. The AI doesn&apos;t ignore them on purpose - they just become
       a tiny fraction of what it&apos;s paying attention to.
     </p>
     <p>
@@ -1197,7 +1197,7 @@ git commit -m "feat(phase-2): add 'When More Context Hurts' section with context
 
 ---
 
-## Task 8: Tool Calling Diagram — Phase 2
+## Task 8: Tool Calling Diagram  - Phase 2
 
 **Files:**
 - Create: `src/components/interactive/ToolCallingAnimation.tsx`
@@ -1214,7 +1214,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 
 /**
- * ToolCallingAnimation — Shows the invisible orchestration layer:
+ * ToolCallingAnimation  - Shows the invisible orchestration layer:
  *   1. Context contents (system prompt, user message, available tools)
  *   2. AI decides which tool to call (text generation!)
  *   3. Tool executes and returns result
@@ -1375,7 +1375,7 @@ export function ToolCallingAnimation() {
                 transition={{ delay: 10.0, duration: 0.4 }}
                 className="mt-2 text-[9px] text-sflow-cream-muted text-center"
               >
-                The user never sees the tool call &mdash; only the final answer.
+                The user never sees the tool call - only the final answer.
               </motion.p>
             </div>
           </div>
@@ -1415,7 +1415,7 @@ Add a new Section **after** the "How a Prompt Actually Works" section (after the
   <h2 className="text-2xl font-bold mb-4">How Tool Calling Works</h2>
   <p className="text-sflow-cream-muted mb-6 max-w-3xl">
     When AI &ldquo;searches the web&rdquo; or &ldquo;reads a file,&rdquo; there&apos;s an invisible orchestration layer
-    between the chat and the action. The AI doesn&apos;t execute anything &mdash; it generates text that describes
+    between the chat and the action. The AI doesn&apos;t execute anything - it generates text that describes
     what it wants to do, and the system carries it out.
   </p>
   <ToolCallingAnimation />
@@ -1436,7 +1436,7 @@ git commit -m "feat(phase-2): add tool calling diagram with animated orchestrati
 
 ---
 
-## Task 9: Clarify "Agentic" vs "Agent" — Phase 3
+## Task 9: Clarify "Agentic" vs "Agent"  - Phase 3
 
 **Files:**
 - Create: `src/components/interactive/AgenticToolSelectionAnimation.tsx`
@@ -1453,7 +1453,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 
 /**
- * AgenticToolSelectionAnimation — Shows that "agentic" tool selection
+ * AgenticToolSelectionAnimation  - Shows that "agentic" tool selection
  * is still just text generation. The AI generates a plan as text,
  * tools execute, results feed back.
  *
@@ -1531,7 +1531,7 @@ export function AgenticToolSelectionAnimation() {
             </div>
           </motion.div>
 
-          {/* AI generates plan — THIS IS STILL TEXT */}
+          {/* AI generates plan  - THIS IS STILL TEXT */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -1595,7 +1595,7 @@ export function AgenticToolSelectionAnimation() {
             <p className="text-xs text-sflow-cream-muted">
               <strong className="text-sflow-gold">Key insight:</strong> Selecting tools, planning steps, and deciding what to do
               next is <strong className="text-sflow-cream">all still text generation</strong>. The &ldquo;intelligence&rdquo;
-              is pattern matching — the system around it provides the actual capabilities.
+              is pattern matching  - the system around it provides the actual capabilities.
             </p>
           </motion.div>
         </motion.div>
@@ -1617,7 +1617,7 @@ Replace the existing "What Is an Agent?" Section (the one starting with `<h2>Wha
 
 ```tsx
 <Section>
-  <h2 className="text-2xl font-bold mb-4">Agentic vs Agent &mdash; They&apos;re Not the Same</h2>
+  <h2 className="text-2xl font-bold mb-4">Agentic vs Agent - They&apos;re Not the Same</h2>
   <div className="grid gap-4 sm:grid-cols-2 max-w-3xl mx-auto mb-8">
     <div className="rounded-xl border border-sflow-gold/30 bg-sflow-gold/5 p-5">
       <h3 className="font-semibold text-sflow-gold mb-2">&ldquo;Agentic&rdquo;</h3>
@@ -1641,7 +1641,7 @@ Replace the existing "What Is an Agent?" Section (the one starting with `<h2>Wha
     </div>
   </div>
   <p className="text-sflow-cream-muted max-w-3xl mb-8">
-    The magic isn&apos;t the agent &mdash; it&apos;s the <strong className="text-sflow-gold">process</strong> it&apos;s embedded in.
+    The magic isn&apos;t the agent - it&apos;s the <strong className="text-sflow-gold">process</strong> it&apos;s embedded in.
     And the surprising truth: tool selection is still just text generation.
   </p>
   <AgenticToolSelectionAnimation />
@@ -1662,7 +1662,7 @@ git commit -m "feat(phase-3): clarify Agentic vs Agent distinction with tool sel
 
 ---
 
-## Task 10: AI for Deterministic Scripts/Code — Phase 3
+## Task 10: AI for Deterministic Scripts/Code  - Phase 3
 
 **Files:**
 - Modify: `src/app/phase-3/page.tsx` (add section)
@@ -1676,7 +1676,7 @@ In `src/app/phase-3/page.tsx`, add a new Section **after** the "Google AI Studio
 ```tsx
 {/* AI for deterministic code */}
 <Section>
-  <h2 className="text-2xl font-bold mb-4">Don&apos;t Ask AI to DO Finance &mdash; Ask It to BUILD the Tool</h2>
+  <h2 className="text-2xl font-bold mb-4">Don&apos;t Ask AI to DO Finance - Ask It to BUILD the Tool</h2>
   <div className="max-w-3xl space-y-4 text-sflow-cream-muted">
     <p>
       AI makes mistakes. Math doesn&apos;t. The solution:{" "}
@@ -1708,7 +1708,7 @@ In `src/app/phase-3/page.tsx`, add a new Section **after** the "Google AI Studio
   </div>
   <DemoCallout
     title="Azure DevOps KPI automation"
-    description="Using Claude Code / AI Studio to build a Python script that pulls Azure DevOps data and generates KPI dashboards — deterministic code, not AI guesswork."
+    description="Using Claude Code / AI Studio to build a Python script that pulls Azure DevOps data and generates KPI dashboards  - deterministic code, not AI guesswork."
   />
 </Section>
 ```
@@ -1727,7 +1727,7 @@ git commit -m "feat(phase-3): add 'AI for deterministic scripts' section with Az
 
 ---
 
-## Task 11: Security Page — Add Story Card Images
+## Task 11: Security Page  - Add Story Card Images
 
 **Files:**
 - Modify: `src/lib/constants.ts` (add `imageUrl` field to Story interface + stories)
@@ -1753,7 +1753,7 @@ export interface Story {
 
 - [ ] **Step 2: Add image URLs to the three security stories**
 
-In `src/lib/constants.ts`, add `imageUrl` to the chevrolet, air-canada, and samsung story objects. These should be paths to images in `public/images/stories/`. The actual images need to be sourced by the user — use placeholder paths for now:
+In `src/lib/constants.ts`, add `imageUrl` to the chevrolet, air-canada, and samsung story objects. These should be paths to images in `public/images/stories/`. The actual images need to be sourced by the user  - use placeholder paths for now:
 
 ```ts
 // In the chevrolet story object, add:
@@ -1809,7 +1809,7 @@ git commit -m "feat(security): add optional imageUrl to StoryCard for case study
 
 ---
 
-## Task 12: Landscape — "Google Finds Way to Run with Less RAM"
+## Task 12: Landscape  - "Google Finds Way to Run with Less RAM"
 
 **Files:**
 - Modify: `src/app/landscape/page.tsx` (add content to local models section)
@@ -1825,7 +1825,7 @@ Search for "Google finds way to run AI models with less RAM" or similar. The use
 In `src/app/landscape/page.tsx`, in the "Local Models Are Coming to Your Laptop" section, add a 5th card to the grid:
 
 ```tsx
-{ title: "Less RAM, Same Quality", desc: "Google researchers demonstrated techniques to run frontier-quality models with significantly less memory — making local AI more accessible on standard hardware." },
+{ title: "Less RAM, Same Quality", desc: "Google researchers demonstrated techniques to run frontier-quality models with significantly less memory  - making local AI more accessible on standard hardware." },
 ```
 
 Update the grid to include this card. Also add a source link below the grid:
@@ -1854,7 +1854,7 @@ git commit -m "content(landscape): add Google 'less RAM' research to local model
 
 ---
 
-## Task 13: Landscape — Local Models Outperform Original ChatGPT
+## Task 13: Landscape  - Local Models Outperform Original ChatGPT
 
 **Files:**
 - Modify: `src/app/landscape/page.tsx` (add content)
@@ -1874,7 +1874,7 @@ In the first Section (after the grid `</div>` closing tag), add:
     Today&apos;s local models running on a laptop <strong className="text-sflow-cream">outperform the original
     ChatGPT</strong> (GPT-3.5, November 2022) that started the entire revolution.
     The model that amazed the world 3 years ago is now surpassed by software running
-    on your MacBook &mdash; offline, private, free. Progress is exponential.
+    on your MacBook - offline, private, free. Progress is exponential.
   </p>
 </div>
 ```
@@ -1900,12 +1900,12 @@ Tasks can be executed in parallel within groups:
 | Group | Tasks | Reason |
 |-------|-------|--------|
 | A (parallel) | 1, 2 | Both modify factory page in different sections |
-| B (parallel) | 3, 4, 5 | All modify phase-1 in different sections, but Task 3 changes line numbers — execute 3 first, then 4+5 in parallel |
+| B (parallel) | 3, 4, 5 | All modify phase-1 in different sections, but Task 3 changes line numbers  - execute 3 first, then 4+5 in parallel |
 | C (sequential) | 6 first | Move must happen before Task 7/8 add content to Phase 2 |
 | D (parallel) | 7, 8 | Both add to phase-2, different sections |
 | E (parallel) | 9, 10 | Both modify phase-3, different sections |
 | F | 11 | Security page, independent |
-| G (parallel) | 12, 13 | Both modify landscape page, different parts of same section — can be combined |
+| G (parallel) | 12, 13 | Both modify landscape page, different parts of same section  - can be combined |
 
 **Recommended execution order:** A → B → C → D → E → F → G
 

@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import { RotateCcw } from "lucide-react";
 
 /**
- * LLMPipelineAnimation — Shows the full LLM request lifecycle:
+ * LLMPipelineAnimation - Shows the full LLM request lifecycle:
  *   1. Input tokens appear (your prompt broken into pieces)
  *   2. Context blocks appear (System Prompt, Documents, History)
  *   3. API Call arrow appears
@@ -127,7 +127,7 @@ export function LLMPipelineAnimation() {
               >
                 <p className="text-xs font-bold text-sflow-gold mb-1">Neural Network</p>
                 <p className="text-[10px] text-sflow-cream-muted/70">
-                  (autoregressive — can&apos;t go back)
+                  (autoregressive - can&apos;t go back)
                 </p>
                 <MiniNeuralNet delay={4.7} />
               </motion.div>
@@ -171,7 +171,7 @@ export function LLMPipelineAnimation() {
           >
             <p className="text-sm text-sflow-cream-muted">
               Each token is generated <strong className="text-sflow-cream">one at a time, left to right</strong>.
-              The model can&apos;t revise earlier tokens — that&apos;s why{" "}
+              The model can&apos;t revise earlier tokens - that&apos;s why{" "}
               <strong className="text-sflow-gold">feedback and iteration matter</strong>.
             </p>
           </motion.div>

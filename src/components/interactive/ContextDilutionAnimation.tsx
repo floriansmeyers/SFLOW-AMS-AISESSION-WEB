@@ -34,7 +34,7 @@ export function ContextDilutionAnimation() {
           transition={{ duration: 0.5 }}
           className="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] gap-4 sm:gap-6"
         >
-          {/* LEFT — Context Window */}
+          {/* LEFT - Context Window */}
           <div className="flex flex-col gap-2">
             <motion.p
               initial={{ opacity: 0 }}
@@ -46,7 +46,7 @@ export function ContextDilutionAnimation() {
             </motion.p>
 
             <div className="rounded-xl border border-sflow-glass-border bg-sflow-glass/50 p-3 flex flex-col gap-2">
-              {/* System Prompt — shrinks over 10s */}
+              {/* System Prompt - shrinks over 10s */}
               <motion.div
                 initial={{ height: 80, opacity: 1 }}
                 animate={{ height: 24, opacity: 0.4 }}
@@ -91,7 +91,7 @@ export function ContextDilutionAnimation() {
             </div>
           </div>
 
-          {/* CENTER — Percentage indicator (hidden on mobile) */}
+          {/* CENTER - Percentage indicator (hidden on mobile) */}
           <div className="hidden sm:flex flex-col items-center justify-center gap-2 min-w-[80px]">
             <p className="text-[10px] text-sflow-cream-muted/60 text-center">Instructions:</p>
             <motion.p
@@ -126,7 +126,7 @@ export function ContextDilutionAnimation() {
             </motion.p>
           </div>
 
-          {/* RIGHT — Explanation */}
+          {/* RIGHT - Explanation */}
           <div className="flex flex-col gap-3">
             <motion.p
               initial={{ opacity: 0 }}
@@ -166,7 +166,7 @@ export function ContextDilutionAnimation() {
               </ol>
             </motion.div>
 
-            {/* The result box — appears late */}
+            {/* The result box - appears late */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -175,7 +175,7 @@ export function ContextDilutionAnimation() {
             >
               <p className="text-xs font-bold text-red-400 mb-2">The result:</p>
               <p className="text-[10px] text-sflow-cream-muted leading-relaxed">
-                Contradictions, ignored constraints, and subtle hallucinations &mdash;
+                Contradictions, ignored constraints, and subtle hallucinations -
                 not because the AI forgot, but because your instructions became a whisper.
               </p>
             </motion.div>

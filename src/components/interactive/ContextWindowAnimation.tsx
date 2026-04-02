@@ -5,11 +5,11 @@ import { useRef, useState } from "react";
 import { RotateCcw } from "lucide-react";
 
 /**
- * ContextWindowAnimation — Shows the 4 parts of a context window:
- *   1. System Prompt — "You are a helpful assistant that..."
- *   2. Your Documents / Data — company policies, research, etc.
- *   3. Conversation — previous messages
- *   4. Your Message — the current prompt
+ * ContextWindowAnimation - Shows the 4 parts of a context window:
+ *   1. System Prompt - "You are a helpful assistant that..."
+ *   2. Your Documents / Data - company policies, research, etc.
+ *   3. Conversation - previous messages
+ *   4. Your Message - the current prompt
  *
  * Teaching point: everything the model can "see" must fit in the context
  * window. More context = better output. The quality of AI output is

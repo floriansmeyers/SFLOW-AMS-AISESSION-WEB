@@ -5,13 +5,13 @@ import { useRef, useState } from "react";
 import { RotateCcw } from "lucide-react";
 
 /**
- * LLMTokenAnimation — Shows how an LLM works in 3 stages:
+ * LLMTokenAnimation - Shows how an LLM works in 3 stages:
  *   1. Input tokens appear one by one (your prompt broken into pieces)
  *   2. Neural network "processes" them (nodes light up, connections glow)
  *   3. Output tokens appear one by one (the response)
  *
  * Teaching point: LLMs are next-token prediction machines. They don't
- * "understand" — they predict the statistically most likely next token,
+ * "understand" - they predict the statistically most likely next token,
  * one at a time.
  *
  * Infinite loop with ~14s cycle.

@@ -5,11 +5,11 @@ import { useRef, useState } from "react";
 import { RotateCcw } from "lucide-react";
 
 /**
- * FactoryEvolutionAnimation — Three-column diagram showing the evolution
+ * FactoryEvolutionAnimation - Three-column diagram showing the evolution
  * from artisanal workshop → industrial factory → AI agent system.
  *
  * Teaching point: the pattern of how technology adoption evolves is always
- * the same — individual skill → standardized process → scalable system.
+ * the same - individual skill → standardized process → scalable system.
  * AI agents are NOT replacing people; they're the next evolution of process.
  *
  * Animation cycle (~14s):
@@ -122,7 +122,7 @@ export function FactoryEvolutionAnimation() {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   ColumnWithArrow — a single column + the arrow AFTER it (if any)
+   ColumnWithArrow - a single column + the arrow AFTER it (if any)
    ═══════════════════════════════════════════════════════════════════ */
 
 function ColumnWithArrow({ col, index }: { col: ColumnData; index: number }) {
@@ -216,7 +216,7 @@ function ColumnWithArrow({ col, index }: { col: ColumnData; index: number }) {
    SVG Icons for each column
    ═══════════════════════════════════════════════════════════════════ */
 
-/** Single expert circle — represents the lone craftsman */
+/** Single expert circle - represents the lone craftsman */
 function ExpertCircle() {
   return (
     <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
@@ -230,7 +230,7 @@ function ExpertCircle() {
   );
 }
 
-/** Three role circles — QA, Ops, Mgr */
+/** Three role circles - QA, Ops, Mgr */
 function FactoryCircles() {
   return (
     <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
@@ -252,7 +252,7 @@ function FactoryCircles() {
   );
 }
 
-/** Agent boxes — represents AI system components */
+/** Agent boxes - represents AI system components */
 function AgentBoxes() {
   return (
     <svg width="64" height="64" viewBox="0 0 64 64" fill="none">

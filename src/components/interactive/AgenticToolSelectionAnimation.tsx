@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import { RotateCcw } from "lucide-react";
 
 /**
- * AgenticToolSelectionAnimation — Shows an agent receiving a task, planning steps
+ * AgenticToolSelectionAnimation - Shows an agent receiving a task, planning steps
  * (still text generation!), executing tools, and getting results.
  *
  * Teaching point: Selecting tools and planning steps is still just text generation.
@@ -162,7 +162,7 @@ export function AgenticToolSelectionAnimation() {
             <p className="text-xs text-sflow-gold text-center leading-relaxed">
               Selecting tools, planning steps, and deciding what to do next is all still{" "}
               <strong>text generation</strong>. The &ldquo;intelligence&rdquo; is pattern matching
-              &mdash; the system around it provides the actual capabilities.
+             - the system around it provides the actual capabilities.
             </p>
           </motion.div>
         </motion.div>

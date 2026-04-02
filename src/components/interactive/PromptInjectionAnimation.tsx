@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import { RotateCcw } from "lucide-react";
 
 /**
- * PromptInjectionAnimation — Two-row comparison:
+ * PromptInjectionAnimation - Two-row comparison:
  *   Row 1 (Normal): System prompt + legitimate user message → safe response
  *   Row 2 (Attack): System prompt + injection payload → data leak
  *   Row 3 (Defense): Three defense cards + effectiveness stat

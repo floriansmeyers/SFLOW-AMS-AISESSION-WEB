@@ -108,7 +108,7 @@ export default function TakeawaysPage() {
             <a href="mailto:florian@sflow.be" className="text-sflow-cream hover:text-sflow-gold transition-colors">
               florian@sflow.be
             </a>
-            {" "}&mdash;{" "}
+            {" "}-{" "}
             <a href="https://sflow.be" target="_blank" className="text-sflow-cream hover:text-sflow-gold transition-colors">
               sflow.be
             </a>

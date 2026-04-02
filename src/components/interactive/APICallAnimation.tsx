@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import { RotateCcw } from "lucide-react";
 
 /**
- * APICallAnimation — Shows how a prompt/API call actually works:
+ * APICallAnimation - Shows how a prompt/API call actually works:
  *   You (or your app) → builds a request (system, context, user, tools)
  *   → API Call (POST /messages) →
  *   AI Provider API (reads context, generates token by token, charges per token)

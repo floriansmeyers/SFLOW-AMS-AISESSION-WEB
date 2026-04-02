@@ -12,11 +12,11 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "AI Session — AMS 2026 | SFLOW",
+  title: "AI Session - AMS 2026 | SFLOW",
   description:
-    "Interactive AI workshop by Florian Smeyers at Antwerp Management School. From ChatGPT basics to agentic workflows — practical tools you can use tomorrow.",
+    "Interactive AI workshop by Florian Smeyers at Antwerp Management School. From ChatGPT basics to agentic workflows - practical tools you can use tomorrow.",
   openGraph: {
-    title: "AI Session — AMS 2026 | SFLOW",
+    title: "AI Session - AMS 2026 | SFLOW",
     description:
       "Interactive AI workshop: from ChatGPT basics to agentic workflows.",
     url: "https://ai-session-ams.vercel.app",

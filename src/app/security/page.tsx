@@ -29,7 +29,7 @@ export default function SecurityPage() {
       <Section>
         <h2 className="text-2xl font-bold mb-4">MCP &amp; Security</h2>
         <p className="text-sflow-cream-muted mb-6 max-w-3xl">
-          MCP (Model Context Protocol) gives AI access to real systems &mdash; your email, your database, your code.
+          MCP (Model Context Protocol) gives AI access to real systems - your email, your database, your code.
           If permissions are wrong, damage is real.
         </p>
         <StatGroup
@@ -50,7 +50,7 @@ export default function SecurityPage() {
       {/* Governance */}
       <Section>
         <h2 className="text-2xl font-bold mb-2">Governance, Not Agent Failure</h2>
-        <QuoteBlock quote="The agent did what it was allowed to do — the question is: who allowed it?" />
+        <QuoteBlock quote="The agent did what it was allowed to do. The question is: who allowed it?" />
         <StatGroup
           stats={[
             { value: 13, suffix: "%", label: "Organizations breached via AI" },
@@ -71,7 +71,7 @@ export default function SecurityPage() {
       <Section>
         <h2 className="text-2xl font-bold mb-4">AI Agents as Attackers</h2>
         <div className="max-w-3xl space-y-4 text-sflow-cream-muted">
-          <p>AI agents are already VERY good at finding security holes. They don&apos;t need to be &ldquo;correct&rdquo; &mdash; they just need to find 1 hole. Brute-force intelligence is now cheap.</p>
+          <p>AI agents are already VERY good at finding security holes. They don&apos;t need to be &ldquo;correct&rdquo; - they just need to find 1 hole. Brute-force intelligence is now cheap.</p>
           <p className="text-lg text-sflow-cream font-semibold">
             Your defense needs to be right 100% of the time. The attacker only needs to be right once.
           </p>
@@ -180,7 +180,7 @@ export default function SecurityPage() {
           <p>AI is a tool. It serves whoever wields it.</p>
           <p>Palantir in the US-Iran conflict: AI for targeting, surveillance, warfare. The same tech that automates your lead pipeline can automate a kill chain.</p>
           <p className="text-lg text-sflow-cream font-semibold">
-            This isn&apos;t sci-fi &mdash; it&apos;s happening now. The ethics conversation is not optional.
+            This isn&apos;t sci-fi - it&apos;s happening now. The ethics conversation is not optional.
           </p>
         </div>
       </Section>
@@ -188,7 +188,7 @@ export default function SecurityPage() {
       <Section>
         <div className="text-center max-w-2xl mx-auto">
           <p className="text-sflow-cream-muted mb-6">
-            Beyond the threats &mdash; where is the technology heading?
+            Beyond the threats - where is the technology heading?
           </p>
           <Link
             href="/landscape"

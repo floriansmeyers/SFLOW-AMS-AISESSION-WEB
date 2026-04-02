@@ -33,7 +33,7 @@ export function Footer() {
               >
                 Antwerp Management School
               </a>{" "}
-              &mdash; April 2, 2026
+             - April 2, 2026
             </p>
           </div>
         </div>

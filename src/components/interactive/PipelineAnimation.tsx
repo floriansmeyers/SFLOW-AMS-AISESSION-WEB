@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import { RotateCcw } from "lucide-react";
 
 /**
- * PipelineAnimation — Animated step-by-step pipeline flow.
+ * PipelineAnimation - Animated step-by-step pipeline flow.
  * Steps appear one by one with arrows between them, showing
  * a complete automated workflow.
  *

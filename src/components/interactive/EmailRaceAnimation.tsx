@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import { RotateCcw } from "lucide-react";
 
 /**
- * EmailRaceAnimation — Looping Gantt-chart comparing email workflows
+ * EmailRaceAnimation - Looping Gantt-chart comparing email workflows
  * with and without AI.
  *
  * The key insight this teaches: AI speeds up the WRITING, but the real
@@ -51,7 +51,7 @@ export function EmailRaceAnimation() {
         >
           {/* ── Header ──────────────────────────────────────────── */}
           <p className="text-xs font-medium uppercase tracking-widest text-sflow-cream-muted text-center">
-            The Email Problem — Send the assignment, wait for it, send it back
+            The Email Problem - Send the assignment, wait for it, send it back
           </p>
 
           {/* ── Lane: Without AI ────────────────────────────────── */}
@@ -124,7 +124,7 @@ export function EmailRaceAnimation() {
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   Lane — one horizontal Gantt row
+   Lane - one horizontal Gantt row
    ═══════════════════════════════════════════════════════════════════ */
 
 interface LaneProps {
@@ -146,7 +146,7 @@ function Lane({
 }: LaneProps) {
   // Timing offsets (absolute seconds into the cycle)
   const sentDelay = writeDelay + writeDuration + 0.3;
-  const waitDelay = 4.5; // fixed absolute time — both lanes start waiting together
+  const waitDelay = 4.5; // fixed absolute time - both lanes start waiting together
   const doneDelay = waitDelay + 3.5;
 
   return (

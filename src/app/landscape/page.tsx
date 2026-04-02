@@ -21,7 +21,7 @@ export default function LandscapePage() {
             { title: "Apple MLX Chips", desc: "Apple ships dedicated machine learning chips in every laptop." },
             { title: "Privacy Benefit", desc: "Your data never leaves your device. Sensitive documents analyzed locally." },
             { title: "Becoming Normal", desc: "Running models locally is becoming standard, not niche." },
-            { title: "Less RAM, Same Quality", desc: "Google researchers demonstrated techniques to run frontier-quality models with significantly less memory — making local AI more accessible on standard hardware." },
+            { title: "Less RAM, Same Quality", desc: "Google researchers demonstrated techniques to run frontier-quality models with significantly less memory - making local AI more accessible on standard hardware." },
           ].map((item) => (
             <div key={item.title} className="rounded-xl border border-sflow-glass-border bg-sflow-glass p-5">
               <h3 className="font-semibold text-sflow-cream">{item.title}</h3>
@@ -39,7 +39,7 @@ export default function LandscapePage() {
           <p className="text-sm text-sflow-cream-muted">
             Today&apos;s local models running on a laptop <strong className="text-sflow-cream">outperform the original ChatGPT</strong>{" "}(GPT-3.5, November 2022) that started the entire revolution.
             The model that amazed the world 3 years ago is now surpassed by software running
-            on your MacBook &mdash; offline, private, free. Progress is exponential.
+            on your MacBook - offline, private, free. Progress is exponential.
           </p>
         </div>
       </Section>
@@ -76,7 +76,7 @@ export default function LandscapePage() {
           <p>Trade-off: <strong className="text-sflow-cream">convenience &amp; safety</strong> vs <strong className="text-sflow-cream">control &amp; cost</strong>.</p>
           <p>
             Geopolitical angle: China open-sourcing powerful models changes the playing field entirely.
-            Llama 4 Scout has a <strong className="text-sflow-gold">10M token context window</strong>{" "}&mdash; open source, free.
+            Llama 4 Scout has a <strong className="text-sflow-gold">10M token context window</strong>{" "}- open source, free.
           </p>
         </div>
       </Section>
@@ -84,7 +84,7 @@ export default function LandscapePage() {
       <Section>
         <div className="text-center max-w-2xl mx-auto">
           <p className="text-sflow-cream-muted mb-6">
-            Let&apos;s wrap it up &mdash; what does all of this mean for you?
+            Let&apos;s wrap it up - what does all of this mean for you?
           </p>
           <Link
             href="/takeaways"

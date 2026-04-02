@@ -19,7 +19,7 @@ const electricityTimeline = [
   { date: "1900", title: "5% electric power", description: "Factories simply replaced the steam engine with an electric motor. Same building, same belts, same layout.", highlight: false },
   { date: "1919", title: "50% electric power", description: "Still marginal productivity gains. Productivity growth: just 1.3%/year.", highlight: false },
   { date: "1920s", title: "The breakthrough", description: "Engineers redesigned factories from scratch. Each machine got its own motor. Single-floor layouts. Arranged by flow, not by power source.", highlight: true },
-  { date: "1930", title: "80% electric power", description: "Productivity growth jumped to 3.1%/year — more than doubled. It took 40 years.", highlight: true },
+  { date: "1930", title: "80% electric power", description: "Productivity growth jumped to 3.1%/year - more than doubled. It took 40 years.", highlight: true },
 ];
 
 export default function FactoryPage() {
@@ -41,7 +41,7 @@ export default function FactoryPage() {
             You&apos;d think factories would immediately become more productive, right?
           </p>
           <p className="text-xl font-bold text-sflow-cream">
-            For 40 years &mdash; nothing.
+            For 40 years - nothing.
           </p>
           <p>
             Factories were designed for steam power: one big steam engine, connected to every machine
@@ -54,7 +54,7 @@ export default function FactoryPage() {
           <p>
             The breakthrough came when engineers stopped asking &ldquo;how do we use this motor?&rdquo;
             and started asking &ldquo;how should the factory work?&rdquo; They redesigned the process
-            from scratch &mdash; single-floor layouts, each machine with its own motor, arranged by
+            from scratch - single-floor layouts, each machine with its own motor, arranged by
             workflow instead of power source. <strong className="text-sflow-cream">Process redesign, not tool adoption,
             is what doubled productivity.</strong>
           </p>
@@ -64,7 +64,7 @@ export default function FactoryPage() {
           <Factory size={56} className="mx-auto mb-4 text-sflow-cream-muted" strokeWidth={1.5} />
           <p className="text-sm text-sflow-cream-muted italic">
             Belt-driven factory floor, circa 1900: one steam engine powers every machine through a maze of belts and pulleys.
-            Replace the engine with an electric motor and nothing changes &mdash; same layout, same constraints, same bottlenecks.
+            Replace the engine with an electric motor and nothing changes - same layout, same constraints, same bottlenecks.
           </p>
         </div>
       </Section>
@@ -81,7 +81,7 @@ export default function FactoryPage() {
         />
 
         <p className="text-sflow-cream-muted max-w-3xl mt-4">
-          Satya Nadella calls AI a &ldquo;compressed Industrial Revolution&rdquo; &mdash; what took
+          Satya Nadella calls AI a &ldquo;compressed Industrial Revolution&rdquo; - what took
           200 years with electricity could take 20&ndash;25 years with AI.
         </p>
       </Section>
@@ -98,7 +98,7 @@ export default function FactoryPage() {
         <h2 className="text-2xl font-bold mb-4">Are AI and Humans More Alike Than We Think?</h2>
         <p className="text-sflow-cream-muted mb-8 max-w-3xl">
           Understanding how LLMs work starts with a surprising insight: many AI limitations
-          mirror human cognition. This isn&apos;t a coincidence &mdash; it&apos;s a useful mental model
+          mirror human cognition. This isn&apos;t a coincidence - it&apos;s a useful mental model
           for building better workflows. <span className="text-sflow-gold">(Phase 1 goes deeper.)</span>
         </p>
         <HumanAIComparisonDiagram />
@@ -108,14 +108,14 @@ export default function FactoryPage() {
         <h2 className="text-2xl font-bold mb-6">Three Versions of the Same Factory</h2>
         <p className="text-sflow-cream-muted mb-8 max-w-3xl">
           Tonight, I&apos;m going to take you through three versions of the same factory.
-          By the end, you&apos;ll know exactly where you are &mdash; and where to go next.
+          By the end, you&apos;ll know exactly where you are - and where to go next.
         </p>
 
         <div className="grid gap-4 sm:grid-cols-3">
           {[
             { phase: "Phase 1", title: "It Goes Faster", desc: "ChatGPT, smarter emails, better drafts", analogy: "We bolted an electric motor onto the steam-era belt drive.", href: "/phase-1" },
             { phase: "Phase 2", title: "Retrofitting", desc: "AI becomes a workflow component, not just a tool", analogy: "We ripped out the belts and installed new production lines.", href: "/phase-2" },
-            { phase: "Phase 3", title: "The New Factory", desc: "Agentic workflows — systems built for automation from day one", analogy: "We redesigned the factory from the ground up.", href: "/phase-3" },
+            { phase: "Phase 3", title: "The New Factory", desc: "Agentic workflows: systems built for automation from day one", analogy: "We redesigned the factory from the ground up.", href: "/phase-3" },
           ].map((p) => (
             <Link
               key={p.phase}
@@ -140,7 +140,7 @@ export default function FactoryPage() {
         <p className="text-lg text-sflow-cream mb-2">
           <strong>&ldquo;88% of companies have adopted AI. Only 6% are transforming their business with it.&rdquo;</strong>
         </p>
-        <p className="text-sm text-sflow-muted mb-8">&mdash; McKinsey, 2025</p>
+        <p className="text-sm text-sflow-muted mb-8">- McKinsey, 2025</p>
 
         <FunnelChart
           steps={[
@@ -164,7 +164,7 @@ export default function FactoryPage() {
 
         <p className="mt-6 text-sflow-cream-muted max-w-3xl">
           <strong className="text-sflow-gold">Process is king.</strong>{" "}The 6% who see real impact
-          aren&apos;t the ones with the best AI tools &mdash; they&apos;re the ones who redesigned
+          aren&apos;t the ones with the best AI tools - they&apos;re the ones who redesigned
           their workflows around AI. The tool is the motor. The process is the factory.
         </p>
       </Section>
@@ -182,8 +182,8 @@ export default function FactoryPage() {
         <h3 className="text-xl font-bold mt-10 mb-4">When Production Gets Cheaper...</h3>
         <QuoteBlock quote="If software becomes 10x cheaper to build, do you think companies will build less of it?" />
         <p className="text-sflow-cream-muted max-w-3xl">
-          The Industrial Revolution didn&apos;t mean fewer goods &mdash; it meant MORE. Software, images,
-          content, code &mdash; costs are dropping fast. We won&apos;t make less. We&apos;ll make{" "}
+          The Industrial Revolution didn&apos;t mean fewer goods - it meant MORE. Software, images,
+          content, code - costs are dropping fast. We won&apos;t make less. We&apos;ll make{" "}
           <strong className="text-sflow-gold">far more</strong>.
         </p>
       </Section>
