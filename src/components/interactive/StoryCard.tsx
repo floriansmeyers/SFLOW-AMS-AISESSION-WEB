@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ExternalLink } from "lucide-react";
 import type { Story } from "@/lib/constants";
 
 export function StoryCard({ story }: { story: Story }) {
@@ -77,7 +78,7 @@ export function StoryCard({ story }: { story: Story }) {
                     onClick={(e) => e.stopPropagation()}
                     className="inline-block mt-2 text-xs text-sflow-gold/70 hover:text-sflow-gold transition-colors"
                   >
-                    Source ↗
+                    <span className="inline-flex items-center gap-1">Source <ExternalLink size={10} /></span>
                   </a>
                 )}
               </div>

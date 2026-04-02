@@ -6,7 +6,18 @@ export function SlideIndicator() {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const slide = (e.currentTarget as HTMLElement).closest(".snap-slide");
     const next = slide?.nextElementSibling;
-    if (next) {
+    if (!next) return;
+
+    const container = next.closest(".snap-container");
+    if (container instanceof HTMLElement) {
+      container.style.scrollSnapType = "none";
+      next.scrollIntoView({ behavior: "smooth" });
+      container.addEventListener(
+        "scrollend",
+        () => { container.style.scrollSnapType = ""; },
+        { once: true },
+      );
+    } else {
       next.scrollIntoView({ behavior: "smooth" });
     }
   };
@@ -18,7 +29,7 @@ export function SlideIndicator() {
       animate={{ opacity: 0.5 }}
       whileHover={{ opacity: 1 }}
       transition={{ duration: 0.4 }}
-      className="absolute bottom-6 left-1/2 -translate-x-1/2 p-2 text-sflow-cream-muted hover:text-sflow-gold transition-colors cursor-pointer"
+      className="slide-indicator absolute bottom-6 left-1/2 -translate-x-1/2 p-2 text-sflow-cream-muted hover:text-sflow-gold transition-colors cursor-pointer"
       aria-label="Scroll to next section"
     >
       <motion.svg

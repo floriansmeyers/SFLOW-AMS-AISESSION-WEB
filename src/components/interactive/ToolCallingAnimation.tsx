@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
+import { Check } from "lucide-react";
 
 /**
  * ToolCallingAnimation — Shows the invisible orchestration layer when AI uses tools:
@@ -142,7 +143,7 @@ export function ToolCallingAnimation() {
                   transition={{ delay: 4.2, duration: 0.6, repeat: 2, repeatType: "mirror" }}
                   className="rounded border-2 border-sflow-gold/50 bg-sflow-gold/[0.08] px-2.5 py-1.5"
                 >
-                  <p className="text-[10px] font-mono text-sflow-gold font-bold">weather ✓</p>
+                  <p className="text-[10px] font-mono text-sflow-gold font-bold inline-flex items-center gap-0.5">weather <Check size={10} strokeWidth={3} /></p>
                 </motion.div>
                 {/* calculator — dimmed */}
                 <div className="rounded border border-sflow-glass-border bg-sflow-glass px-2.5 py-1.5 opacity-40">

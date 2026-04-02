@@ -14,6 +14,7 @@ import { ContextWindowAnimation } from "@/components/interactive/ContextWindowAn
 import { NewHireContextAnimation } from "@/components/interactive/NewHireContextAnimation";
 import { PHASE_META, IMAGE_TOOLS } from "@/lib/constants";
 import Link from "next/link";
+import { ExternalLink } from "lucide-react";
 
 const meta = PHASE_META["phase-1"];
 
@@ -237,7 +238,7 @@ export default function Phase1Page() {
           rel="noopener noreferrer"
           className="mt-4 inline-flex items-center gap-2 rounded-full bg-sflow-glass border border-sflow-glass-border px-4 py-2 text-sm text-sflow-cream hover:bg-sflow-glass-hover transition-colors"
         >
-          Try it live: Markdown Editor ↗
+          <span className="inline-flex items-center gap-1">Try it live: Markdown Editor <ExternalLink size={14} /></span>
         </a>
       </Section>
 

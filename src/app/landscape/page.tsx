@@ -4,6 +4,7 @@ import { PageHero } from "@/components/layout/PageHero";
 import { Section } from "@/components/ui/Section";
 import { PHASE_META } from "@/lib/constants";
 import Link from "next/link";
+import { ExternalLink } from "lucide-react";
 
 const meta = PHASE_META.landscape;
 
@@ -30,7 +31,7 @@ export default function LandscapePage() {
         </div>
         <p className="mt-4 text-xs text-sflow-muted">
           <a href="https://research.google/blog/accelerating-ai-with-updated-gemma-models/" target="_blank" rel="noopener noreferrer" className="underline hover:text-sflow-cream transition-colors">
-            Source: Google Gemma research on efficient model inference ↗
+            <span className="inline-flex items-center gap-1">Source: Google Gemma research on efficient model inference <ExternalLink size={12} /></span>
           </a>
         </p>
         <div className="mt-8 rounded-xl border border-sflow-gold/20 bg-sflow-gold/5 p-5 max-w-3xl">

@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
+import { User } from "lucide-react";
 
 /**
  * DeathOfUIAnimation — Two-state transition showing the shift from
@@ -97,7 +98,7 @@ export function DeathOfUIAnimation() {
                       transition={{ delay: 1.5 + i * 0.3, duration: 0.3, ease: "backOut" }}
                       className="h-6 w-6 rounded-full bg-sflow-cream-muted/20 border border-sflow-cream-muted/40 flex items-center justify-center"
                     >
-                      <span className="text-[8px] text-sflow-cream-muted">👤</span>
+                      <User size={10} className="text-sflow-cream-muted" strokeWidth={2} />
                     </motion.div>
                   ))}
                 </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ExternalLink } from "lucide-react";
 
 interface QuoteBlockProps {
   quote: string;
@@ -25,8 +26,8 @@ export function QuoteBlock({ quote, author, source, url }: QuoteBlockProps) {
         <footer className="mt-2 text-sm text-sflow-muted">
           {author && <span className="font-medium">&mdash; {author}</span>}
           {source && url ? (
-            <a href={url} target="_blank" rel="noopener noreferrer" className="hover:text-sflow-gold transition-colors">
-              , {source} ↗
+            <a href={url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center hover:text-sflow-gold transition-colors">
+              , {source} <ExternalLink size={12} className="ml-1" />
             </a>
           ) : source ? (
             <span>, {source}</span>

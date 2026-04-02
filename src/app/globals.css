@@ -44,6 +44,11 @@ body {
   color: var(--color-sflow-dark);
 }
 
+/* Hide slide indicator on the last snap-slide */
+.snap-slide:last-of-type .slide-indicator {
+  display: none;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;

@@ -221,7 +221,7 @@ function ExpertCircle() {
       <path d="M16 54c0-8.8 7.2-16 16-16s16 7.2 16 16" stroke="currentColor" strokeWidth="1.5" className="text-sflow-cream-muted" strokeLinecap="round" />
       {/* Small star (skill) */}
       <circle cx="48" cy="14" r="5" className="fill-sflow-cream-muted/20 stroke-sflow-cream-muted" strokeWidth="1" />
-      <text x="48" y="17" textAnchor="middle" className="fill-sflow-cream-muted" fontSize="8" fontWeight="bold">★</text>
+      <path d="M48 10.5l1.4 2.8 3.1.5-2.2 2.2.5 3.1L48 17.5l-2.8 1.6.5-3.1-2.2-2.2 3.1-.5z" className="fill-sflow-cream-muted" />
     </svg>
   );
 }
