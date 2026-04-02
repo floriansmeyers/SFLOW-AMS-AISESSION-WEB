@@ -34,7 +34,7 @@ const WITH_AI = { write: 8, wait: 50 };     // 8% writing, same 50% waiting
 
 export function EmailRaceAnimation() {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { margin: "-50px" });
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
   const [tick, setTick] = useState(0);
 
   const key = `cycle-${tick}`;

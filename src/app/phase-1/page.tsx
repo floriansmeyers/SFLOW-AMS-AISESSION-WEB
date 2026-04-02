@@ -117,16 +117,18 @@ export default function Phase1Page() {
         <p className="mt-4 text-sflow-cream-muted max-w-3xl">
           The difference between a useless answer and a brilliant one is <strong className="text-sflow-gold">context</strong>.
         </p>
-        <div className="mt-10">
-          <h3 className="text-xl font-bold mb-3">The &ldquo;New Hire on First Day&rdquo; Analogy</h3>
-          <p className="text-sflow-cream-muted mb-6 max-w-3xl">
-            You wouldn&apos;t dump every company document on a new hire&apos;s desk and say
-            &ldquo;make me an invoice.&rdquo; You&apos;d extract the relevant info and write a
-            clear brief. <strong className="text-sflow-cream">Treat AI the same way.</strong>{" "}
-            This connects directly to the instruction documents section later.
-          </p>
-          <NewHireContextAnimation />
-        </div>
+      </Section>
+
+      {/* New Hire Analogy */}
+      <Section>
+        <h2 className="text-2xl font-bold mb-3">The &ldquo;New Hire on First Day&rdquo; Analogy</h2>
+        <p className="text-sflow-cream-muted mb-6 max-w-3xl">
+          You wouldn&apos;t dump every company document on a new hire&apos;s desk and say
+          &ldquo;make me an invoice.&rdquo; You&apos;d extract the relevant info and write a
+          clear brief. <strong className="text-sflow-cream">Treat AI the same way.</strong>{" "}
+          This connects directly to the instruction documents section later.
+        </p>
+        <NewHireContextAnimation />
       </Section>
 
       {/* GitHub Copilot */}

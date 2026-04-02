@@ -9,16 +9,10 @@ export function SlideIndicator() {
     if (!next) return;
 
     const container = next.closest(".snap-container");
-    if (container instanceof HTMLElement) {
-      container.style.scrollSnapType = "none";
-      next.scrollIntoView({ behavior: "smooth" });
-      container.addEventListener(
-        "scrollend",
-        () => { container.style.scrollSnapType = ""; },
-        { once: true },
-      );
+    if (container instanceof HTMLElement && next instanceof HTMLElement) {
+      container.scrollTo({ top: next.offsetTop - container.offsetTop, behavior: "smooth" });
     } else {
-      next.scrollIntoView({ behavior: "smooth" });
+      next.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 

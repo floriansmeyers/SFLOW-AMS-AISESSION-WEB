@@ -102,9 +102,9 @@ export default function Phase2Page() {
         />
       </Section>
 
-      {/* CoWork & Dispatch — workflow integration */}
+      {/* CoWork — workflow integration */}
       <Section>
-        <h2 className="text-2xl font-bold mb-4">Claude in Your Workflow (CoWork &amp; Dispatch)</h2>
+        <h2 className="text-2xl font-bold mb-4">Claude in Your Workflow (CoWork)</h2>
         <p className="text-sflow-cream-muted mb-6 max-w-3xl">
           This is Phase 2 in action: AI isn&apos;t a standalone chat &mdash; it&apos;s embedded in your daily tools.
           <strong className="text-sflow-cream"> CoWork</strong> (launched January 2026) is a persistent agent inside the Claude Desktop app.
@@ -120,22 +120,24 @@ export default function Phase2Page() {
           title="CoWork cross-app workflow"
           description="Claude reading an email attachment, analyzing it in Excel, and drafting a reply — all in one conversation."
         />
-        <div className="mt-8">
-          <h3 className="text-xl font-bold mb-2">Dispatch</h3>
-          <p className="text-sflow-cream-muted max-w-3xl">
-            Send tasks from your <strong className="text-sflow-cream">phone</strong> to your{" "}
-            <strong className="text-sflow-cream">desktop</strong> Claude. Scan a QR code, connected in 2 taps.
-            Note: tasks are routed through Anthropic&apos;s cloud &mdash; not fully local processing.
-          </p>
-          <DemoCallout
-            title="Dispatch from phone"
-            description="Scanning the QR code, sending a task from phone, watching Claude execute it on desktop."
-          />
-        </div>
         <p className="mt-6 text-sm text-sflow-cream-muted max-w-3xl">
-          CoWork and Dispatch are about <strong className="text-sflow-gold">ripping out the belts</strong> &mdash;
+          CoWork is about <strong className="text-sflow-gold">ripping out the belts</strong> &mdash;
           instead of copy-pasting between apps, AI flows across your entire toolkit.
         </p>
+      </Section>
+
+      {/* Dispatch — phone to desktop */}
+      <Section>
+        <h2 className="text-2xl font-bold mb-4">Dispatch</h2>
+        <p className="text-sflow-cream-muted mb-6 max-w-3xl">
+          Send tasks from your <strong className="text-sflow-cream">phone</strong> to your{" "}
+          <strong className="text-sflow-cream">desktop</strong> Claude. Scan a QR code, connected in 2 taps.
+          Note: tasks are routed through Anthropic&apos;s cloud &mdash; not fully local processing.
+        </p>
+        <DemoCallout
+          title="Dispatch from phone"
+          description="Scanning the QR code, sending a task from phone, watching Claude execute it on desktop."
+        />
       </Section>
 
       {/* When More Context Hurts */}

@@ -57,7 +57,7 @@ const ROWS: ComparisonRow[] = [
 
 export function HumanAIComparisonDiagram() {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { margin: "-50px" });
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
   const [activeRow, setActiveRow] = useState<number | null>(null);
 
   function handleRowClick(index: number) {
