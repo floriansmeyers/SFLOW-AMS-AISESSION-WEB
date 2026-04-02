@@ -29,7 +29,7 @@ export default function Phase2Page() {
         <ExerciseBox
           title="Meta-prompting"
           steps={[
-            { text: "Think of a task where you\u2019ve been unhappy with AI output" },
+            { text: "Think of a task where you've been unhappy with AI output" },
             {
               text: "Ask the AI to write you a detailed prompt:",
               copyText: "Write me a detailed prompt that will help me [do X] consistently. Include role, context, format, and constraints.",
@@ -54,7 +54,7 @@ export default function Phase2Page() {
               text: "Ask the AI to turn it into a reusable document:",
               copyText: "Turn this into a reusable instruction document I can paste at the start of any conversation. Add sections for: Role, Context, Task, Format, Constraints.",
             },
-            { text: "Save the result \u2014 this is your first \u201cskill\u201d" },
+            { text: `Save the result — this is your first \u201cskill\u201d` },
           ]}
         />
       </Section>
@@ -84,7 +84,7 @@ export default function Phase2Page() {
           />
         </div>
         <DemoCallout
-          title="Claude \u2192 Google AI Studio Prompt Chain"
+          title="Claude → Google AI Studio Prompt Chain"
           description="Use Claude to research a topic and generate a structured prompt. Copy that prompt into Google AI Studio. AI Studio builds a full interactive app from it. One AI preparing work for another."
         />
       </Section>

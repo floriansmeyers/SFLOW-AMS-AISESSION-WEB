@@ -16,7 +16,7 @@ const klarnaStory = STORIES.find((s) => s.id === "klarna")!;
 
 const klarnaTimeline = [
   { date: "Early 2024", title: "AI Deployed", description: "2.3M conversations/month. Equivalent to 700 full-time agents. Satisfaction up 47%.", highlight: true },
-  { date: "Mid 2024", title: "Full Speed Ahead", description: "Headcount 5,000 \u2192 3,000. $10M annual savings. Response time: 15 min \u2192 under 2 min.", highlight: false },
+  { date: "Mid 2024", title: "Full Speed Ahead", description: "Headcount 5,000 → 3,000. $10M annual savings. Response time: 15 min → under 2 min.", highlight: false },
   { date: "2025", title: "Complex Cases Fail", description: "Quietly rebuilding human customer service team. Full AI replacement failed for sensitive cases.", highlight: false },
   { date: "2026", title: "Hybrid Model", description: "Human-on-the-loop stabilized. AI handles volume, humans handle complexity.", highlight: true },
 ];
@@ -63,11 +63,11 @@ export default function Phase3Page() {
             },
             {
               title: "Dispatch",
-              items: ["Send tasks from phone \u2192 Claude executes on desktop", "Scan QR code \u2192 connected in 2 taps", "All processing local, files never leave your computer"],
+              items: ["Send tasks from phone → Claude executes on desktop", "Scan QR code → connected in 2 taps", "All processing local, files never leave your computer"],
             },
             {
               title: "Claude CLI (Claude Code)",
-              items: ["Terminal-based agentic coding tool (GA May 2025)", "Natural language \u2192 code, file ops, git, shell, web search", "Extensible: skills, hooks, subagents, MCP servers"],
+              items: ["Terminal-based agentic coding tool (GA May 2025)", "Natural language → code, file ops, git, shell, web search", "Extensible: skills, hooks, subagents, MCP servers"],
             },
           ].map((card) => (
             <div key={card.title} className="rounded-xl border border-sflow-glass-border bg-sflow-glass p-5">
@@ -93,7 +93,7 @@ export default function Phase3Page() {
         <h2 className="text-2xl font-bold mb-4">Demo: Automated Lead Research Pipeline</h2>
         <DemoCallout
           title="Fully autonomous sales pipeline"
-          description="End-to-end: Google Form intake \u2192 CSV \u2192 CoWork scheduled job picks up new entries \u2192 AI researches each company \u2192 saves research \u2192 second job generates personalized outreach emails. Zero manual work."
+          description="End-to-end: Google Form intake → CSV → CoWork scheduled job picks up new entries → AI researches each company → saves research → second job generates personalized outreach emails. Zero manual work."
         />
         <div className="mt-4">
           <PipelineAnimation
@@ -115,7 +115,7 @@ export default function Phase3Page() {
       <Section>
         <DemoCallout
           title="Google AI Studio App with Database"
-          description="Link the CSV from the lead pipeline into Google AI Studio. AI builds a full app to browse leads, view research, edit outreach drafts. Built entirely for free \u2014 no code."
+          description="Link the CSV from the lead pipeline into Google AI Studio. AI builds a full app to browse leads, view research, edit outreach drafts. Built entirely for free — no code."
         />
       </Section>
 

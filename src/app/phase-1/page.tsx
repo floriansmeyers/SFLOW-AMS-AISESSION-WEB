@@ -28,10 +28,10 @@ export default function Phase1Page() {
         </p>
         <div className="grid gap-4 sm:grid-cols-2 max-w-3xl mx-auto">
           {[
-            { step: "1", title: "Tokenization", desc: "Text is broken into small pieces (\u201ctokens\u201d, roughly 3/4 of a word)." },
+            { step: "1", title: "Tokenization", desc: `Text is broken into small pieces (\u201ctokens\u201d, roughly 3/4 of a word).` },
             { step: "2", title: "Pattern Recognition", desc: "Trained on massive text, it learned statistical patterns about which tokens follow others." },
-            { step: "3", title: "Probability", desc: "Given a sequence, it predicts the most likely next token. Repeats. That\u2019s it." },
-            { step: "4", title: "Emergent Capabilities", desc: "At scale, surprising abilities arise: reasoning, coding, analysis. It doesn\u2019t \u201cknow\u201d \u2014 but the results can be remarkable." },
+            { step: "3", title: "Probability", desc: "Given a sequence, it predicts the most likely next token. Repeats. That's it." },
+            { step: "4", title: "Emergent Capabilities", desc: `At scale, surprising abilities arise: reasoning, coding, analysis. It doesn\u2019t \u201cknow\u201d — but the results can be remarkable.` },
           ].map((item) => (
             <div key={item.step} className="rounded-xl border border-sflow-glass-border bg-sflow-glass p-5">
               <span className="flex h-8 w-8 items-center justify-center rounded-full bg-sflow-gold/20 text-sm font-bold text-sflow-gold mb-3">
@@ -119,7 +119,7 @@ export default function Phase1Page() {
         </div>
         <DemoCallout
           title="CoWork cross-app workflow"
-          description="Claude reading an email attachment, analyzing it in Excel, and drafting a reply \u2014 all in one conversation."
+          description="Claude reading an email attachment, analyzing it in Excel, and drafting a reply — all in one conversation."
         />
         <div className="mt-8">
           <h3 className="text-xl font-bold mb-2">Dispatch</h3>
@@ -196,7 +196,7 @@ export default function Phase1Page() {
           {[
             { title: "Universal", desc: "Every AI tool reads and writes Markdown natively." },
             { title: "Portable", desc: "Works in any text editor, converts to HTML/PDF/slides." },
-            { title: "Structured", desc: "Headings, lists, tables, code blocks \u2014 AI understands the structure." },
+            { title: "Structured", desc: "Headings, lists, tables, code blocks — AI understands the structure." },
             { title: "Version-friendly", desc: "Plain text = easy to diff, track changes, collaborate." },
           ].map((item) => (
             <div key={item.title} className="rounded-xl border border-sflow-glass-border bg-sflow-glass p-4">
@@ -224,10 +224,10 @@ export default function Phase1Page() {
         <div className="grid gap-4 sm:grid-cols-2 max-w-3xl mx-auto mb-6">
           {[
             { label: "Free", detail: "1,000 daily requests across all Gemini models" },
-            { label: "Vibe Coding", detail: "Describe an app \u2192 get a working app \u2192 deploy to Cloud Run" },
-            { label: "CSV Upload", detail: "Up to 2GB per file (48-hour expiry) \u2014 great for prototyping" },
-            { label: "localStorage", detail: "5\u201310MB persistence for personal apps, no backend needed" },
-            { label: "Context", detail: "2M context window (Gemini 3 Pro) \u2014 entire codebases or document sets" },
+            { label: "Vibe Coding", detail: "Describe an app → get a working app → deploy to Cloud Run" },
+            { label: "CSV Upload", detail: "Up to 2GB per file (48-hour expiry) — great for prototyping" },
+            { label: "localStorage", detail: "5–10MB persistence for personal apps, no backend needed" },
+            { label: "Context", detail: "2M context window (Gemini 3 Pro) — entire codebases or document sets" },
             { label: "System Instructions", detail: "Persistent context for consistent behavior" },
           ].map((item) => (
             <div key={item.label} className="flex gap-3">
@@ -238,14 +238,14 @@ export default function Phase1Page() {
         </div>
         <DemoCallout
           title="Google AI Studio vibe coding"
-          description="Describing a simple CRM app \u2192 AI generates it \u2192 upload a CSV \u2192 working app. All free, no code."
+          description="Describing a simple CRM app → AI generates it → upload a CSV → working app. All free, no code."
         />
       </Section>
 
       {/* Instruction Documents */}
       <Section>
         <h2 className="text-2xl font-bold mb-4">Instruction Documents &amp; Custom Instructions</h2>
-        <QuoteBlock quote="You wouldn\u2019t hire someone and explain the job differently every morning." />
+        <QuoteBlock quote="You wouldn't hire someone and explain the job differently every morning." />
         <div className="space-y-2 text-sflow-cream-muted max-w-3xl">
           <p><strong className="text-sflow-cream">Claude:</strong> Projects with custom instructions / system prompts</p>
           <p><strong className="text-sflow-cream">ChatGPT:</strong> Custom GPTs / &ldquo;Customize ChatGPT&rdquo; instructions</p>
@@ -267,7 +267,7 @@ export default function Phase1Page() {
               copyText: "Write me a reusable instruction prompt for [your task]. Include placeholders for the parts that change each time.",
             },
             { text: "Test it: paste in real (or example) content and run the prompt" },
-            { text: "Save it somewhere you\u2019ll find it tomorrow" },
+            { text: "Save it somewhere you'll find it tomorrow" },
           ]}
         />
       </Section>

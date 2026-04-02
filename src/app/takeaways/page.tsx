@@ -71,7 +71,7 @@ export default function TakeawaysPage() {
       </Section>
 
       <Section>
-        <QuoteBlock quote="The next Google or Amazon of AI probably hasn\u2019t stood up yet. Maybe it\u2019s in this room." />
+        <QuoteBlock quote="The next Google or Amazon of AI probably hasn't stood up yet. Maybe it's in this room." />
       </Section>
 
       <Section>

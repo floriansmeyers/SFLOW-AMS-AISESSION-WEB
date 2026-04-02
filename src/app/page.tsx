@@ -9,19 +9,19 @@ const SECTIONS = [
     href: "/factory",
     badge: "Introduction",
     title: "The Factory Paradigm",
-    description: "Why AI adoption mirrors the Industrial Revolution \u2014 and what the 6% who succeed do differently.",
+    description: "Why AI adoption mirrors the Industrial Revolution — and what the 6% who succeed do differently.",
   },
   {
     href: "/phase-1",
     badge: "Phase 1",
     title: "The Factory with a New Motor",
-    description: "ChatGPT, Copilot, image generation, Google AI Studio \u2014 tools you can use today.",
+    description: "ChatGPT, Copilot, image generation, Google AI Studio — tools you can use today.",
   },
   {
     href: "/phase-2",
     badge: "Phase 2",
     title: "Ripping Out the Belts",
-    description: "Meta-prompting, reusable skills, prompt chains \u2014 AI as a workflow component.",
+    description: "Meta-prompting, reusable skills, prompt chains — AI as a workflow component.",
   },
   {
     href: "/phase-3",
@@ -45,7 +45,7 @@ const SECTIONS = [
     href: "/takeaways",
     badge: "Closing",
     title: "Key Takeaways",
-    description: "9 principles to take home \u2014 and remember that email.",
+    description: "9 principles to take home — and remember that email.",
   },
 ];
 

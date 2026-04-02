@@ -13,11 +13,11 @@ import Link from "next/link";
 const meta = PHASE_META.factory;
 
 const electricityTimeline = [
-  { date: "1879", title: "Edison invents the lightbulb", description: "Electric motors become available. You\u2019d think factories would immediately become more productive.", highlight: false },
+  { date: "1879", title: "Edison invents the lightbulb", description: "Electric motors become available. You'd think factories would immediately become more productive.", highlight: false },
   { date: "1900", title: "5% electric power", description: "Factories simply replaced the steam engine with an electric motor. Same building, same belts, same layout.", highlight: false },
   { date: "1919", title: "50% electric power", description: "Still marginal productivity gains. Productivity growth: just 1.3%/year.", highlight: false },
   { date: "1920s", title: "The breakthrough", description: "Engineers redesigned factories from scratch. Each machine got its own motor. Single-floor layouts. Arranged by flow, not by power source.", highlight: true },
-  { date: "1930", title: "80% electric power", description: "Productivity growth jumped to 3.1%/year \u2014 more than doubled. It took 40 years.", highlight: true },
+  { date: "1930", title: "80% electric power", description: "Productivity growth jumped to 3.1%/year — more than doubled. It took 40 years.", highlight: true },
 ];
 
 export default function FactoryPage() {
@@ -27,7 +27,7 @@ export default function FactoryPage() {
 
       <Section>
         <QuoteBlock
-          quote="It will be comparable with the Industrial Revolution. But instead of exceeding people in physical strength, it\u2019s going to exceed people in intellectual ability."
+          quote="It will be comparable with the Industrial Revolution. But instead of exceeding people in physical strength, it's going to exceed people in intellectual ability."
           author="Geoffrey Hinton"
           source="Nobel Prize 2024"
         />
@@ -55,7 +55,7 @@ export default function FactoryPage() {
         <QuoteBlock
           quote="Managers at first simply overlaid one technical system upon a preexisting stratum."
           author="Paul David"
-          source="\u201cThe Dynamo and the Computer,\u201d 1990"
+          source={`\u201cThe Dynamo and the Computer,\u201d 1990`}
         />
 
         <p className="text-sflow-cream-muted max-w-3xl mt-4">
@@ -83,7 +83,7 @@ export default function FactoryPage() {
           {[
             { phase: "Phase 1", title: "It Goes Faster", desc: "ChatGPT, smarter emails, better drafts", analogy: "We bolted an electric motor onto the steam-era belt drive.", href: "/phase-1" },
             { phase: "Phase 2", title: "Retrofitting", desc: "AI becomes a workflow component, not just a tool", analogy: "We ripped out the belts and installed new production lines.", href: "/phase-2" },
-            { phase: "Phase 3", title: "The New Factory", desc: "Agentic workflows \u2014 systems built for automation from day one", analogy: "We redesigned the factory from the ground up.", href: "/phase-3" },
+            { phase: "Phase 3", title: "The New Factory", desc: "Agentic workflows — systems built for automation from day one", analogy: "We redesigned the factory from the ground up.", href: "/phase-3" },
           ].map((p) => (
             <Link
               key={p.phase}

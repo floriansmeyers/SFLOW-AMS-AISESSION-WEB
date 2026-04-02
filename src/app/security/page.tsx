@@ -35,7 +35,7 @@ export default function SecurityPage() {
           stats={[
             { value: 8000, suffix: "+", label: "MCP servers exposed online" },
             { value: 43, suffix: "%", label: "Have at least one vulnerability" },
-            { value: 30, suffix: "+", label: "CVEs in 6 weeks (Jan\u2013Feb 2026)" },
+            { value: 30, suffix: "+", label: "CVEs in 6 weeks (Jan–Feb 2026)" },
           ]}
         />
         <div className="mt-8 mb-6">
@@ -49,7 +49,7 @@ export default function SecurityPage() {
       {/* Governance */}
       <Section>
         <h2 className="text-2xl font-bold mb-2">Governance, Not Agent Failure</h2>
-        <QuoteBlock quote="The agent did what it was allowed to do \u2014 the question is: who allowed it?" />
+        <QuoteBlock quote="The agent did what it was allowed to do — the question is: who allowed it?" />
         <StatGroup
           stats={[
             { value: 13, suffix: "%", label: "Organizations breached via AI" },
@@ -108,7 +108,7 @@ export default function SecurityPage() {
           ))}
         </div>
 
-        <QuoteBlock quote="No amount of \u2018please don\u2019t do bad things\u2019 in a system prompt protects you." />
+        <QuoteBlock quote="No amount of 'please don't do bad things' in a system prompt protects you." />
 
         <h3 className="text-xl font-bold mt-8 mb-4">Real Prompt Injection Attacks</h3>
         <div className="space-y-4">
@@ -154,7 +154,7 @@ export default function SecurityPage() {
             </thead>
             <tbody>
               {[
-                { scenario: "AI agent operations", cost: "$3,200\u2013$13,000" },
+                { scenario: "AI agent operations", cost: "$3,200–$13,000" },
                 { scenario: "50K docs/month WITH caching", cost: "$8,000" },
                 { scenario: "50K docs/month WITHOUT caching", cost: "$45,000" },
               ].map((row) => (

@@ -43,7 +43,7 @@ export default function LandscapePage() {
               {[
                 { row: "Examples", closed: "Anthropic (Claude), OpenAI (ChatGPT)", open: "Meta (Llama), DeepSeek, Qwen" },
                 { row: "Price", closed: "Subscription / API fees", open: "Free (self-host or cheap API)" },
-                { row: "Customization", closed: "Limited to provider\u2019s options", open: "Full control, fine-tunable" },
+                { row: "Customization", closed: "Limited to provider's options", open: "Full control, fine-tunable" },
                 { row: "Guardrails", closed: "Built-in, polished", open: "Fewer restrictions" },
                 { row: "Privacy", closed: "Data goes to provider", open: "Runs on your infrastructure" },
               ].map((item) => (
