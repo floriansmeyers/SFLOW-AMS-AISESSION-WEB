@@ -6,9 +6,10 @@ interface QuoteBlockProps {
   quote: string;
   author?: string;
   source?: string;
+  url?: string;
 }
 
-export function QuoteBlock({ quote, author, source }: QuoteBlockProps) {
+export function QuoteBlock({ quote, author, source, url }: QuoteBlockProps) {
   return (
     <motion.blockquote
       initial={{ opacity: 0, x: -20 }}
@@ -23,7 +24,13 @@ export function QuoteBlock({ quote, author, source }: QuoteBlockProps) {
       {(author || source) && (
         <footer className="mt-2 text-sm text-sflow-muted">
           {author && <span className="font-medium">&mdash; {author}</span>}
-          {source && <span>, {source}</span>}
+          {source && url ? (
+            <a href={url} target="_blank" rel="noopener noreferrer" className="hover:text-sflow-gold transition-colors">
+              , {source} ↗
+            </a>
+          ) : source ? (
+            <span>, {source}</span>
+          ) : null}
         </footer>
       )}
     </motion.blockquote>
