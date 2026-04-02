@@ -1,7 +1,8 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useState } from "react";
+import { RotateCcw } from "lucide-react";
 
 /**
  * ContextWindowAnimation — Shows the 4 parts of a context window:
@@ -53,12 +54,6 @@ export function ContextWindowAnimation() {
   const isInView = useInView(ref, { margin: "-50px" });
   const [tick, setTick] = useState(0);
 
-  useEffect(() => {
-    if (!isInView) return;
-    const id = setInterval(() => setTick((t) => t + 1), CYCLE * 1000);
-    return () => clearInterval(id);
-  }, [isInView]);
-
   const key = `cycle-${tick}`;
 
   return (
@@ -67,8 +62,8 @@ export function ContextWindowAnimation() {
         <motion.div
           key={key}
           initial={{ opacity: 0 }}
-          animate={{ opacity: [0, 1, 1, 0] }}
-          transition={{ duration: CYCLE, times: [0, 0.04, 0.84, 0.92] }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
         >
           {/* Outer container label */}
           <motion.p
@@ -135,6 +130,15 @@ export function ContextWindowAnimation() {
           </motion.p>
         </motion.div>
       )}
+      <div className="flex justify-center mt-4">
+        <button
+          onClick={() => setTick((t) => t + 1)}
+          className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-sflow-cream/50 hover:text-sflow-cream/80 border border-sflow-cream/20 hover:border-sflow-cream/40 rounded-full transition-colors"
+        >
+          <RotateCcw size={12} />
+          Replay
+        </button>
+      </div>
     </div>
   );
 }

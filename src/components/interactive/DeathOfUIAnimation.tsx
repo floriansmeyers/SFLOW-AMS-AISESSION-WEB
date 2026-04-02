@@ -1,8 +1,8 @@
 "use client";
 
 import { motion, AnimatePresence, useInView } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
-import { User } from "lucide-react";
+import { useRef, useState } from "react";
+import { User, RotateCcw } from "lucide-react";
 
 /**
  * DeathOfUIAnimation — Two-state transition showing the shift from
@@ -40,12 +40,6 @@ export function DeathOfUIAnimation() {
   const isInView = useInView(ref, { margin: "-50px" });
   const [tick, setTick] = useState(0);
 
-  useEffect(() => {
-    if (!isInView) return;
-    const id = setInterval(() => setTick((t) => t + 1), CYCLE * 1000);
-    return () => clearInterval(id);
-  }, [isInView]);
-
   const key = `cycle-${tick}`;
 
   return (
@@ -54,8 +48,8 @@ export function DeathOfUIAnimation() {
         <motion.div
           key={key}
           initial={{ opacity: 0 }}
-          animate={{ opacity: [0, 1, 1, 0] }}
-          transition={{ duration: CYCLE, times: [0, 0.03, 0.87, 0.93] }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
           className="space-y-8"
         >
           {/* ── Side by side: Today → Tomorrow ────────────────── */}
@@ -218,6 +212,15 @@ export function DeathOfUIAnimation() {
           </div>
         </motion.div>
       )}
+      <div className="flex justify-center mt-4">
+        <button
+          onClick={() => setTick((t) => t + 1)}
+          className="flex items-center gap-1.5 px-3 py-1.5 text-xs text-sflow-cream/50 hover:text-sflow-cream/80 border border-sflow-cream/20 hover:border-sflow-cream/40 rounded-full transition-colors"
+        >
+          <RotateCcw size={12} />
+          Replay
+        </button>
+      </div>
     </div>
   );
 }

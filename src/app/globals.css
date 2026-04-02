@@ -30,13 +30,10 @@ body {
 .snap-container {
   height: calc(100dvh - var(--nav-height));
   overflow-y: auto;
-  scroll-snap-type: y mandatory;
 }
 
 .snap-slide {
   min-height: calc(100dvh - var(--nav-height));
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
 }
 
 ::selection {
