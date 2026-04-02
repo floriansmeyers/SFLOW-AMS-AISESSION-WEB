@@ -48,8 +48,8 @@ export function ContextDilutionAnimation() {
             <div className="rounded-xl border border-sflow-glass-border bg-sflow-glass/50 p-3 flex flex-col gap-2">
               {/* System Prompt - shrinks over 10s */}
               <motion.div
-                initial={{ height: 80, opacity: 1 }}
-                animate={{ height: 24, opacity: 0.4 }}
+                initial={{ height: 100, opacity: 1 }}
+                animate={{ height: 28, opacity: 0.4 }}
                 transition={{ delay: 1, duration: 9, ease: "easeInOut" }}
                 className="rounded-lg border border-sflow-gold/40 bg-sflow-gold/[0.07] px-3 overflow-hidden flex items-start pt-2"
               >
@@ -106,14 +106,14 @@ export function ContextDilutionAnimation() {
                 transition={{ delay: 1, duration: 4.5, times: [0, 0.9, 1] }}
                 className="absolute"
               >
-                45%
+                90%
               </motion.span>
               <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: [0, 0, 1] }}
                 transition={{ delay: 1, duration: 9, times: [0, 0.8, 1] }}
               >
-                ~3%
+                ~10%
               </motion.span>
             </motion.p>
             <motion.p

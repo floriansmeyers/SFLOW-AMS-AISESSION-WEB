@@ -15,11 +15,11 @@ import Link from "next/link";
 const meta = PHASE_META.factory;
 
 const electricityTimeline = [
-  { date: "1879", title: "Edison invents the lightbulb", description: "Electric motors become available. You'd think factories would immediately become more productive.", highlight: false },
-  { date: "1900", title: "5% electric power", description: "Factories simply replaced the steam engine with an electric motor. Same building, same belts, same layout.", highlight: false },
-  { date: "1919", title: "50% electric power", description: "Still marginal productivity gains. Productivity growth: just 1.3%/year.", highlight: false },
-  { date: "1920s", title: "The breakthrough", description: "Engineers redesigned factories from scratch. Each machine got its own motor. Single-floor layouts. Arranged by flow, not by power source.", highlight: true },
-  { date: "1930", title: "80% electric power", description: "Productivity growth jumped to 3.1%/year - more than doubled. It took 40 years.", highlight: true },
+  { date: "1879", title: "Edison invents the lightbulb", description: "Electric motors become available. You'd think factories would immediately become more productive.", highlight: false, source: "https://ethw.org/Edison's_Electric_Light_and_Power_System" },
+  { date: "1900", title: "<5% electric power", description: "Factories simply replaced the steam engine with an electric motor. Same building, same belts, same layout.", highlight: false, source: "https://eh.net/encyclopedia/the-u-s-economy-in-the-1920s/" },
+  { date: "1919", title: "50% electric power", description: "Still marginal productivity gains. Manufacturing TFP growth: less than 1%/year.", highlight: false, source: "https://www.cambridge.org/core/journals/journal-of-economic-history/article/abs/from-shafts-to-wires-historical-perspective-on-electrification/500078D9B4764BA1109A7967437CF226" },
+  { date: "1920s", title: "The breakthrough", description: "Engineers redesigned factories from scratch. Each machine got its own motor. Single-floor layouts. Arranged by flow, not by power source.", highlight: true, source: "https://www.jstor.org/stable/2006600" },
+  { date: "1930", title: "75% electric power", description: "Productivity growth surged to over 5%/year. It took 40 years.", highlight: true, source: "https://www.nber.org/system/files/working_papers/w28076/w28076.pdf" },
 ];
 
 export default function FactoryPage() {
@@ -41,7 +41,7 @@ export default function FactoryPage() {
             You&apos;d think factories would immediately become more productive, right?
           </p>
           <p className="text-xl font-bold text-sflow-cream">
-            For 40 years - nothing.
+            For 40 years &mdash; nothing.
           </p>
           <p>
             Factories were designed for steam power: one big steam engine, connected to every machine
@@ -60,11 +60,18 @@ export default function FactoryPage() {
           </p>
         </div>
 
-        <div className="mt-8 rounded-xl border border-sflow-glass-border bg-sflow-glass p-6 max-w-3xl mx-auto text-center">
-          <Factory size={56} className="mx-auto mb-4 text-sflow-cream-muted" strokeWidth={1.5} />
+        <div className="mt-8 rounded-xl border border-sflow-glass-border bg-sflow-glass p-4 max-w-3xl mx-auto text-center">
+          <img
+            src="/images/belt-driven-factory.jpg"
+            alt="Belt-driven factory floor showing overhead line shafts with belts and pulleys powering machinery"
+            className="rounded-lg mx-auto mb-4 max-h-[400px] object-cover w-full"
+          />
           <p className="text-sm text-sflow-cream-muted italic">
             Belt-driven factory floor, circa 1900: one steam engine powers every machine through a maze of belts and pulleys.
-            Replace the engine with an electric motor and nothing changes - same layout, same constraints, same bottlenecks.
+            Replace the engine with an electric motor and nothing changes — same layout, same constraints, same bottlenecks.
+          </p>
+          <p className="text-xs text-sflow-cream-muted/50 mt-1">
+            Photo: Jet Lowe / HAER, Library of Congress (public domain)
           </p>
         </div>
       </Section>
@@ -83,13 +90,14 @@ export default function FactoryPage() {
         <p className="text-sflow-cream-muted max-w-3xl mt-4">
           Satya Nadella calls AI a &ldquo;compressed Industrial Revolution&rdquo; - what took
           200 years with electricity could take 20&ndash;25 years with AI.
+          <a href="https://www.dwarkesh.com/p/satya-nadella-2" target="_blank" rel="noopener noreferrer" className="text-sflow-gold hover:underline ml-1 text-sm">(Dwarkesh Podcast, Nov 2025)</a>
         </p>
       </Section>
 
       <Section>
         <h2 className="text-2xl font-bold mb-6">From Workshop to Agent System</h2>
         <p className="text-sflow-cream-muted mb-8 max-w-3xl">
-          The pattern repeats every industrial revolution: individual skill gets encoded into process, then process gets automated at scale.
+          The pattern repeats with every general-purpose technology: individual skill gets encoded into process, then process gets automated at scale.
         </p>
         <FactoryEvolutionAnimation />
       </Section>
@@ -102,6 +110,73 @@ export default function FactoryPage() {
           for building better workflows. <span className="text-sflow-gold">(Phase 1 goes deeper.)</span>
         </p>
         <HumanAIComparisonDiagram />
+      </Section>
+
+      <Section>
+        <h2 className="text-2xl font-bold mb-6">The Adoption Gap</h2>
+        <p className="text-lg text-sflow-cream mb-2">
+          <strong>&ldquo;88% of companies have adopted AI. Only 6% are transforming their business with it.&rdquo;</strong>
+        </p>
+        <p className="text-sm text-sflow-muted mb-8">
+          -{" "}<a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank" rel="noopener noreferrer" className="underline hover:text-sflow-cream transition-colors">McKinsey, State of AI 2025</a>
+        </p>
+
+        <FunnelChart
+          steps={[
+            { label: "Using AI at all", value: "88%", width: 100 },
+            { label: "Using generative AI", value: "72%", width: 82 },
+            { label: "Scaling enterprise-wide", value: "~33%", width: 38 },
+            { label: "Significant financial impact (>5% EBIT)", value: "6%", width: 7 },
+          ]}
+        />
+
+        <div className="mt-8">
+          <StatGroup
+            stats={[
+              { value: 88, suffix: "%", label: "Using AI" },
+              { value: 6, suffix: "%", label: "Real impact" },
+              { value: 3, suffix: "x", label: "More likely to redesign workflows" },
+              { value: 40, label: "Years electricity took", suffix: " yrs" },
+            ]}
+          />
+        </div>
+
+        <p className="mt-6 text-sflow-cream-muted max-w-3xl">
+          <strong className="text-sflow-gold">Process is king.</strong>{" "}The 6% who see real impact
+          aren&apos;t the ones with the best AI tools - they&apos;re the ones who redesigned
+          their workflows around AI. The tool is the motor. The process is the factory.
+        </p>
+
+        <div className="mt-8 rounded-xl border border-sflow-glass-border overflow-hidden max-w-3xl mx-auto">
+          <img
+            src="/images/ai-exposure.png"
+            alt="AI exposure across industries - Anthropic research"
+            className="w-full"
+            loading="lazy"
+          />
+          <p className="text-xs text-sflow-muted p-3 text-center">
+            Source: Anthropic &ndash; Labor market impacts of AI
+          </p>
+        </div>
+      </Section>
+
+      <Section>
+        <h2 className="text-2xl font-bold mb-4">AI Is Like the Early Internet</h2>
+        <div className="max-w-3xl space-y-4 text-sflow-cream-muted">
+          <p>In 1998, everyone was struggling to find &ldquo;something&rdquo; to do with it. Pet food websites. Digital brochures. Glorified phone books.</p>
+          <p>Google was founded in a garage. Amazon sold books.</p>
+          <p className="text-lg text-sflow-cream font-semibold">
+            The next Google or Amazon of AI probably hasn&apos;t stood up yet.
+          </p>
+        </div>
+
+        <h3 className="text-xl font-bold mt-10 mb-4">When Production Gets Cheaper...</h3>
+        <QuoteBlock quote="If software becomes 10x cheaper to build, do you think companies will build less of it?" />
+        <p className="text-sflow-cream-muted max-w-3xl">
+          The Industrial Revolution didn&apos;t mean fewer goods - it meant MORE. Software, images,
+          content, code - costs are dropping fast. We won&apos;t make less. We&apos;ll make{" "}
+          <strong className="text-sflow-gold">far more</strong>.
+        </p>
       </Section>
 
       <Section>
@@ -133,59 +208,6 @@ export default function FactoryPage() {
             </Link>
           ))}
         </div>
-      </Section>
-
-      <Section>
-        <h2 className="text-2xl font-bold mb-6">The Adoption Gap</h2>
-        <p className="text-lg text-sflow-cream mb-2">
-          <strong>&ldquo;88% of companies have adopted AI. Only 6% are transforming their business with it.&rdquo;</strong>
-        </p>
-        <p className="text-sm text-sflow-muted mb-8">- McKinsey, 2025</p>
-
-        <FunnelChart
-          steps={[
-            { label: "Using AI at all", value: "88%", width: 100 },
-            { label: "Using generative AI", value: "72%", width: 82 },
-            { label: "Scaling enterprise-wide", value: "~33%", width: 38 },
-            { label: "Significant financial impact (>5% EBIT)", value: "6%", width: 7 },
-          ]}
-        />
-
-        <div className="mt-8">
-          <StatGroup
-            stats={[
-              { value: 88, suffix: "%", label: "Using AI" },
-              { value: 6, suffix: "%", label: "Real impact" },
-              { value: 3, suffix: "x", label: "More likely to redesign workflows" },
-              { value: 40, label: "Years electricity took", suffix: " yrs" },
-            ]}
-          />
-        </div>
-
-        <p className="mt-6 text-sflow-cream-muted max-w-3xl">
-          <strong className="text-sflow-gold">Process is king.</strong>{" "}The 6% who see real impact
-          aren&apos;t the ones with the best AI tools - they&apos;re the ones who redesigned
-          their workflows around AI. The tool is the motor. The process is the factory.
-        </p>
-      </Section>
-
-      <Section>
-        <h2 className="text-2xl font-bold mb-4">AI Is Like the Early Internet</h2>
-        <div className="max-w-3xl space-y-4 text-sflow-cream-muted">
-          <p>In 1998, everyone was struggling to find &ldquo;something&rdquo; to do with it. Pet food websites. Digital brochures. Glorified phone books.</p>
-          <p>Google was founded in a garage. Amazon sold books.</p>
-          <p className="text-lg text-sflow-cream font-semibold">
-            The next Google or Amazon of AI probably hasn&apos;t stood up yet.
-          </p>
-        </div>
-
-        <h3 className="text-xl font-bold mt-10 mb-4">When Production Gets Cheaper...</h3>
-        <QuoteBlock quote="If software becomes 10x cheaper to build, do you think companies will build less of it?" />
-        <p className="text-sflow-cream-muted max-w-3xl">
-          The Industrial Revolution didn&apos;t mean fewer goods - it meant MORE. Software, images,
-          content, code - costs are dropping fast. We won&apos;t make less. We&apos;ll make{" "}
-          <strong className="text-sflow-gold">far more</strong>.
-        </p>
       </Section>
     </>
   );

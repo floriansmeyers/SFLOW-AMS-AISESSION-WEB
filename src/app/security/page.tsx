@@ -8,6 +8,7 @@ import { StoryCard } from "@/components/interactive/StoryCard";
 import { ComparisonBars } from "@/components/interactive/ComparisonBars";
 import { MCPDiagramAnimation } from "@/components/interactive/MCPDiagramAnimation";
 import { PromptInjectionAnimation } from "@/components/interactive/PromptInjectionAnimation";
+import { AttackerComparisonAnimation } from "@/components/interactive/AttackerComparisonAnimation";
 import { PHASE_META, STORIES } from "@/lib/constants";
 import Link from "next/link";
 
@@ -34,9 +35,9 @@ export default function SecurityPage() {
         </p>
         <StatGroup
           stats={[
-            { value: 8000, suffix: "+", label: "MCP servers exposed online" },
-            { value: 43, suffix: "%", label: "Have at least one vulnerability" },
-            { value: 30, suffix: "+", label: "CVEs in 6 weeks (Jan–Feb 2026)" },
+            { value: 492, suffix: "", label: "MCP servers without auth", source: { label: "Trend Micro", url: "https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/mcp-security-network-exposed-servers-are-backdoors-to-your-private-data" } },
+            { value: 34, suffix: "%", label: "Susceptible to command injection", source: { label: "Endor Labs", url: "https://www.endorlabs.com/learn/classic-vulnerabilities-meet-ai-infrastructure-why-mcp-needs-appsec" } },
+            { value: 50, suffix: "", label: "Vulnerabilities catalogued", source: { label: "vulnerablemcp.info", url: "https://vulnerablemcp.info/" } },
           ]}
         />
         <div className="mt-8 mb-6">
@@ -59,10 +60,17 @@ export default function SecurityPage() {
             { value: 670, prefix: "$", suffix: "K", label: "Extra cost per shadow AI breach" },
           ]}
         />
+        <p className="mt-4 text-xs text-sflow-muted max-w-3xl">
+          Source:{" "}
+          <a href="https://www.ibm.com/reports/data-breach" target="_blank" rel="noopener noreferrer" className="underline hover:text-sflow-cream transition-colors">
+            IBM Cost of a Data Breach Report 2025
+          </a>{" "}
+          (IBM &amp; Ponemon Institute, July 2025 — 3,470 interviews across 600 breached organizations)
+        </p>
         <h3 className="text-xl font-bold mt-10 mb-4">Real-World Governance Failures</h3>
-        <div className="space-y-4">
+        <div className="grid gap-4 sm:grid-cols-3">
           {governanceStories.map((story) => (
-            <StoryCard key={story.id} story={story} />
+            <StoryCard key={story.id} story={story} modal />
           ))}
         </div>
       </Section>
@@ -70,12 +78,13 @@ export default function SecurityPage() {
       {/* AI Agents as Attackers */}
       <Section>
         <h2 className="text-2xl font-bold mb-4">AI Agents as Attackers</h2>
-        <div className="max-w-3xl space-y-4 text-sflow-cream-muted">
+        <div className="max-w-3xl space-y-4 text-sflow-cream-muted mb-8">
           <p>AI agents are already VERY good at finding security holes. They don&apos;t need to be &ldquo;correct&rdquo; - they just need to find 1 hole. Brute-force intelligence is now cheap.</p>
           <p className="text-lg text-sflow-cream font-semibold">
             Your defense needs to be right 100% of the time. The attacker only needs to be right once.
           </p>
         </div>
+        <AttackerComparisonAnimation />
       </Section>
 
       {/* Prompt Injection */}
@@ -84,15 +93,27 @@ export default function SecurityPage() {
         <StatGroup
           stats={[
             { value: 1, prefix: "#", label: "OWASP vulnerability for LLMs (2025)" },
-            { value: 73, suffix: "%", label: "Production AI deployments affected" },
-            { value: 84, suffix: "%", label: "Attack success rate (up to)" },
+            { value: 84, suffix: "%", label: "Attack success rate on unprotected agents" },
+            { value: 1.4, suffix: "%", label: "With layered defenses (Anthropic)" },
           ]}
         />
+        <p className="mt-2 text-xs text-sflow-muted max-w-3xl">
+          Sources:{" "}
+          <a href="https://genai.owasp.org/llmrisk/llm01-prompt-injection/" target="_blank" rel="noopener noreferrer" className="underline hover:text-sflow-cream transition-colors">
+            OWASP Top 10 for LLMs
+          </a>{", "}
+          <a href="https://arxiv.org/abs/2601.17548" target="_blank" rel="noopener noreferrer" className="underline hover:text-sflow-cream transition-colors">
+            arXiv:2601.17548
+          </a>{" "}(prompt injection on agentic coding assistants){", "}
+          <a href="https://venturebeat.com/security/prompt-injection-measurable-security-metric-one-ai-developer-publishes-numbers" target="_blank" rel="noopener noreferrer" className="underline hover:text-sflow-cream transition-colors">
+            Anthropic via VentureBeat
+          </a>
+        </p>
         <div className="mt-6 mb-6">
           <PromptInjectionAnimation />
         </div>
         <p className="mt-6 text-sflow-cream-muted max-w-3xl">
-          <strong className="text-sflow-gold">Good news:</strong> Layered defense reduces attack success from 73% to under 9%.
+          <strong className="text-sflow-gold">Good news:</strong> Layered defense drops attack success from 84% to under 2%.
         </p>
 
         {/* Defense architecture */}
@@ -109,6 +130,10 @@ export default function SecurityPage() {
           ))}
         </div>
 
+      </Section>
+
+      {/* Prompt Injection - real attacks */}
+      <Section>
         <QuoteBlock quote="No amount of 'please don't do bad things' in a system prompt protects you." />
 
         <h3 className="text-xl font-bold mt-8 mb-4">Real Prompt Injection Attacks</h3>
@@ -124,53 +149,65 @@ export default function SecurityPage() {
         <h2 className="text-2xl font-bold mb-4">Cost Awareness</h2>
         <p className="text-sflow-cream-muted mb-6 max-w-3xl">The &ldquo;inference cost paradox&rdquo;:</p>
 
-        <div className="grid gap-8 sm:grid-cols-2 max-w-3xl mx-auto">
+        <div className="grid gap-8 sm:grid-cols-2 max-w-4xl mx-auto">
           <ComparisonBars
-            title="Per-token costs"
+            title="Per-token costs (GPT-3.5-level)"
             bars={[
-              { label: "2024", value: "Baseline", width: 100 },
-              { label: "2026", value: "280x cheaper", width: 0.4, color: "bg-green-500" },
+              { label: "2022", value: "$20 / 1M tokens", width: 100 },
+              { label: "2024", value: "$0.07 / 1M tokens", width: 0.4, color: "bg-green-500" },
             ]}
           />
           <ComparisonBars
-            title="Enterprise AI bills"
+            title="Enterprise GenAI market"
             bars={[
-              { label: "2024", value: "$1.2M/yr avg", width: 17 },
-              { label: "2026", value: "$7M/yr avg", width: 100, color: "bg-red-400" },
+              { label: "2024", value: "$13.8B total", width: 37 },
+              { label: "2025", value: "$37B total", width: 100, color: "bg-red-400" },
             ]}
           />
         </div>
-
-        <p className="mt-6 text-sflow-cream-muted max-w-3xl">
-          Why? Agentic AI uses <strong className="text-sflow-cream">5&ndash;30x more tokens</strong> per task.
+        <p className="mt-2 text-xs text-sflow-cream-muted max-w-4xl">
+          Sources: <a href="https://epoch.ai/data-insights/llm-inference-price-trends" target="_blank" rel="noopener noreferrer" className="underline hover:text-sflow-cream">Epoch AI</a> (280x cost drop for GPT-3.5-level performance, Nov 2022 &ndash; Oct 2024) &bull; <a href="https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/" target="_blank" rel="noopener noreferrer" className="underline hover:text-sflow-cream">Menlo Ventures</a> (enterprise market size)
         </p>
 
-        <div className="mt-6 overflow-x-auto rounded-xl border border-sflow-glass-border">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b border-sflow-glass-border bg-sflow-glass">
-                <th className="px-4 py-3 text-left font-medium text-sflow-cream-muted">Scenario</th>
-                <th className="px-4 py-3 text-left font-medium text-sflow-cream-muted">Cost/month</th>
-              </tr>
-            </thead>
-            <tbody>
-              {[
-                { scenario: "AI agent operations", cost: "$3,200–$13,000" },
-                { scenario: "50K docs/month WITH caching", cost: "$8,000" },
-                { scenario: "50K docs/month WITHOUT caching", cost: "$45,000" },
-              ].map((row) => (
-                <tr key={row.scenario} className="border-b border-sflow-glass-border last:border-b-0 hover:bg-sflow-glass transition-colors">
-                  <td className="px-4 py-3 text-sflow-cream">{row.scenario}</td>
-                  <td className="px-4 py-3 text-sflow-gold font-semibold">{row.cost}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <p className="mt-8 text-sflow-cream-muted max-w-3xl">
+          Yet costs keep rising. Agentic AI uses <strong className="text-sflow-cream">5&ndash;30x more tokens</strong> per task,
+          triggering 10&ndash;20 LLM calls per user action.
+        </p>
+        <p className="mt-2 text-xs text-sflow-cream-muted max-w-3xl">
+          Source: <a href="https://www.gartner.com/en/newsroom/press-releases/2026-03-25-gartner-predicts-that-by-2030-performing-inference-on-an-llm-with-1-trillion-parameters-will-cost-genai-providers-over-90-percent-less-than-in-2025" target="_blank" rel="noopener noreferrer" className="underline hover:text-sflow-cream">Gartner, March 2026</a>
+        </p>
+
+        <p className="mt-6 text-sm text-sflow-cream-muted max-w-3xl">
+          Monitor AI spend like any other operational cost.
+        </p>
+        <div className="mt-6 rounded-xl border border-sflow-gold/20 bg-sflow-gold/5 p-4 max-w-3xl">
+          <p className="text-sm text-sflow-cream-muted">
+            <strong className="text-sflow-gold">Track everything.</strong>{" "}Running AI experiments without
+            tracking costs is just playing around. Noting down what you spend, what works, and what
+            doesn&apos;t - that&apos;s what turns experimentation into science.
+          </p>
         </div>
-        <p className="mt-4 text-sm text-sflow-cream-muted max-w-3xl">
-          For every $1 on AI models &rarr; <strong className="text-sflow-cream">$5&ndash;10</strong> making them production-ready.
-          Monitor it like any other operational cost.
+      </Section>
+
+      {/* Auditing, Tracking & Governance */}
+      <Section>
+        <h2 className="text-2xl font-bold mb-4">Auditing, Tracking &amp; Governance</h2>
+        <p className="text-sflow-cream-muted mb-6 max-w-3xl">
+          If you can&apos;t answer &ldquo;who did what, when, and why?&rdquo; - you don&apos;t have governance.
         </p>
+        <div className="grid gap-4 sm:grid-cols-2 max-w-3xl mx-auto">
+          {[
+            { title: "Audit Trails", desc: "Log every AI action: what was requested, what was executed, what data was accessed. Non-negotiable for compliance." },
+            { title: "Cost Budgets", desc: "Set spending limits per team, project, or agent. Alert before you hit them, not after." },
+            { title: "Access Policies", desc: "Define who can deploy AI agents, what data they can touch, and what actions require human approval." },
+            { title: "Review Cadence", desc: "Regular reviews of AI outputs, costs, and incidents. Treat AI like any other operational system." },
+          ].map((item) => (
+            <div key={item.title} className="rounded-xl border border-sflow-glass-border bg-sflow-glass p-5">
+              <h4 className="font-semibold text-sflow-cream">{item.title}</h4>
+              <p className="mt-1 text-sm text-sflow-cream-muted">{item.desc}</p>
+            </div>
+          ))}
+        </div>
       </Section>
 
       {/* The Dark Side */}
@@ -178,9 +215,18 @@ export default function SecurityPage() {
         <h2 className="text-2xl font-bold mb-4">The Dark Side</h2>
         <div className="max-w-3xl space-y-4 text-sflow-cream-muted">
           <p>AI is a tool. It serves whoever wields it.</p>
-          <p>Palantir in the US-Iran conflict: AI for targeting, surveillance, warfare. The same tech that automates your lead pipeline can automate a kill chain.</p>
+          <p>
+            Palantir&apos;s Maven Smart System is now a core Pentagon AI platform across all military branches -
+            AI for targeting, surveillance, battlefield intelligence. The same tech that automates your
+            lead pipeline can automate a kill chain.
+          </p>
           <p className="text-lg text-sflow-cream font-semibold">
             This isn&apos;t sci-fi - it&apos;s happening now. The ethics conversation is not optional.
+          </p>
+          <p className="text-xs text-sflow-muted mt-4">
+            <a href="https://www.defensenews.com/land/2025/03/07/palantir-delivers-first-2-next-gen-targeting-systems-to-army/" target="_blank" rel="noopener noreferrer" className="underline hover:text-sflow-cream transition-colors">
+              Source: Defense News - Palantir delivers next-gen targeting systems
+            </a>
           </p>
         </div>
       </Section>

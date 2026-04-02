@@ -61,7 +61,18 @@ export function ModelTable() {
                 className="border-b border-sflow-glass-border last:border-b-0 hover:bg-sflow-glass transition-colors"
               >
                 <td className="px-4 py-3 font-medium text-sflow-cream">
-                  {model.name}
+                  {model.source ? (
+                    <a
+                      href={model.source}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline decoration-sflow-gold/40 underline-offset-2 hover:decoration-sflow-gold transition-colors"
+                    >
+                      {model.name}
+                    </a>
+                  ) : (
+                    model.name
+                  )}
                 </td>
                 <td className="px-4 py-3 text-sflow-cream-muted">
                   {model.context}

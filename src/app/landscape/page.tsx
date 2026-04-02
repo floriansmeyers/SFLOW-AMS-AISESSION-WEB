@@ -15,7 +15,7 @@ export default function LandscapePage() {
 
       <Section>
         <h2 className="text-2xl font-bold mb-6">Local Models Are Coming to Your Laptop</h2>
-        <div className="grid gap-4 sm:grid-cols-2 max-w-3xl">
+        <div className="grid gap-4 sm:grid-cols-2 max-w-3xl mx-auto">
           {[
             { title: "Cheaper Hardware", desc: "Getting cheaper and easier to run on smaller hardware every month." },
             { title: "Apple MLX Chips", desc: "Apple ships dedicated machine learning chips in every laptop." },
@@ -30,11 +30,20 @@ export default function LandscapePage() {
           ))}
         </div>
         <p className="mt-4 text-xs text-sflow-muted">
-          <a href="https://research.google/blog/accelerating-ai-with-updated-gemma-models/" target="_blank" rel="noopener noreferrer" className="underline hover:text-sflow-cream transition-colors">
-            <span className="inline-flex items-center gap-1">Source: Google Gemma research on efficient model inference <ExternalLink size={12} /></span>
+          <a href="https://developers.googleblog.com/en/gemma-3-quantized-aware-trained-state-of-the-art-ai-to-consumer-gpus/" target="_blank" rel="noopener noreferrer" className="underline hover:text-sflow-cream transition-colors">
+            <span className="inline-flex items-center gap-1">Source: Google Gemma QAT - bringing AI to consumer GPUs <ExternalLink size={12} /></span>
           </a>
         </p>
-        <div className="mt-8 rounded-xl border border-sflow-gold/20 bg-sflow-gold/5 p-5 max-w-3xl">
+        <div className="mt-8 rounded-xl border border-sflow-glass-border overflow-hidden max-w-3xl mx-auto">
+          <img
+            src="/images/doublin-metrjpeg.jpeg"
+            alt="AI progress - Dublin metro display"
+            className="w-full"
+            loading="lazy"
+          />
+        </div>
+
+        <div className="mt-8 rounded-xl border border-sflow-gold/20 bg-sflow-gold/5 p-5 max-w-3xl mx-auto">
           <h3 className="font-semibold text-sflow-gold mb-2">Perspective: &ldquo;Local = Worse&rdquo; is Outdated</h3>
           <p className="text-sm text-sflow-cream-muted">
             Today&apos;s local models running on a laptop <strong className="text-sflow-cream">outperform the original ChatGPT</strong>{" "}(GPT-3.5, November 2022) that started the entire revolution.

@@ -36,35 +36,35 @@ interface ColumnData {
 
 const COLUMNS: ColumnData[] = [
   {
-    title: "Artisanal Workshop",
+    title: "Hand Tools",
     color: "border-sflow-cream-muted/30",
     icon: <ExpertCircle />,
     bullets: [
-      "One expert does everything",
-      "Quality = individual skill",
-      "If that person leaves, the workshop stops",
+      "One expert does everything by hand",
+      "Quality depends on individual skill",
+      "Slow, but full control",
     ],
     caption: "Individual skill",
   },
   {
-    title: "Industrial Factory",
+    title: "Power Tools",
     color: "border-blue-400/40",
     icon: <FactoryCircles />,
     bullets: [
-      "Specialized roles (QA, Ops, Mgr)",
-      "Documented procedures",
-      "Process guards quality",
+      "Things go faster with better tools",
+      "Same layout, same bottlenecks",
+      "Speed up, but don't redesign",
     ],
-    caption: "Process",
+    caption: "Faster",
   },
   {
-    title: "AI Agent System",
+    title: "Redesigned Process",
     color: "border-sflow-gold/40",
     icon: <AgentBoxes />,
     bullets: [
-      "Agent boxes replace manual steps",
-      "Prompts = procedures",
-      "Human = quality controller",
+      "Rearrange the tools AND the process",
+      "AI agents replace manual steps",
+      "Human monitors, not operates",
     ],
     caption: "Scale",
   },
@@ -100,11 +100,11 @@ export function FactoryEvolutionAnimation() {
             transition={{ delay: 7.6, duration: 0.6 }}
             className="mt-6 flex items-center justify-center gap-3 text-sm font-semibold"
           >
-            <span className="text-sflow-cream-muted">Individual skill</span>
+            <span className="text-sflow-cream-muted">Hand tools</span>
             <ArrowRight className="text-sflow-gold" />
-            <span className="text-blue-400">Process</span>
+            <span className="text-blue-400">Power tools</span>
             <ArrowRight className="text-sflow-gold" />
-            <span className="text-sflow-gold">Scale</span>
+            <span className="text-sflow-gold">Redesigned process</span>
           </motion.div>
         </motion.div>
       )}

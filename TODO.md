@@ -127,3 +127,6 @@ New
 - Update the financial thing to include build a App instead of a script
 - Add a small note/… about cost tracking that running experiments without tracking is like playing around. Noting down makes something science.
 - Maybe also add something about the “building AI systems” that it is a continuous loop and not a one-off process. More like running a business and not managing an IT system
+
+===NEW V2==
+- email writing animation STILLis not the same length writing goes 50% faster. not 5x. the total lenght should be the same!!

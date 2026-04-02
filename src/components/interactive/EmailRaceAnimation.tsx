@@ -14,7 +14,7 @@ import { RotateCcw } from "lucide-react";
  *
  * Animation cycle (~12s):
  *   0.0s – 1.0s : "Received" blocks appear
- *   1.0s – 4.0s : Writing phases grow (long without AI, tiny with AI)
+ *   1.0s – 4.0s : Writing phases grow (without AI 2.5s, with AI 1.67s = 50% faster)
  *   4.0s – 4.5s : "Sent" markers appear
  *   4.5s – 8.5s : Waiting phases grow (identical length on both lanes)
  *   8.5s – 9.0s : "Done" markers appear
@@ -29,8 +29,10 @@ import { RotateCcw } from "lucide-react";
 const CYCLE = 14.5;
 
 // Phase durations on the Gantt (as % of total bar width)
-const WITHOUT_AI = { write: 35, wait: 50 }; // 35% writing, 50% waiting
-const WITH_AI = { write: 8, wait: 50 };     // 8% writing, same 50% waiting
+// AI writes 50% faster (takes 2/3 the time), NOT 5× faster.
+// Both lanes total 85% so they end at the same point visually.
+const WITHOUT_AI = { write: 35, gap: 0, wait: 50 };  // 35 + 50 = 85%
+const WITH_AI = { write: 23, gap: 12, wait: 50 };    // 23 + 12 + 50 = 85%
 
 export function EmailRaceAnimation() {
   const ref = useRef<HTMLDivElement>(null);
@@ -58,18 +60,20 @@ export function EmailRaceAnimation() {
           <Lane
             label="Without AI"
             writeWidth={WITHOUT_AI.write}
+            gapWidth={WITHOUT_AI.gap}
             waitWidth={WITHOUT_AI.wait}
             writeDelay={1.0}
-            writeDuration={3.0}
+            writeDuration={2.5}
           />
 
           {/* ── Lane: With AI ───────────────────────────────────── */}
           <Lane
             label="With AI"
             writeWidth={WITH_AI.write}
+            gapWidth={WITH_AI.gap}
             waitWidth={WITH_AI.wait}
             writeDelay={1.0}
-            writeDuration={0.6}
+            writeDuration={1.67}
             fast
           />
 
@@ -130,6 +134,7 @@ export function EmailRaceAnimation() {
 interface LaneProps {
   label: string;
   writeWidth: number;   // % of total bar
+  gapWidth: number;     // % idle gap between writing and waiting
   waitWidth: number;    // % of total bar
   writeDelay: number;   // seconds before writing phase starts growing
   writeDuration: number; // how long the grow animation takes
@@ -139,6 +144,7 @@ interface LaneProps {
 function Lane({
   label,
   writeWidth,
+  gapWidth,
   waitWidth,
   writeDelay,
   writeDuration,
@@ -158,7 +164,7 @@ function Lane({
         </span>
         {fast && (
           <span className="rounded-full bg-sflow-gold/15 px-2 py-0.5 text-[10px] font-bold text-sflow-gold uppercase tracking-wide">
-            10 sec
+            50% faster
           </span>
         )}
       </div>
@@ -204,6 +210,20 @@ function Lane({
           </span>
         </motion.div>
 
+        {/* Idle gap (time saved by AI, waiting for the wait to start) */}
+        {gapWidth > 0 && (
+          <motion.div
+            initial={{ width: 0 }}
+            animate={{ width: `${gapWidth}%` }}
+            transition={{
+              delay: sentDelay + 0.3,
+              duration: 1.0,
+              ease: "easeInOut",
+            }}
+            className="h-full shrink-0"
+          />
+        )}
+
         {/* Waiting phase */}
         <motion.div
           initial={{ width: 0 }}
@@ -233,8 +253,9 @@ function Lane({
       {/* Phase legend below bar */}
       <div className="flex text-[10px] text-sflow-cream-muted/60">
         <span style={{ width: `${writeWidth}%` }} className="text-center truncate">
-          {fast ? "Writing (10s)" : "Writing (slow)"}
+          {fast ? "Writing (50% faster)" : "Writing"}
         </span>
+        {gapWidth > 0 && <span style={{ width: `${gapWidth}%` }} />}
         <span style={{ width: `${waitWidth}%` }} className="text-center truncate text-red-400/60">
           Waiting for reply…
         </span>

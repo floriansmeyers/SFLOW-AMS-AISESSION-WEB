@@ -26,7 +26,13 @@ export default function Phase2Page() {
         <h2 className="text-2xl font-bold mb-4">Don&apos;t Write Prompts From Scratch</h2>
         <div className="max-w-3xl space-y-4 text-sflow-cream-muted">
           <p>Ask AI to generate a prompt for you. Then iterate on that - much faster, much better.</p>
-          <p>The meta-skill: <strong className="text-sflow-gold">using AI to make AI better</strong>.</p>
+          <p>
+            You don&apos;t need to be an expert to get <strong className="text-sflow-cream">expert-level answers</strong>.
+            The meta-skill: <strong className="text-sflow-gold">using AI to make AI better</strong>.
+          </p>
+          <p className="text-sm text-red-400/80">
+            <strong>Caveat:</strong> AI can sound very confidently wrong. Always verify critical outputs.
+          </p>
         </div>
         <ExerciseBox
           title="Meta-prompting"

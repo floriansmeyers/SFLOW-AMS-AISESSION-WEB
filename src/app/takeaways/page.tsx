@@ -75,6 +75,48 @@ export default function TakeawaysPage() {
       </Section>
 
       <Section>
+        <h2 className="text-2xl font-bold mb-4">Building AI Systems Is a Continuous Loop</h2>
+        <div className="max-w-3xl space-y-4 text-sflow-cream-muted">
+          <p>
+            This is not a one-off IT project. Building with AI is more like{" "}
+            <strong className="text-sflow-cream">running a business</strong>{" "}than managing a system.
+            You iterate, learn, adapt - continuously.
+          </p>
+          <p>
+            The tools change. The models improve. Your processes need to evolve with them.
+            The companies that treat AI as a &ldquo;set and forget&rdquo; deployment will fall behind
+            those that treat it as an ongoing practice.
+          </p>
+        </div>
+      </Section>
+
+      <Section>
+        <h2 className="text-2xl font-bold mb-4">About Me</h2>
+        <div className="max-w-3xl space-y-4 text-sflow-cream-muted">
+          <p>
+            <strong className="text-sflow-cream">Florian Smeyers</strong> - Founder of{" "}
+            <strong className="text-sflow-gold">SFLOW</strong>. I help companies integrate AI into
+            their workflows - not by replacing people, but by redesigning processes.
+          </p>
+        </div>
+      </Section>
+
+      <Section>
+        <h2 className="text-2xl font-bold mb-4">How We Use It at Agidens</h2>
+        <div className="max-w-3xl space-y-4 text-sflow-cream-muted">
+          <p>
+            Real-world application: we use AI to fetch User Stories from Azure DevOps, draft
+            documentation, generate content for our media pipeline, and build internal tools -
+            all with human review gates in place.
+          </p>
+          <p>
+            The key: <strong className="text-sflow-cream">AI does the heavy lifting, humans do the quality control.</strong>{" "}
+            Every output goes through review before it ships.
+          </p>
+        </div>
+      </Section>
+
+      <Section>
         <h2 className="text-2xl font-bold mb-6">Resources &amp; Links</h2>
         <div className="grid gap-4 sm:grid-cols-2 max-w-3xl mx-auto">
           {[
@@ -84,6 +126,8 @@ export default function TakeawaysPage() {
             { label: "Google AI Studio", href: "https://aistudio.google.com" },
             { label: "Gamma", href: "https://gamma.app" },
             { label: "MCP Servers", href: "https://mcp.so" },
+            { label: "Lovable", href: "https://lovable.dev" },
+            { label: "Markdown Editor", href: "https://onlinemarkdownedit.netlify.app/" },
           ].map((link) => (
             <a
               key={link.label}

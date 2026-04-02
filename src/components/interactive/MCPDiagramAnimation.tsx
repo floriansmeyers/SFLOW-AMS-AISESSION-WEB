@@ -19,7 +19,12 @@ import { RotateCcw } from "lucide-react";
 
 const CYCLE = 14.5;
 
-const TOOLS = ["read_file", "query_db", "send_msg", "create_pr"];
+const TOOLS: { name: string; restricted?: boolean }[] = [
+  { name: "read_file" },
+  { name: "query_db" },
+  { name: "send_msg", restricted: true },
+  { name: "create_pr", restricted: true },
+];
 const SYSTEMS = [
   { name: "File System", desc: "Local files, docs" },
   { name: "Database", desc: "PostgreSQL, APIs" },
@@ -94,7 +99,7 @@ export function MCPDiagramAnimation() {
               <div className="grid grid-cols-2 gap-1.5">
                 {TOOLS.map((tool, i) => (
                   <motion.div
-                    key={tool}
+                    key={tool.name}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{
@@ -102,11 +107,22 @@ export function MCPDiagramAnimation() {
                       duration: 0.25,
                       ease: "backOut",
                     }}
-                    className="rounded border border-sflow-glass-border bg-sflow-card px-2 py-1.5 text-center"
+                    className={`rounded border px-2 py-1.5 text-center ${
+                      tool.restricted
+                        ? "border-red-500/50 bg-red-500/10"
+                        : "border-sflow-glass-border bg-sflow-card"
+                    }`}
                   >
-                    <span className="text-[10px] font-mono text-sflow-cream-muted">
-                      {tool}
+                    <span className={`text-[10px] font-mono ${
+                      tool.restricted ? "text-red-400" : "text-sflow-cream-muted"
+                    }`}>
+                      {tool.name}
                     </span>
+                    {tool.restricted && (
+                      <span className="block text-[8px] font-bold text-red-400/70 uppercase tracking-wider mt-0.5">
+                        Restricted
+                      </span>
+                    )}
                   </motion.div>
                 ))}
               </div>

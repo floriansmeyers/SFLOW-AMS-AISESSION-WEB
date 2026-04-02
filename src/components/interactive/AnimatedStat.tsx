@@ -9,9 +9,10 @@ interface AnimatedStatProps {
   prefix?: string;
   label: string;
   decimals?: number;
+  source?: { label: string; url: string };
 }
 
-export function AnimatedStat({ value, suffix = "", prefix = "", label, decimals = 0 }: AnimatedStatProps) {
+export function AnimatedStat({ value, suffix = "", prefix = "", label, decimals = 0, source }: AnimatedStatProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const motionValue = useMotionValue(0);
@@ -33,6 +34,16 @@ export function AnimatedStat({ value, suffix = "", prefix = "", label, decimals 
         {suffix}
       </div>
       <p className="mt-1 text-sm text-sflow-cream-muted">{label}</p>
+      {source && (
+        <a
+          href={source.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-1 inline-block text-xs text-sflow-gold/60 underline underline-offset-2 hover:text-sflow-gold"
+        >
+          {source.label}
+        </a>
+      )}
     </div>
   );
 }

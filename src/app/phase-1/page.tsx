@@ -25,7 +25,7 @@ export default function Phase1Page() {
 
       {/* How LLMs Work */}
       <Section>
-        <h2 className="text-2xl font-bold mb-6">How the Machine Works (in 2 minutes)</h2>
+        <h2 className="text-2xl font-bold mb-6">How the Machine Works</h2>
         <p className="text-sflow-cream-muted mb-6 max-w-3xl mx-auto">
           A large language model is a <strong className="text-sflow-cream">next-token prediction machine</strong>:
         </p>
@@ -46,9 +46,15 @@ export default function Phase1Page() {
           ))}
         </div>
 
-        <div className="mt-8">
-          <LLMTokenAnimation />
-        </div>
+      </Section>
+
+      {/* Token Animation - its own section */}
+      <Section>
+        <h2 className="text-2xl font-bold mb-6">See It in Action</h2>
+        <p className="text-sflow-cream-muted mb-6 max-w-3xl mx-auto">
+          Watch how tokens flow through the model - from input to prediction, one token at a time.
+        </p>
+        <LLMTokenAnimation />
       </Section>
 
       {/* Why AI "Forgets" and Can't Go Back */}
@@ -74,6 +80,14 @@ export default function Phase1Page() {
           <strong className="text-sflow-gold">This is not a flaw - it&apos;s the architecture.</strong>{" "}
           Pattern matching at scale, not reasoning. The results can be brilliant, but
           it&apos;s statistics all the way down.
+        </p>
+      </Section>
+
+      {/* Pipeline Animation - its own section */}
+      <Section>
+        <h2 className="text-2xl font-bold mb-6">The Full Pipeline</h2>
+        <p className="text-sflow-cream-muted mb-6 max-w-3xl mx-auto">
+          From your prompt to the AI&apos;s response - this is what happens under the hood.
         </p>
         <LLMPipelineAnimation />
       </Section>
@@ -147,6 +161,13 @@ export default function Phase1Page() {
           <strong className="text-sflow-cream">Caveat:</strong>{" "}AI-assisted code can increase issue counts (~1.7x) if not paired with proper review.
           Speed without governance = faster mistakes.
         </p>
+        <p className="mt-3 text-xs text-sflow-cream-muted/60 max-w-3xl">
+          Sources:{" "}
+          <a href="https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/" target="_blank" rel="noopener noreferrer" className="underline hover:text-sflow-cream-muted">GitHub Research 2022</a>{" · "}
+          <a href="https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-in-the-enterprise-with-accenture/" target="_blank" rel="noopener noreferrer" className="underline hover:text-sflow-cream-muted">GitHub × Accenture 2024</a>{" · "}
+          <a href="https://github.blog/news-insights/research/the-economic-impact-of-the-ai-powered-developer-lifecycle-and-lessons-from-github-copilot/" target="_blank" rel="noopener noreferrer" className="underline hover:text-sflow-cream-muted">GitHub Economic Impact 2023</a>{" · "}
+          <a href="https://www.businesswire.com/news/home/20251217666881/en/" target="_blank" rel="noopener noreferrer" className="underline hover:text-sflow-cream-muted">CodeRabbit Report 2025</a>
+        </p>
         <DemoCallout
           title="GitHub Copilot in action"
           description="Writing a function with Copilot autocomplete, tab-accepting suggestions, and inline chat to refactor code."
@@ -162,8 +183,6 @@ export default function Phase1Page() {
               <tr className="border-b border-sflow-glass-border bg-sflow-glass">
                 <th className="px-4 py-3 text-left font-medium text-sflow-cream-muted">Tool</th>
                 <th className="px-4 py-3 text-left font-medium text-sflow-cream-muted">Best For</th>
-                <th className="px-4 py-3 text-left font-medium text-sflow-cream-muted">Price</th>
-                <th className="px-4 py-3 text-left font-medium text-sflow-cream-muted">Commercial Safe?</th>
               </tr>
             </thead>
             <tbody>
@@ -171,8 +190,6 @@ export default function Phase1Page() {
                 <tr key={tool.name} className="border-b border-sflow-glass-border last:border-b-0 hover:bg-sflow-glass transition-colors">
                   <td className="px-4 py-3 font-medium text-sflow-cream">{tool.name}</td>
                   <td className="px-4 py-3 text-sflow-cream-muted">{tool.bestFor}</td>
-                  <td className="px-4 py-3 text-sflow-cream-muted">{tool.price}</td>
-                  <td className="px-4 py-3 text-sflow-cream-muted">{tool.commercial}</td>
                 </tr>
               ))}
             </tbody>
@@ -210,14 +227,14 @@ export default function Phase1Page() {
       {/* Markdown */}
       <Section>
         <h2 className="text-2xl font-bold mb-4">Markdown: Why and How</h2>
-        <div className="grid gap-4 sm:grid-cols-2 max-w-3xl mx-auto mb-6">
+        <div className="grid gap-3 sm:grid-cols-2 max-w-3xl mx-auto mb-6">
           {[
-            { title: "Universal", desc: "Every AI tool reads and writes Markdown natively." },
-            { title: "Portable", desc: "Works in any text editor, converts to HTML/PDF/slides." },
-            { title: "Structured", desc: "Headings, lists, tables, code blocks - AI understands the structure." },
-            { title: "Version-friendly", desc: "Plain text = easy to diff, track changes, collaborate." },
+            { title: "Universal & Portable", desc: "Every AI tool reads/writes it natively. Works in any editor, converts to HTML/PDF/slides." },
+            { title: "Structured", desc: "Headings, lists, tables, code blocks - AI understands the hierarchy." },
+            { title: "Version-friendly", desc: "Plain text = easy to diff, track changes, and collaborate." },
+            { title: "Lightweight", desc: "Tiny files compared to .docx or .pptx - easy to share and store." },
           ].map((item) => (
-            <div key={item.title} className="rounded-xl border border-sflow-glass-border bg-sflow-glass p-4">
+            <div key={item.title} className="rounded-xl border border-sflow-glass-border bg-sflow-glass p-3">
               <h4 className="font-semibold text-sflow-cream">{item.title}</h4>
               <p className="mt-1 text-sm text-sflow-cream-muted">{item.desc}</p>
             </div>
@@ -250,7 +267,7 @@ export default function Phase1Page() {
         <div className="grid gap-4 sm:grid-cols-2 max-w-3xl mx-auto mb-6">
           {[
             { label: "Free", detail: "1,000 daily requests across all Gemini models" },
-            { label: "Vibe Coding", detail: "Describe an app → get a working app → deploy to Cloud Run" },
+            { label: "Vibe Coding", detail: "Describe an app → get a working app → deploy to Cloud Run or Netlify" },
 { label: "localStorage", detail: "5–10MB persistence for personal apps, no backend needed" },
             { label: "Context", detail: "2M context window (Gemini 3 Pro) - entire codebases or document sets" },
             { label: "System Instructions", detail: "Persistent context for consistent behavior" },
@@ -263,8 +280,18 @@ export default function Phase1Page() {
         </div>
         <DemoCallout
           title="Google AI Studio vibe coding"
-          description="Describing a simple CRM app → AI generates it → working app. All free, no code."
+          description="Describing a simple CRM app → AI generates it → working app → deploy to Cloud Run or Netlify. All free, no code."
         />
+        <div className="mt-6 rounded-xl border border-green-500/20 bg-green-500/5 p-4 max-w-3xl mx-auto">
+          <p className="text-sm text-sflow-cream-muted">
+            <strong className="text-green-400">Data stays local:</strong>{" "}Google AI Studio creates the app with AI, but your actual data
+            (CSVs, spreadsheets) is processed in the generated app on your device - not sent to the AI model.
+          </p>
+        </div>
+        <p className="mt-4 text-sm text-sflow-cream-muted max-w-3xl mx-auto">
+          <strong className="text-sflow-gold">Better context = better apps.</strong>{" "}Just like prompting,
+          the more specific your description, the better the result. Research first, describe clearly.
+        </p>
       </Section>
 
       {/* Ask AI to formulate your question */}
@@ -320,7 +347,6 @@ export default function Phase1Page() {
       <Section>
         <ExerciseBox
           title="Write your first instruction document"
-          goal="Everyone leaves with a reusable template they can use tomorrow."
           steps={[
             { text: "Open Claude (claude.ai) or ChatGPT (chatgpt.com) on your laptop/phone" },
             { text: "Pick a task you do repeatedly at work (e.g. meeting summary, email reply, report)" },

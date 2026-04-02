@@ -8,6 +8,7 @@ interface TimelineEvent {
   title: string;
   description: string;
   highlight?: boolean;
+  source?: string;
 }
 
 export function Timeline({ events }: { events: TimelineEvent[] }) {
@@ -58,6 +59,16 @@ export function Timeline({ events }: { events: TimelineEvent[] }) {
               <p className="mt-1 text-sm text-sflow-cream-muted">
                 {event.description}
               </p>
+              {event.source && (
+                <a
+                  href={event.source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 inline-block text-xs text-sflow-gold/60 hover:text-sflow-gold hover:underline transition-colors"
+                >
+                  [source]
+                </a>
+              )}
             </div>
           </motion.div>
         ))}

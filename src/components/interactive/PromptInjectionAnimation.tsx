@@ -12,7 +12,7 @@ import { RotateCcw } from "lucide-react";
  *
  * Teaching point: prompt injection is the #1 OWASP vulnerability for LLMs.
  * No "please don't" in a system prompt protects you. Layered defense
- * reduces attack success from 73% to under 9%.
+ * drops attack success from 84% to under 2% (Anthropic).
  *
  * Infinite loop ~14s.
  */
