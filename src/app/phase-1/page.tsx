@@ -295,6 +295,43 @@ export default function Phase1Page() {
         />
       </Section>
 
+      {/* Ask AI to formulate your question */}
+      <Section>
+        <h2 className="text-2xl font-bold mb-4">Ask AI to Help You Ask Better Questions</h2>
+        <div className="max-w-3xl space-y-4 text-sflow-cream-muted">
+          <p>
+            When you need advice from an expert, you don&apos;t walk in and ask random questions.
+            You <strong className="text-sflow-cream">ask someone to help you figure out what to ask</strong>.
+          </p>
+          <p>
+            The same applies to AI. Before asking a complex question, ask the AI:
+            &ldquo;What should I ask you to get the best answer about X?&rdquo;
+          </p>
+        </div>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 max-w-3xl mx-auto">
+          <div className="rounded-xl border border-red-500/30 bg-red-500/5 p-5">
+            <p className="text-xs font-medium text-red-400 uppercase tracking-wide mb-2">Direct (often weak)</p>
+            <p className="text-sm text-sflow-cream-muted italic">
+              &ldquo;How do I improve my team&apos;s productivity?&rdquo;
+            </p>
+          </div>
+          <div className="rounded-xl border border-green-500/30 bg-green-500/5 p-5">
+            <p className="text-xs font-medium text-green-400 uppercase tracking-wide mb-2">Meta-question (better)</p>
+            <p className="text-sm text-sflow-cream-muted italic">
+              &ldquo;I manage a 12-person finance team. What questions should I ask you
+              to get actionable advice on improving our quarterly close process?&rdquo;
+            </p>
+          </div>
+        </div>
+        <p className="mt-6 text-sm text-sflow-gold max-w-3xl">
+          This is a teaser &mdash; in Phase 2, we&apos;ll turn this into a full meta-prompting workflow.
+        </p>
+        <DemoCallout
+          title="Meta-questioning demo"
+          description="Asking AI 'what should I ask you?' and comparing the quality of answers to direct questions."
+        />
+      </Section>
+
       {/* Instruction Documents */}
       <Section>
         <h2 className="text-2xl font-bold mb-4">Instruction Documents &amp; Custom Instructions</h2>
