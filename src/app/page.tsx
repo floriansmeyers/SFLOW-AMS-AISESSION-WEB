@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { QuoteBlock } from "@/components/content/QuoteBlock";
+import { SlideIndicator } from "@/components/ui/SlideIndicator";
 
 const SECTIONS = [
   {
@@ -53,9 +54,9 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-sflow-darker">
+      <section className="snap-slide relative flex items-center overflow-hidden bg-sflow-darker">
         <div className="absolute inset-0 bg-gradient-to-br from-sflow-gold/8 via-transparent to-transparent" />
-        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-32">
+        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-32 w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -77,68 +78,74 @@ export default function Home() {
             </p>
           </motion.div>
         </div>
+        <SlideIndicator />
       </section>
 
       {/* The Email Hook */}
-      <section className="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <h2 className="text-2xl font-bold sm:text-3xl">
-            The Email That Started Everything
-          </h2>
-          <div className="mt-6 space-y-4 text-sflow-cream-muted max-w-3xl">
-            <p>A client sends a change request by email.</p>
-            <p>AI drafts the reply in 10 seconds &mdash; great.</p>
-            <p>But it still sits in a mailbox for a day.</p>
-            <p className="text-sflow-cream font-semibold text-lg">
-              So what did we actually gain?
+      <section className="snap-slide relative flex flex-col justify-center">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-2xl font-bold sm:text-3xl">
+              The Email That Started Everything
+            </h2>
+            <div className="mt-6 space-y-4 text-sflow-cream-muted max-w-3xl">
+              <p>A client sends a change request by email.</p>
+              <p>AI drafts the reply in 10 seconds &mdash; great.</p>
+              <p>But it still sits in a mailbox for a day.</p>
+              <p className="text-sflow-cream font-semibold text-lg">
+                So what did we actually gain?
+              </p>
+            </div>
+            <QuoteBlock
+              quote="The bottleneck was never the typing."
+            />
+            <p className="text-sflow-cream-muted max-w-3xl">
+              McKinsey found: AI saves <strong className="text-sflow-cream">5.7 hours per week</strong> per employee &mdash;
+              but only <strong className="text-sflow-gold">1.7 of those</strong> go to high-value work.
+              The rest is lost to the same old bottlenecks.
             </p>
-          </div>
-          <QuoteBlock
-            quote="The bottleneck was never the typing."
-          />
-          <p className="text-sflow-cream-muted max-w-3xl">
-            McKinsey found: AI saves <strong className="text-sflow-cream">5.7 hours per week</strong> per employee &mdash;
-            but only <strong className="text-sflow-gold">1.7 of those</strong> go to high-value work.
-            The rest is lost to the same old bottlenecks.
-          </p>
-        </motion.div>
+          </motion.div>
+        </div>
+        <SlideIndicator />
       </section>
 
       {/* Section Cards */}
-      <section className="mx-auto max-w-7xl px-4 pb-32 sm:px-6">
-        <h2 className="text-2xl font-bold sm:text-3xl mb-8">
-          Explore the Session
-        </h2>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {SECTIONS.map((section, i) => (
-            <motion.div
-              key={section.href}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.05 }}
-            >
-              <Link
-                href={section.href}
-                className="group block h-full rounded-xl border border-sflow-glass-border bg-sflow-glass p-6 hover:bg-sflow-glass-hover hover:border-sflow-gold/30 transition-all"
+      <section className="snap-slide relative flex flex-col justify-center">
+        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 w-full">
+          <h2 className="text-2xl font-bold sm:text-3xl mb-8">
+            Explore the Session
+          </h2>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {SECTIONS.map((section, i) => (
+              <motion.div
+                key={section.href}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.05 }}
               >
-                <span className="inline-block rounded-full bg-sflow-gold/15 px-2.5 py-0.5 text-xs font-medium text-sflow-gold mb-3">
-                  {section.badge}
-                </span>
-                <h3 className="text-lg font-semibold text-sflow-cream group-hover:text-sflow-gold transition-colors">
-                  {section.title}
-                </h3>
-                <p className="mt-2 text-sm text-sflow-cream-muted">
-                  {section.description}
-                </p>
-              </Link>
-            </motion.div>
-          ))}
+                <Link
+                  href={section.href}
+                  className="group block h-full rounded-xl border border-sflow-glass-border bg-sflow-glass p-6 hover:bg-sflow-glass-hover hover:border-sflow-gold/30 transition-all"
+                >
+                  <span className="inline-block rounded-full bg-sflow-gold/15 px-2.5 py-0.5 text-xs font-medium text-sflow-gold mb-3">
+                    {section.badge}
+                  </span>
+                  <h3 className="text-lg font-semibold text-sflow-cream group-hover:text-sflow-gold transition-colors">
+                    {section.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-sflow-cream-muted">
+                    {section.description}
+                  </p>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
     </>

@@ -3,6 +3,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
+import { SlideContainer } from "@/components/layout/SlideContainer";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -34,8 +35,10 @@ export default function RootLayout({
     <html lang="en" className={`${dmSans.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <Navigation />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <SlideContainer>
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </SlideContainer>
       </body>
     </html>
   );

@@ -6,14 +6,14 @@ Effort: [S] ~15 min | [M] ~30-60 min | [L] 1hr+
 
 ## Cross-page
 
-- [ ] [S] Add reference links to all quotes (QuoteBlock components across all pages have author/source but no URLs)
+- [x] [S] Add reference links to all quotes (QuoteBlock components across all pages have author/source but no URLs)
 - [ ] [M] "Process is King" — weave this theme into Factory intro (process redesign > tool adoption) and reinforce in Takeaways
 
 ---
 
 ## Factory (`/factory`)
 
-- [ ] [S] Add a picture/illustration of a belt-driven factory (visual anchor for the steam-era metaphor)
+- [x] [S] Add a picture/illustration of a belt-driven factory (visual anchor for the steam-era metaphor)
 - [ ] [M] New section: "Are AI and Humans More Alike Than We Think?" — practical teaching aid using parallels: context window = working memory, token limit = attention span, temperature = creativity vs focus, forgetting = no persistent memory. Frame it as motivation for understanding how LLMs work (Phase 1 goes deeper) - Show a side by side interactive diagram comparing them with eachother. Memory, context (vision, hearing, ... for humans), tools, ... etc
 
 ---
@@ -27,15 +27,15 @@ Effort: [S] ~15 min | [M] ~30-60 min | [L] 1hr+
   - Why feedback matters / AI can't "go back" (autoregressive generation, token-by-token)
   - Keep existing token animation, enhance with neural net visual if time allows
   - Show this as a nice interactive animation where the tokens are inputted, context added and then send to the API and then coming back
-- [ ] [S] Model comparison: add note about thinking overhead — "expensive" models aren't always better (thinking thinking thinking... "hello"). Reasoning models burn tokens on simple tasks
+- [x] [S] Model comparison: add note about thinking overhead — "expensive" models aren't always better (thinking thinking thinking... "hello"). Reasoning models burn tokens on simple tasks
 - [ ] [M] Context section: add "new hire on first day" analogy — you wouldn't throw all company info at a new hire and ask them to make an invoice. Extract the useful info, make a clear instruction document. Connects to the instruction documents section later. Show a side by side comparison of a lot of files with a direct arrow to output, compared with, a lot of files => Instruction => Output
 - [ ] [M] Add "ask AI to help you formulate your question" concept — when asking a someone for advice, you first ask what you should ask the expert, not ask dumb questions directly. Teaser for Phase 2 meta-prompting. I have a short demo to show here.
 
 ### Fixes
 - [ ] [M] **Move CoWork & Dispatch section to Phase 2** — it's workflow integration, not basic tool usage. Phase 1 should stay focused on individual tools (ChatGPT, Copilot, image gen, AI Studio)
-- [ ] [S] Email animation: add the "assignment" framing (send in an assignment, wait for it, send it back) and fix both bars to equal animation length
-- [ ] [S] Add MarkdownEdit link in the Markdown section (currently no link to an editor): https://onlinemarkdownedit.netlify.app/
-- [ ] [S] Remove CSV upload mention from Google AI Studio section
+- [x] [S] Email animation: add the "assignment" framing (send in an assignment, wait for it, send it back) and fix both bars to equal animation length
+- [x] [S] Add MarkdownEdit link in the Markdown section (currently no link to an editor): https://onlinemarkdownedit.netlify.app/
+- [x] [S] Remove CSV upload mention from Google AI Studio section
 
 ---
 
@@ -54,16 +54,16 @@ Effort: [S] ~15 min | [M] ~30-60 min | [L] 1hr+
   - "Agent" = fully autonomous AI that acts on triggers/schedules without human initiation
   - Current text throws both on the same pile
   - Add an animation showing an agent "calling tools" and getting the result from a system. Add an animation that shows how this works: selecting tools is STILL just text generation.
-- [ ] [S] Dispatch cloud note — add clarification that Dispatch still sends data to the cloud (not local processing)
+- [x] [S] Dispatch cloud note — add clarification that Dispatch still sends data to the cloud (not local processing)
 - [ ] [M] Add section or reference about using AI to write deterministic scripts/code for finance (don't ask AI to DO finance, ask it to BUILD the tool that does finance). E.g. using AI studio, Claude Code, ... etc - I have a demo example to show about this using azure devops KPI's.
 
 ---
 
 ## Security (`/security`)
 
-- [ ] [S] Add "next" navigation button to Landscape page (navigation chain currently breaks: Phase 3 → Security → ???)
+- [x] [S] Add "next" navigation button to Landscape page (navigation chain currently breaks: Phase 3 → Security → ???)
 - [ ] [M] Add screenshots/images for Chevrolet, Air Canada, Samsung story cards (currently text-only)
-- [ ] [S] Add source URLs to case study StoryCards
+- [x] [S] Add source URLs to case study StoryCards
 
 ---
 
@@ -71,7 +71,7 @@ Effort: [S] ~15 min | [M] ~30-60 min | [L] 1hr+
 
 - [ ] [M] Local models section: add "Google finds way to run with less RAM" development (research the article)
 - [ ] [M] Local model performance note: today's local models outperform the original ChatGPT (2022) — reframe the "local = worse" assumption and also emhpasizes the progress that is being made.
-- [ ] [S] Add "next" navigation button to Takeaways (if missing)
+- [x] [S] Add "next" navigation button to Takeaways (if missing)
 
 ---
 

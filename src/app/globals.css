@@ -16,10 +16,27 @@
   --font-sans: var(--font-dm-sans);
 }
 
+:root {
+  --nav-height: 53px;
+}
+
 body {
   background: var(--color-sflow-dark);
   color: var(--color-sflow-cream);
   font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Slide-deck scroll snap */
+.snap-container {
+  height: calc(100dvh - var(--nav-height));
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.snap-slide {
+  min-height: calc(100dvh - var(--nav-height));
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 ::selection {

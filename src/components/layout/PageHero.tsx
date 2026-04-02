@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/Badge";
+import { SlideIndicator } from "@/components/ui/SlideIndicator";
 
 interface PageHeroProps {
   badge: string;
@@ -11,11 +12,10 @@ interface PageHeroProps {
 
 export function PageHero({ badge, title, subtitle }: PageHeroProps) {
   return (
-    <section className="relative overflow-hidden border-b border-sflow-glass-border bg-sflow-darker">
-      {/* Subtle gradient overlay */}
+    <section className="snap-slide relative flex items-center overflow-hidden border-b border-sflow-glass-border bg-sflow-darker">
       <div className="absolute inset-0 bg-gradient-to-br from-sflow-gold/5 via-transparent to-transparent" />
 
-      <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24">
+      <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -30,6 +30,8 @@ export function PageHero({ badge, title, subtitle }: PageHeroProps) {
           </p>
         </motion.div>
       </div>
+
+      <SlideIndicator />
     </section>
   );
 }
