@@ -150,37 +150,6 @@ export default function Phase1Page() {
         />
       </Section>
 
-      {/* CoWork & Dispatch */}
-      <Section>
-        <h2 className="text-2xl font-bold mb-4">Claude in Office Tools (CoWork)</h2>
-        <p className="text-sflow-cream-muted mb-6 max-w-3xl">
-          <strong className="text-sflow-cream">CoWork</strong> (launched January 2026) &mdash; a persistent agent inside the Claude Desktop app.
-          The key differentiator: <strong className="text-sflow-gold">shared context</strong>. Claude sees your Excel, PowerPoint, AND Gmail simultaneously.
-        </p>
-        <div className="rounded-xl border border-sflow-glass-border bg-sflow-glass p-5 mb-6 max-w-3xl">
-          <p className="text-sm text-sflow-cream-muted">
-            <strong className="text-sflow-cream">Example:</strong> Claude reads your inbox, pulls a spreadsheet attachment, analyzes it,
-            and drafts a reply with the findings. One workflow, three apps, zero copy-paste.
-          </p>
-        </div>
-        <DemoCallout
-          title="CoWork cross-app workflow"
-          description="Claude reading an email attachment, analyzing it in Excel, and drafting a reply — all in one conversation."
-        />
-        <div className="mt-8">
-          <h3 className="text-xl font-bold mb-2">Dispatch</h3>
-          <p className="text-sflow-cream-muted max-w-3xl">
-            Send tasks from your <strong className="text-sflow-cream">phone</strong> to your{" "}
-            <strong className="text-sflow-cream">desktop</strong> Claude. Scan a QR code, connected in 2 taps.
-            All processing happens locally, files never leave your computer.
-          </p>
-          <DemoCallout
-            title="Dispatch from phone"
-            description="Scanning the QR code, sending a task from phone, watching Claude execute it on desktop."
-          />
-        </div>
-      </Section>
-
       {/* Image Generation */}
       <Section>
         <h2 className="text-2xl font-bold mb-6">Generating Images</h2>
