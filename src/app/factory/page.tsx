@@ -8,6 +8,7 @@ import { FunnelChart } from "@/components/interactive/FunnelChart";
 import { Timeline } from "@/components/interactive/Timeline";
 import { FactoryEvolutionAnimation } from "@/components/interactive/FactoryEvolutionAnimation";
 import { PHASE_META } from "@/lib/constants";
+import { Factory } from "lucide-react";
 import Link from "next/link";
 
 const meta = PHASE_META.factory;
@@ -46,10 +47,20 @@ export default function FactoryPage() {
             via belts and pulleys. When they &ldquo;adopted&rdquo; electricity, they just replaced the steam
             engine with an electric motor. Same building, same layout, same belts.
           </p>
+          <p className="text-lg font-semibold text-sflow-gold">
+            The tool changed. The process didn&apos;t. And that&apos;s why nothing improved.
+          </p>
+          <p>
+            The breakthrough came when engineers stopped asking &ldquo;how do we use this motor?&rdquo;
+            and started asking &ldquo;how should the factory work?&rdquo; They redesigned the process
+            from scratch &mdash; single-floor layouts, each machine with its own motor, arranged by
+            workflow instead of power source. <strong className="text-sflow-cream">Process redesign, not tool adoption,
+            is what doubled productivity.</strong>
+          </p>
         </div>
 
         <div className="mt-8 rounded-xl border border-sflow-glass-border bg-sflow-glass p-6 max-w-3xl mx-auto text-center">
-          <div className="text-6xl mb-4">🏭</div>
+          <Factory size={56} className="mx-auto mb-4 text-sflow-cream-muted" strokeWidth={1.5} />
           <p className="text-sm text-sflow-cream-muted italic">
             Belt-driven factory floor, circa 1900: one steam engine powers every machine through a maze of belts and pulleys.
             Replace the engine with an electric motor and nothing changes &mdash; same layout, same constraints, same bottlenecks.
@@ -139,6 +150,12 @@ export default function FactoryPage() {
             ]}
           />
         </div>
+
+        <p className="mt-6 text-sflow-cream-muted max-w-3xl">
+          <strong className="text-sflow-gold">Process is king.</strong> The 6% who see real impact
+          aren&apos;t the ones with the best AI tools &mdash; they&apos;re the ones who redesigned
+          their workflows around AI. The tool is the motor. The process is the factory.
+        </p>
       </Section>
 
       <Section>
