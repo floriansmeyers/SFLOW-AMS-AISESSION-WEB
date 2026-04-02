@@ -7,6 +7,7 @@ import { StatGroup } from "@/components/interactive/StatGroup";
 import { FunnelChart } from "@/components/interactive/FunnelChart";
 import { Timeline } from "@/components/interactive/Timeline";
 import { FactoryEvolutionAnimation } from "@/components/interactive/FactoryEvolutionAnimation";
+import { HumanAIComparisonDiagram } from "@/components/interactive/HumanAIComparisonDiagram";
 import { PHASE_META } from "@/lib/constants";
 import { Factory } from "lucide-react";
 import Link from "next/link";
@@ -91,6 +92,16 @@ export default function FactoryPage() {
           The pattern repeats every industrial revolution: individual skill gets encoded into process, then process gets automated at scale.
         </p>
         <FactoryEvolutionAnimation />
+      </Section>
+
+      <Section>
+        <h2 className="text-2xl font-bold mb-4">Are AI and Humans More Alike Than We Think?</h2>
+        <p className="text-sflow-cream-muted mb-8 max-w-3xl">
+          Understanding how LLMs work starts with a surprising insight: many AI limitations
+          mirror human cognition. This isn&apos;t a coincidence &mdash; it&apos;s a useful mental model
+          for building better workflows. <span className="text-sflow-gold">(Phase 1 goes deeper.)</span>
+        </p>
+        <HumanAIComparisonDiagram />
       </Section>
 
       <Section>
