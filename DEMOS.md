@@ -71,3 +71,9 @@ CSV: https://docs.google.com/spreadsheets/d/e/2PACX-1vRA0X9MZIBcbHJFpc9147Ve37HR
 FORM: https://docs.google.com/forms/d/1fdi3Spi-YGLCHzQ7BYAkuXdlTOsTTeuHnOozJ1ajY3Y/edit#responses
 
 Link: https://ai-session-ams.vercel.app.
+
+
+===
+
+Azure DevOps
+https://azure-devops-timeline-4dfjklx343kmeui.netlify.app/
