@@ -8,6 +8,7 @@ import { StatGroup } from "@/components/interactive/StatGroup";
 import { StoryCard } from "@/components/interactive/StoryCard";
 import { Timeline } from "@/components/interactive/Timeline";
 import { PipelineAnimation } from "@/components/interactive/PipelineAnimation";
+import { AgenticToolSelectionAnimation } from "@/components/interactive/AgenticToolSelectionAnimation";
 import { PHASE_META, STORIES } from "@/lib/constants";
 import Link from "next/link";
 
@@ -39,18 +40,34 @@ export default function Phase3Page() {
       </Section>
 
       <Section>
-        <h2 className="text-2xl font-bold mb-4">What Is an &ldquo;Agent&rdquo;?</h2>
-        <div className="max-w-3xl space-y-4 text-sflow-cream-muted">
-          <p>A prompt that runs triggered by an event or a set time. Nothing more, nothing less.</p>
-          <p>The magic isn&apos;t the agent &mdash; it&apos;s the <strong className="text-sflow-gold">process</strong> it&apos;s embedded in.</p>
+        <h2 className="text-2xl font-bold mb-4">Agentic vs Agent &mdash; They&apos;re Not the Same</h2>
+        <div className="grid gap-4 sm:grid-cols-2 max-w-3xl mx-auto mb-8">
+          <div className="rounded-xl border border-sflow-gold/30 bg-sflow-gold/5 p-5">
+            <h3 className="font-semibold text-sflow-gold mb-2">&ldquo;Agentic&rdquo;</h3>
+            <p className="text-sm text-sflow-cream-muted">
+              AI that <strong className="text-sflow-cream">chooses its own tools</strong>, plans steps, and orchestrates
+              workflows. You give it a goal; it figures out the how. Still needs a human to start it.
+            </p>
+            <p className="mt-2 text-xs text-sflow-muted italic">
+              Example: Claude Code reading your codebase, deciding which files to edit, running tests.
+            </p>
+          </div>
+          <div className="rounded-xl border border-purple-400/30 bg-purple-400/5 p-5">
+            <h3 className="font-semibold text-purple-300 mb-2">&ldquo;Agent&rdquo;</h3>
+            <p className="text-sm text-sflow-cream-muted">
+              Fully autonomous AI that <strong className="text-sflow-cream">acts on triggers or schedules</strong>{" "}
+              without human initiation. It runs in the background, watching for events.
+            </p>
+            <p className="mt-2 text-xs text-sflow-muted italic">
+              Example: An agent that polls Azure DevOps every 30s, claims tickets tagged &ldquo;CLAUDE,&rdquo; executes work, and closes them.
+            </p>
+          </div>
         </div>
-        <div className="mt-6 rounded-xl border border-sflow-glass-border bg-sflow-glass p-5 max-w-3xl">
-          <p className="text-sm text-sflow-cream-muted">
-            <strong className="text-sflow-cream">Real example:</strong> An agent polls Azure DevOps every 30 seconds for tickets
-            tagged &ldquo;CLAUDE.&rdquo; It claims the ticket, reads the description, executes the work,
-            posts a comment with findings, and closes the ticket. No human intervention.
-          </p>
-        </div>
+        <p className="text-sflow-cream-muted max-w-3xl mb-8">
+          The magic isn&apos;t the agent &mdash; it&apos;s the <strong className="text-sflow-gold">process</strong> it&apos;s embedded in.
+          And the surprising truth: tool selection is still just text generation.
+        </p>
+        <AgenticToolSelectionAnimation />
       </Section>
 
       <Section>
