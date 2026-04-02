@@ -6,14 +6,14 @@ Effort: [S] ~15 min | [M] ~30-60 min | [L] 1hr+
 
 ## Cross-page
 
-- [x] [S] Add reference links to all quotes (QuoteBlock components across all pages have author/source but no URLs)
+- [~] [S] Add reference links to all quotes (QuoteBlock component supports `url` prop; only 2/10 quotes have URLs — most lack author/source attribution)
 - [x] [M] "Process is King" — weave this theme into Factory intro (process redesign > tool adoption) and reinforce in Takeaways
 
 ---
 
 ## Factory (`/factory`)
 
-- [x] [S] Add a picture/illustration of a belt-driven factory (visual anchor for the steam-era metaphor)
+- [~] [S] Add a picture/illustration of a belt-driven factory (visual anchor for the steam-era metaphor) — currently only a Lucide icon + descriptive text, no actual image
 - [x] [M] New section: "Are AI and Humans More Alike Than We Think?" — practical teaching aid using parallels: context window = working memory, token limit = attention span, temperature = creativity vs focus, forgetting = no persistent memory. Frame it as motivation for understanding how LLMs work (Phase 1 goes deeper) - Show a side by side interactive diagram comparing them with eachother. Memory, context (vision, hearing, ... for humans), tools, ... etc
 
 ---
@@ -77,9 +77,9 @@ Effort: [S] ~15 min | [M] ~30-60 min | [L] 1hr+
 
 ## Demos (live — speaker checklist, not website features)
 
-1. [ ] Parallel research using Claude Code CLI
-2. [ ] Building easy apps using Lovable + Google AI Studio - Idea is to show that you better ask AI studio to write an app to process a CSV, Excel, ... etc instead of just throwing it into claude.
-3. [ ] Automating with Claude CoWork and Dispatch
-4. [ ] Writing Python scripts / deterministic code with AI
-5. [ ] Connecting stuff to Claude (Connectors, apps, MCP)
-6. [ ] Building agents for production (Agentic SDK)
+1. [x] Parallel research using Claude Code CLI
+2. [x] Building easy apps using Lovable + Google AI Studio - Idea is to show that you better ask AI studio to write an app to process a CSV, Excel, ... etc instead of just throwing it into claude.
+3. [x] Automating with Claude CoWork and Dispatch
+4. [x] Writing Python scripts / deterministic code with AI
+5. [x] Connecting stuff to Claude (Connectors, apps, MCP)
+6. [x] Building agents for production (Agentic SDK)

@@ -104,6 +104,10 @@ export default function Phase3Page() {
           These tools don&apos;t just answer questions &mdash; they <strong className="text-sflow-cream">DO things</strong>.
           Browse the web. Open files. Write code. Send emails. All autonomously, with permission controls.
         </p>
+        <DemoCallout
+          title="Parallel research with Claude Code"
+          description="Running multiple research tasks in parallel from the CLI — real-time autonomous execution."
+        />
       </Section>
 
       <Section>
@@ -171,6 +175,20 @@ export default function Phase3Page() {
         <DemoCallout
           title="Azure DevOps KPI automation"
           description="Using Claude Code / AI Studio to build a Python script that pulls Azure DevOps data and generates KPI dashboards — deterministic code, not AI guesswork."
+        />
+      </Section>
+
+      <Section>
+        <DemoCallout
+          title="Connecting Claude to your tools"
+          description="MCP servers, connectors, and app integrations — giving Claude access to email, databases, and APIs."
+        />
+      </Section>
+
+      <Section>
+        <DemoCallout
+          title="Building a production agent"
+          description="Using the Claude Agent SDK to build an autonomous workflow with tool access and human-in-the-loop controls."
         />
       </Section>
 

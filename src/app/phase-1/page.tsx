@@ -263,7 +263,7 @@ export default function Phase1Page() {
         </div>
         <DemoCallout
           title="Google AI Studio vibe coding"
-          description="Describing a simple CRM app → AI generates it → upload a CSV → working app. All free, no code."
+          description="Describing a simple CRM app → AI generates it → working app. All free, no code."
         />
       </Section>
 
