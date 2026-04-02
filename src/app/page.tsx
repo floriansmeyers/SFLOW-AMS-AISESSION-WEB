@@ -105,7 +105,7 @@ export default function Home() {
               quote="The bottleneck was never the typing."
             />
             <p className="text-sflow-cream-muted max-w-3xl">
-              McKinsey found: AI saves <strong className="text-sflow-cream">5.7 hours per week</strong> per employee &mdash;
+              McKinsey found: AI saves <strong className="text-sflow-cream">5.7 hours per week</strong>{" "}per employee &mdash;
               but only <strong className="text-sflow-gold">1.7 of those</strong> go to high-value work.
               The rest is lost to the same old bottlenecks.
             </p>

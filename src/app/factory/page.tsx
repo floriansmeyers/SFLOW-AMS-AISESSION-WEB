@@ -163,7 +163,7 @@ export default function FactoryPage() {
         </div>
 
         <p className="mt-6 text-sflow-cream-muted max-w-3xl">
-          <strong className="text-sflow-gold">Process is king.</strong> The 6% who see real impact
+          <strong className="text-sflow-gold">Process is king.</strong>{" "}The 6% who see real impact
           aren&apos;t the ones with the best AI tools &mdash; they&apos;re the ones who redesigned
           their workflows around AI. The tool is the motor. The process is the factory.
         </p>

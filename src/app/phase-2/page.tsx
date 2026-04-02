@@ -107,8 +107,8 @@ export default function Phase2Page() {
         <h2 className="text-2xl font-bold mb-4">Claude in Your Workflow (CoWork)</h2>
         <p className="text-sflow-cream-muted mb-6 max-w-3xl">
           This is Phase 2 in action: AI isn&apos;t a standalone chat &mdash; it&apos;s embedded in your daily tools.
-          <strong className="text-sflow-cream"> CoWork</strong> (launched January 2026) is a persistent agent inside the Claude Desktop app.
-          The key differentiator: <strong className="text-sflow-gold">shared context</strong>. Claude sees your Excel, PowerPoint, AND Gmail simultaneously.
+          {" "}<strong className="text-sflow-cream">CoWork</strong>{" "}(launched January 2026) is a persistent agent inside the Claude Desktop app.
+          The key differentiator: <strong className="text-sflow-gold">shared context</strong>{" "}. Claude sees your Excel, PowerPoint, AND Gmail simultaneously.
         </p>
         <div className="rounded-xl border border-sflow-glass-border bg-sflow-glass p-5 mb-6 max-w-3xl">
           <p className="text-sm text-sflow-cream-muted">
@@ -121,7 +121,7 @@ export default function Phase2Page() {
           description="Claude reading an email attachment, analyzing it in Excel, and drafting a reply — all in one conversation."
         />
         <p className="mt-6 text-sm text-sflow-cream-muted max-w-3xl">
-          CoWork is about <strong className="text-sflow-gold">ripping out the belts</strong> &mdash;
+          CoWork is about <strong className="text-sflow-gold">ripping out the belts</strong>{" "}&mdash;
           instead of copy-pasting between apps, AI flows across your entire toolkit.
         </p>
       </Section>
@@ -131,7 +131,7 @@ export default function Phase2Page() {
         <h2 className="text-2xl font-bold mb-4">Dispatch</h2>
         <p className="text-sflow-cream-muted mb-6 max-w-3xl">
           Send tasks from your <strong className="text-sflow-cream">phone</strong> to your{" "}
-          <strong className="text-sflow-cream">desktop</strong> Claude. Scan a QR code, connected in 2 taps.
+          <strong className="text-sflow-cream">desktop</strong>{" "}Claude. Scan a QR code, connected in 2 taps.
           Note: tasks are routed through Anthropic&apos;s cloud &mdash; not fully local processing.
         </p>
         <DemoCallout
@@ -145,7 +145,7 @@ export default function Phase2Page() {
         <h2 className="text-2xl font-bold mb-4">When More Context Hurts</h2>
         <div className="max-w-3xl space-y-4 text-sflow-cream-muted mb-8">
           <p>
-            More context isn&apos;t always better. Long conversations <strong className="text-sflow-cream">dilute</strong> your
+            More context isn&apos;t always better. Long conversations <strong className="text-sflow-cream">dilute</strong>{" "}your
             original instructions. The AI doesn&apos;t ignore them on purpose &mdash; they just become
             a tiny fraction of what it&apos;s paying attention to.
           </p>

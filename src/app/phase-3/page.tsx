@@ -64,7 +64,7 @@ export default function Phase3Page() {
           </div>
         </div>
         <p className="text-sflow-cream-muted max-w-3xl mb-8">
-          The magic isn&apos;t the agent &mdash; it&apos;s the <strong className="text-sflow-gold">process</strong> it&apos;s embedded in.
+          The magic isn&apos;t the agent &mdash; it&apos;s the <strong className="text-sflow-gold">process</strong>{" "}it&apos;s embedded in.
           And the surprising truth: tool selection is still just text generation.
         </p>
         <AgenticToolSelectionAnimation />
@@ -146,12 +146,11 @@ export default function Phase3Page() {
         <div className="max-w-3xl space-y-4 text-sflow-cream-muted">
           <p>
             AI makes mistakes. Math doesn&apos;t. The solution:{" "}
-            <strong className="text-sflow-cream">use AI to write deterministic scripts</strong> that execute
+            <strong className="text-sflow-cream">use AI to write deterministic scripts</strong>{" "}that execute
             reliably every time.
           </p>
           <p>
-            Instead of asking Claude to calculate your KPIs, ask it to <strong className="text-sflow-gold">build
-            a Python script</strong> that pulls data from Azure DevOps, calculates the KPIs with
+            Instead of asking Claude to calculate your KPIs, ask it to <strong className="text-sflow-gold">build a Python script</strong>{" "}that pulls data from Azure DevOps, calculates the KPIs with
             exact formulas, and outputs a dashboard. The script is reviewable, testable, and repeatable.
           </p>
         </div>

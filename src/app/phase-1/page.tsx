@@ -58,14 +58,14 @@ export default function Phase1Page() {
           <div className="rounded-xl border border-red-500/30 bg-red-500/5 p-5">
             <h3 className="font-semibold text-red-400 mb-2">Stateless</h3>
             <p className="text-sm text-sflow-cream-muted">
-              Every conversation starts from zero. The AI has <strong className="text-sflow-cream">no memory</strong> of
+              Every conversation starts from zero. The AI has <strong className="text-sflow-cream">no memory</strong>{" "}of
               yesterday&apos;s chat. It&apos;s not being difficult &mdash; it literally doesn&apos;t know.
             </p>
           </div>
           <div className="rounded-xl border border-red-500/30 bg-red-500/5 p-5">
             <h3 className="font-semibold text-red-400 mb-2">Autoregressive</h3>
             <p className="text-sm text-sflow-cream-muted">
-              Tokens are generated left-to-right, one at a time. It <strong className="text-sflow-cream">can&apos;t revise</strong> earlier
+              Tokens are generated left-to-right, one at a time. It <strong className="text-sflow-cream">can&apos;t revise</strong>{" "}earlier
               tokens once written. That&apos;s why your feedback matters &mdash; the AI literally can&apos;t go back and fix it on its own.
             </p>
           </div>
@@ -87,7 +87,7 @@ export default function Phase1Page() {
         <ModelTable />
         <div className="mt-4 rounded-xl border border-sflow-gold/20 bg-sflow-gold/5 p-4 max-w-3xl mx-auto">
           <p className="text-sm text-sflow-cream-muted">
-            <strong className="text-sflow-gold">Watch out for thinking overhead:</strong> Reasoning models
+            <strong className="text-sflow-gold">Watch out for thinking overhead:</strong>{" "}Reasoning models
             burn tokens on simple tasks &mdash; thinking thinking thinking&hellip; &ldquo;hello.&rdquo;
             An &ldquo;expensive&rdquo; model isn&rsquo;t always better. Match complexity to the task.
           </p>
@@ -143,8 +143,8 @@ export default function Phase1Page() {
           ]}
         />
         <p className="mt-6 text-sm text-sflow-cream-muted max-w-3xl">
-          90% of Fortune 100 companies use Copilot. 20 million users by mid-2025.
-          <strong className="text-sflow-cream"> Caveat:</strong> AI-assisted code can increase issue counts (~1.7x) if not paired with proper review.
+          90% of Fortune 100 companies use Copilot. 20 million users by mid-2025.{" "}
+          <strong className="text-sflow-cream">Caveat:</strong>{" "}AI-assisted code can increase issue counts (~1.7x) if not paired with proper review.
           Speed without governance = faster mistakes.
         </p>
         <DemoCallout
@@ -179,7 +179,7 @@ export default function Phase1Page() {
           </table>
         </div>
         <p className="mt-4 text-sm text-sflow-cream-muted">
-          <strong className="text-sflow-cream">Note:</strong> Claude does NOT generate images &mdash; it excels at image analysis/vision only.
+          <strong className="text-sflow-cream">Note:</strong>{" "}Claude does NOT generate images &mdash; it excels at image analysis/vision only.
         </p>
         <div className="mt-6 rounded-xl border border-sflow-glass-border bg-sflow-glass p-5 max-w-3xl">
           <h4 className="font-semibold text-sflow-cream mb-2">The Ghibli Story (March 2025)</h4>
@@ -198,7 +198,7 @@ export default function Phase1Page() {
       <Section>
         <h2 className="text-2xl font-bold mb-4">Gamma &amp; Presentation Tools</h2>
         <p className="text-sflow-cream-muted mb-6 max-w-3xl">
-          <strong className="text-sflow-cream">Gamma.app</strong> &mdash; AI-powered presentations. Agent researches, generates,
+          <strong className="text-sflow-cream">Gamma.app</strong>{" "}&mdash; AI-powered presentations. Agent researches, generates,
           and restyles entire decks via conversation. Good for quick first drafts &mdash; always review and refine.
         </p>
         <DemoCallout

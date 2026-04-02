@@ -37,8 +37,7 @@ export default function LandscapePage() {
         <div className="mt-8 rounded-xl border border-sflow-gold/20 bg-sflow-gold/5 p-5 max-w-3xl">
           <h3 className="font-semibold text-sflow-gold mb-2">Perspective: &ldquo;Local = Worse&rdquo; is Outdated</h3>
           <p className="text-sm text-sflow-cream-muted">
-            Today&apos;s local models running on a laptop <strong className="text-sflow-cream">outperform the original
-            ChatGPT</strong> (GPT-3.5, November 2022) that started the entire revolution.
+            Today&apos;s local models running on a laptop <strong className="text-sflow-cream">outperform the original ChatGPT</strong>{" "}(GPT-3.5, November 2022) that started the entire revolution.
             The model that amazed the world 3 years ago is now surpassed by software running
             on your MacBook &mdash; offline, private, free. Progress is exponential.
           </p>
@@ -77,7 +76,7 @@ export default function LandscapePage() {
           <p>Trade-off: <strong className="text-sflow-cream">convenience &amp; safety</strong> vs <strong className="text-sflow-cream">control &amp; cost</strong>.</p>
           <p>
             Geopolitical angle: China open-sourcing powerful models changes the playing field entirely.
-            Llama 4 Scout has a <strong className="text-sflow-gold">10M token context window</strong> &mdash; open source, free.
+            Llama 4 Scout has a <strong className="text-sflow-gold">10M token context window</strong>{" "}&mdash; open source, free.
           </p>
         </div>
       </Section>

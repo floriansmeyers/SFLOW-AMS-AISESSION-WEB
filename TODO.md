@@ -83,3 +83,9 @@ Effort: [S] ~15 min | [M] ~30-60 min | [L] 1hr+
 4. [x] Writing Python scripts / deterministic code with AI
 5. [x] Connecting stuff to Claude (Connectors, apps, MCP)
 6. [x] Building agents for production (Agentic SDK)
+
+====
+
+New
+- The email animation should almost be the same lenght to make it more clear on what I mean.
+-
