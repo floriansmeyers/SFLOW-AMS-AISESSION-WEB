@@ -9,6 +9,7 @@ import { StoryCard } from "@/components/interactive/StoryCard";
 import { DeathOfUIAnimation } from "@/components/interactive/DeathOfUIAnimation";
 import { ContextDilutionAnimation } from "@/components/interactive/ContextDilutionAnimation";
 import { APICallAnimation } from "@/components/interactive/APICallAnimation";
+import { ToolCallingAnimation } from "@/components/interactive/ToolCallingAnimation";
 import { PipelineAnimation } from "@/components/interactive/PipelineAnimation";
 import { PHASE_META, STORIES } from "@/lib/constants";
 import Link from "next/link";
@@ -66,6 +67,17 @@ export default function Phase2Page() {
           Every &ldquo;chat&rdquo; with AI is actually a structured API call. Understanding this removes the magic and gives you control.
         </p>
         <APICallAnimation />
+      </Section>
+
+      {/* Tool Calling */}
+      <Section>
+        <h2 className="text-2xl font-bold mb-4">How Tool Calling Works</h2>
+        <p className="text-sflow-cream-muted mb-6 max-w-3xl">
+          When AI &ldquo;searches the web&rdquo; or &ldquo;reads a file,&rdquo; there&apos;s an invisible orchestration layer
+          between the chat and the action. The AI doesn&apos;t execute anything &mdash; it generates text that describes
+          what it wants to do, and the system carries it out.
+        </p>
+        <ToolCallingAnimation />
       </Section>
 
       <Section>
