@@ -9,6 +9,7 @@ import { StatGroup } from "@/components/interactive/StatGroup";
 import { ModelTable } from "@/components/interactive/ModelTable";
 import { EmailRaceAnimation } from "@/components/interactive/EmailRaceAnimation";
 import { LLMTokenAnimation } from "@/components/interactive/LLMTokenAnimation";
+import { LLMPipelineAnimation } from "@/components/interactive/LLMPipelineAnimation";
 import { ContextWindowAnimation } from "@/components/interactive/ContextWindowAnimation";
 import { PHASE_META, IMAGE_TOOLS } from "@/lib/constants";
 import Link from "next/link";
@@ -46,6 +47,33 @@ export default function Phase1Page() {
         <div className="mt-8">
           <LLMTokenAnimation />
         </div>
+      </Section>
+
+      {/* Why AI "Forgets" and Can't Go Back */}
+      <Section>
+        <h2 className="text-2xl font-bold mb-4">Why AI &ldquo;Forgets&rdquo; &amp; Can&apos;t Go Back</h2>
+        <div className="grid gap-4 sm:grid-cols-2 max-w-3xl mx-auto mb-8">
+          <div className="rounded-xl border border-red-500/30 bg-red-500/5 p-5">
+            <h3 className="font-semibold text-red-400 mb-2">Stateless</h3>
+            <p className="text-sm text-sflow-cream-muted">
+              Every conversation starts from zero. The AI has <strong className="text-sflow-cream">no memory</strong> of
+              yesterday&apos;s chat. It&apos;s not being difficult &mdash; it literally doesn&apos;t know.
+            </p>
+          </div>
+          <div className="rounded-xl border border-red-500/30 bg-red-500/5 p-5">
+            <h3 className="font-semibold text-red-400 mb-2">Autoregressive</h3>
+            <p className="text-sm text-sflow-cream-muted">
+              Tokens are generated left-to-right, one at a time. It <strong className="text-sflow-cream">can&apos;t revise</strong> earlier
+              tokens once written. That&apos;s why your feedback matters &mdash; the AI literally can&apos;t go back and fix it on its own.
+            </p>
+          </div>
+        </div>
+        <p className="text-sflow-cream-muted max-w-3xl mb-8 mx-auto">
+          <strong className="text-sflow-gold">This is not a flaw &mdash; it&apos;s the architecture.</strong>{" "}
+          Pattern matching at scale, not reasoning. The results can be brilliant, but
+          it&apos;s statistics all the way down.
+        </p>
+        <LLMPipelineAnimation />
       </Section>
 
       {/* Model Comparison */}
