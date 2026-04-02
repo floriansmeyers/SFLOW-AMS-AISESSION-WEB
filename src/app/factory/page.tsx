@@ -30,6 +30,7 @@ export default function FactoryPage() {
           quote="It will be comparable with the Industrial Revolution. But instead of exceeding people in physical strength, it's going to exceed people in intellectual ability."
           author="Geoffrey Hinton"
           source="Nobel Prize 2024"
+          url="https://www.nobelprize.org/prizes/physics/2024/hinton/lecture/"
         />
 
         <div className="mt-8 max-w-3xl space-y-4 text-sflow-cream-muted">
@@ -56,6 +57,7 @@ export default function FactoryPage() {
           quote="Managers at first simply overlaid one technical system upon a preexisting stratum."
           author="Paul David"
           source={`\u201cThe Dynamo and the Computer,\u201d 1990`}
+          url="https://www.jstor.org/stable/2006600"
         />
 
         <p className="text-sflow-cream-muted max-w-3xl mt-4">
