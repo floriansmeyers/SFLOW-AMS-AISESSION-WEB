@@ -47,6 +47,14 @@ export default function FactoryPage() {
             engine with an electric motor. Same building, same layout, same belts.
           </p>
         </div>
+
+        <div className="mt-8 rounded-xl border border-sflow-glass-border bg-sflow-glass p-6 max-w-3xl mx-auto text-center">
+          <div className="text-6xl mb-4">🏭</div>
+          <p className="text-sm text-sflow-cream-muted italic">
+            Belt-driven factory floor, circa 1900: one steam engine powers every machine through a maze of belts and pulleys.
+            Replace the engine with an electric motor and nothing changes &mdash; same layout, same constraints, same bottlenecks.
+          </p>
+        </div>
       </Section>
 
       <Section>

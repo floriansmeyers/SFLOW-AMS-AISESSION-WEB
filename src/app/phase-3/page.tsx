@@ -63,7 +63,7 @@ export default function Phase3Page() {
             },
             {
               title: "Dispatch",
-              items: ["Send tasks from phone → Claude executes on desktop", "Scan QR code → connected in 2 taps", "All processing local, files never leave your computer"],
+              items: ["Send tasks from phone → Claude executes on desktop", "Scan QR code → connected in 2 taps", "Note: tasks are routed through Anthropic\u2019s cloud \u2014 not fully local processing"],
             },
             {
               title: "Claude CLI (Claude Code)",

@@ -9,6 +9,7 @@ import { ComparisonBars } from "@/components/interactive/ComparisonBars";
 import { MCPDiagramAnimation } from "@/components/interactive/MCPDiagramAnimation";
 import { PromptInjectionAnimation } from "@/components/interactive/PromptInjectionAnimation";
 import { PHASE_META, STORIES } from "@/lib/constants";
+import Link from "next/link";
 
 const meta = PHASE_META.security;
 
@@ -181,6 +182,20 @@ export default function SecurityPage() {
           <p className="text-lg text-sflow-cream font-semibold">
             This isn&apos;t sci-fi &mdash; it&apos;s happening now. The ethics conversation is not optional.
           </p>
+        </div>
+      </Section>
+
+      <Section>
+        <div className="text-center max-w-2xl mx-auto">
+          <p className="text-sflow-cream-muted mb-6">
+            Beyond the threats &mdash; where is the technology heading?
+          </p>
+          <Link
+            href="/landscape"
+            className="inline-flex items-center gap-2 rounded-full bg-sflow-gold px-6 py-3 font-semibold text-sflow-dark hover:bg-sflow-gold-hover transition-colors"
+          >
+            See the landscape &rarr;
+          </Link>
         </div>
       </Section>
     </>

@@ -3,6 +3,7 @@
 import { PageHero } from "@/components/layout/PageHero";
 import { Section } from "@/components/ui/Section";
 import { PHASE_META } from "@/lib/constants";
+import Link from "next/link";
 
 const meta = PHASE_META.landscape;
 
@@ -62,6 +63,20 @@ export default function LandscapePage() {
             Geopolitical angle: China open-sourcing powerful models changes the playing field entirely.
             Llama 4 Scout has a <strong className="text-sflow-gold">10M token context window</strong> &mdash; open source, free.
           </p>
+        </div>
+      </Section>
+
+      <Section>
+        <div className="text-center max-w-2xl mx-auto">
+          <p className="text-sflow-cream-muted mb-6">
+            Let&apos;s wrap it up &mdash; what does all of this mean for you?
+          </p>
+          <Link
+            href="/takeaways"
+            className="inline-flex items-center gap-2 rounded-full bg-sflow-gold px-6 py-3 font-semibold text-sflow-dark hover:bg-sflow-gold-hover transition-colors"
+          >
+            Key takeaways &rarr;
+          </Link>
         </div>
       </Section>
     </>

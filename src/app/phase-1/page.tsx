@@ -55,6 +55,13 @@ export default function Phase1Page() {
           Rule of thumb: bigger &ne; better. Match the model to the task.
         </p>
         <ModelTable />
+        <div className="mt-4 rounded-xl border border-sflow-gold/20 bg-sflow-gold/5 p-4 max-w-3xl mx-auto">
+          <p className="text-sm text-sflow-cream-muted">
+            <strong className="text-sflow-gold">Watch out for thinking overhead:</strong> Reasoning models
+            burn tokens on simple tasks &mdash; thinking thinking thinking&hellip; &ldquo;hello.&rdquo;
+            An &ldquo;expensive&rdquo; model isn&rsquo;t always better. Match complexity to the task.
+          </p>
+        </div>
       </Section>
 
       {/* Context */}
@@ -216,6 +223,14 @@ export default function Phase1Page() {
 [Link](url)`}
           </pre>
         </div>
+        <a
+          href="https://onlinemarkdownedit.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 inline-flex items-center gap-2 rounded-full bg-sflow-glass border border-sflow-glass-border px-4 py-2 text-sm text-sflow-cream hover:bg-sflow-glass-hover transition-colors"
+        >
+          Try it live: Markdown Editor ↗
+        </a>
       </Section>
 
       {/* Google AI Studio */}
@@ -225,8 +240,7 @@ export default function Phase1Page() {
           {[
             { label: "Free", detail: "1,000 daily requests across all Gemini models" },
             { label: "Vibe Coding", detail: "Describe an app → get a working app → deploy to Cloud Run" },
-            { label: "CSV Upload", detail: "Up to 2GB per file (48-hour expiry) — great for prototyping" },
-            { label: "localStorage", detail: "5–10MB persistence for personal apps, no backend needed" },
+{ label: "localStorage", detail: "5–10MB persistence for personal apps, no backend needed" },
             { label: "Context", detail: "2M context window (Gemini 3 Pro) — entire codebases or document sets" },
             { label: "System Instructions", detail: "Persistent context for consistent behavior" },
           ].map((item) => (

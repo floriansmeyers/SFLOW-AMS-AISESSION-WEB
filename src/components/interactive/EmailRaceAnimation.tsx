@@ -58,7 +58,7 @@ export function EmailRaceAnimation() {
         >
           {/* ── Header ──────────────────────────────────────────── */}
           <p className="text-xs font-medium uppercase tracking-widest text-sflow-cream-muted text-center">
-            The Email Problem — animated
+            The Email Problem — Send the assignment, wait for it, send it back
           </p>
 
           {/* ── Lane: Without AI ────────────────────────────────── */}
@@ -144,7 +144,7 @@ function Lane({
 }: LaneProps) {
   // Timing offsets (absolute seconds into the cycle)
   const sentDelay = writeDelay + writeDuration + 0.3;
-  const waitDelay = sentDelay + 0.3;
+  const waitDelay = 4.5; // fixed absolute time — both lanes start waiting together
   const doneDelay = waitDelay + 3.5;
 
   return (
