@@ -114,3 +114,16 @@ New
 - Make the graph/animation at Cost Awareness less "small"; now it's sticky together.
 - Find a source/picture about The Dark Side; palantir article, screenshot, ... etc
 - Center Local Models Are Coming to Your Laptop; now left aligend.
+- “The pattern repeats every Industrial Revolution”; there was only 1 revolution?
+- Agent Animation misses the point a bit about going from artisanal to more using power tools and things go faster to rearranging the tools and process
+- remove the “in 2 minutes”
+- Netlify add to the Google Vibe Coding demo
+- Missing section on what I do
+- Missing section on how we use it at Agidens (fetching User Stories, writing, …) - Media pipeline
+- Remove the “Goal everyone leaves…”
+- Don’t write prompts from scratch: add that you don’t need to be an expert to get better expert-level answers. BUT keep in mind AI can sound very confidently WRONG.
+- Maybe to add something in the vibe coding part that researching applies here too; better context = better results
+- We should somewhere that the Google AI studio tools ARE safe to use as data is managed locally; only the app is created with AI but no data gets sent to AI
+- Update the financial thing to include build a App instead of a script
+- Add a small note/… about cost tracking that running experiments without tracking is like playing around. Noting down makes something science.
+- Maybe also add something about the “building AI systems” that it is a continuous loop and not a one-off process. More like running a business and not managing an IT system
