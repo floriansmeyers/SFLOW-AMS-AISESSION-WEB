@@ -136,6 +136,44 @@ export default function Phase3Page() {
         />
       </Section>
 
+      {/* AI for deterministic code */}
+      <Section>
+        <h2 className="text-2xl font-bold mb-4">Don&apos;t Ask AI to DO Finance &mdash; Ask It to BUILD the Tool</h2>
+        <div className="max-w-3xl space-y-4 text-sflow-cream-muted">
+          <p>
+            AI makes mistakes. Math doesn&apos;t. The solution:{" "}
+            <strong className="text-sflow-cream">use AI to write deterministic scripts</strong> that execute
+            reliably every time.
+          </p>
+          <p>
+            Instead of asking Claude to calculate your KPIs, ask it to <strong className="text-sflow-gold">build
+            a Python script</strong> that pulls data from Azure DevOps, calculates the KPIs with
+            exact formulas, and outputs a dashboard. The script is reviewable, testable, and repeatable.
+          </p>
+        </div>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 max-w-3xl mx-auto">
+          <div className="rounded-xl border border-red-500/30 bg-red-500/5 p-5">
+            <p className="text-xs font-medium text-red-400 uppercase tracking-wide mb-2">Wrong approach</p>
+            <p className="text-sm text-sflow-cream-muted italic">
+              &ldquo;Calculate our sprint velocity and defect rate from this data.&rdquo;
+            </p>
+            <p className="mt-2 text-[10px] text-red-400">AI may hallucinate numbers, round differently, miss edge cases.</p>
+          </div>
+          <div className="rounded-xl border border-green-500/30 bg-green-500/5 p-5">
+            <p className="text-xs font-medium text-green-400 uppercase tracking-wide mb-2">Right approach</p>
+            <p className="text-sm text-sflow-cream-muted italic">
+              &ldquo;Write a Python script that connects to Azure DevOps, fetches work items for the last 6 sprints,
+              and calculates velocity and defect rate using [these exact formulas].&rdquo;
+            </p>
+            <p className="mt-2 text-[10px] text-green-400">Deterministic. Reviewable. Repeatable.</p>
+          </div>
+        </div>
+        <DemoCallout
+          title="Azure DevOps KPI automation"
+          description="Using Claude Code / AI Studio to build a Python script that pulls Azure DevOps data and generates KPI dashboards — deterministic code, not AI guesswork."
+        />
+      </Section>
+
       <Section>
         <h2 className="text-2xl font-bold mb-6">The Human as Operator</h2>
         <div className="overflow-x-auto rounded-xl border border-sflow-glass-border">
