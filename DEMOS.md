@@ -2,3 +2,5 @@
 - AI studio generate something cool
 - AI studio show the CSV/Excel import, creation
 - AI studio show the link with the CSV from earlier
+- CoWork that is scheduled
+- AzureDevops to write code, ...etc
