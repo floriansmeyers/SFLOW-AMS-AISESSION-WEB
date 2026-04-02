@@ -59,8 +59,15 @@ Using Claude Code / AI Studio to build an app that pulls Azure DevOps data and g
 
 ## Demo 13 — Connecting Claude to your tools
 MCP servers, connectors, and app integrations — giving Claude access to email, databases, and APIs.
-- Links:
+- Links: Show CoWork
 
 ## Demo 14 — Building a production agent
 Using the Claude Agent SDK to build an autonomous workflow with tool access and human-in-the-loop controls.
-- Links:
+- Links: Developer Minded
+
+===
+
+CSV: https://docs.google.com/spreadsheets/d/e/2PACX-1vRA0X9MZIBcbHJFpc9147Ve37HRoMBUExdT6l3QVyaygzCinHD_UynEusRp4p5jc78ZcsYTx2qb1aw_/pub?output=csv
+FORM: https://docs.google.com/forms/d/1fdi3Spi-YGLCHzQ7BYAkuXdlTOsTTeuHnOozJ1ajY3Y/edit#responses
+
+Link: https://ai-session-ams.vercel.app.
