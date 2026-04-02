@@ -7,6 +7,7 @@ import { ExerciseBox } from "@/components/content/ExerciseBox";
 import { DemoCallout } from "@/components/content/DemoCallout";
 import { StoryCard } from "@/components/interactive/StoryCard";
 import { DeathOfUIAnimation } from "@/components/interactive/DeathOfUIAnimation";
+import { ContextDilutionAnimation } from "@/components/interactive/ContextDilutionAnimation";
 import { APICallAnimation } from "@/components/interactive/APICallAnimation";
 import { PipelineAnimation } from "@/components/interactive/PipelineAnimation";
 import { PHASE_META, STORIES } from "@/lib/constants";
@@ -123,6 +124,23 @@ export default function Phase2Page() {
           CoWork and Dispatch are about <strong className="text-sflow-gold">ripping out the belts</strong> &mdash;
           instead of copy-pasting between apps, AI flows across your entire toolkit.
         </p>
+      </Section>
+
+      {/* When More Context Hurts */}
+      <Section>
+        <h2 className="text-2xl font-bold mb-4">When More Context Hurts</h2>
+        <div className="max-w-3xl space-y-4 text-sflow-cream-muted mb-8">
+          <p>
+            More context isn&apos;t always better. Long conversations <strong className="text-sflow-cream">dilute</strong> your
+            original instructions. The AI doesn&apos;t ignore them on purpose &mdash; they just become
+            a tiny fraction of what it&apos;s paying attention to.
+          </p>
+          <p>
+            <strong className="text-sflow-gold">Practical guidance:</strong> Start fresh conversations for new tasks.
+            Re-state critical constraints. Keep system prompts concise. Exclude irrelevant context.
+          </p>
+        </div>
+        <ContextDilutionAnimation />
       </Section>
 
       <Section>
