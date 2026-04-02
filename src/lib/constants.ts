@@ -63,6 +63,7 @@ export interface Story {
   happened: string;
   lesson: string;
   sourceUrl?: string;
+  imageUrl?: string;
 }
 
 export const STORIES: Story[] = [
@@ -77,6 +78,7 @@ export const STORIES: Story[] = [
     lesson:
       `The AI didn't "go rogue." It did exactly what it was allowed to do. There were no guardrails: no price floors, no transaction limits, no human approval for commitments. Governance failure, not AI failure.`,
     sourceUrl: "https://www.bbc.com/news/technology-67865517",
+    imageUrl: "/images/stories/chevrolet-chatbot.jpg",
   },
   {
     id: "air-canada",
@@ -89,6 +91,7 @@ export const STORIES: Story[] = [
     lesson:
       "Your AI's promises are YOUR promises. If you wouldn't let an untrained intern make binding commitments to customers, don't let your chatbot do it either.",
     sourceUrl: "https://www.bbc.com/travel/article/20240222-air-canada-chatbot-misinformation",
+    imageUrl: "/images/stories/air-canada-chatbot.jpg",
   },
   {
     id: "samsung",
@@ -101,6 +104,7 @@ export const STORIES: Story[] = [
     lesson:
       `"Don't use it" and "use it freely" are both wrong. You need controlled, governed access with clear boundaries on what data can leave the building.`,
     sourceUrl: "https://www.bloomberg.com/news/articles/2023-05-02/samsung-bans-chatgpt-and-other-generative-ai-use-by-staff-after-leak",
+    imageUrl: "/images/stories/samsung-leak.jpg",
   },
   {
     id: "devin",

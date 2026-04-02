@@ -16,6 +16,16 @@ export function StoryCard({ story }: { story: Story }) {
         <div>
           <h3 className="font-semibold text-sflow-cream">{story.title}</h3>
           <p className="mt-1 text-sm text-sflow-cream-muted">{story.hook}</p>
+          {story.imageUrl && (
+            <div className="mt-3 rounded-lg overflow-hidden border border-sflow-glass-border">
+              <img
+                src={story.imageUrl}
+                alt={story.title}
+                className="w-full h-40 object-cover"
+                loading="lazy"
+              />
+            </div>
+          )}
         </div>
         <motion.svg
           animate={{ rotate: open ? 180 : 0 }}
