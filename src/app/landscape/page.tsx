@@ -20,12 +20,27 @@ export default function LandscapePage() {
             { title: "Apple MLX Chips", desc: "Apple ships dedicated machine learning chips in every laptop." },
             { title: "Privacy Benefit", desc: "Your data never leaves your device. Sensitive documents analyzed locally." },
             { title: "Becoming Normal", desc: "Running models locally is becoming standard, not niche." },
+            { title: "Less RAM, Same Quality", desc: "Google researchers demonstrated techniques to run frontier-quality models with significantly less memory — making local AI more accessible on standard hardware." },
           ].map((item) => (
             <div key={item.title} className="rounded-xl border border-sflow-glass-border bg-sflow-glass p-5">
               <h3 className="font-semibold text-sflow-cream">{item.title}</h3>
               <p className="mt-1 text-sm text-sflow-cream-muted">{item.desc}</p>
             </div>
           ))}
+        </div>
+        <p className="mt-4 text-xs text-sflow-muted">
+          <a href="https://research.google/blog/accelerating-ai-with-updated-gemma-models/" target="_blank" rel="noopener noreferrer" className="underline hover:text-sflow-cream transition-colors">
+            Source: Google Gemma research on efficient model inference ↗
+          </a>
+        </p>
+        <div className="mt-8 rounded-xl border border-sflow-gold/20 bg-sflow-gold/5 p-5 max-w-3xl">
+          <h3 className="font-semibold text-sflow-gold mb-2">Perspective: &ldquo;Local = Worse&rdquo; is Outdated</h3>
+          <p className="text-sm text-sflow-cream-muted">
+            Today&apos;s local models running on a laptop <strong className="text-sflow-cream">outperform the original
+            ChatGPT</strong> (GPT-3.5, November 2022) that started the entire revolution.
+            The model that amazed the world 3 years ago is now surpassed by software running
+            on your MacBook &mdash; offline, private, free. Progress is exponential.
+          </p>
         </div>
       </Section>
 
