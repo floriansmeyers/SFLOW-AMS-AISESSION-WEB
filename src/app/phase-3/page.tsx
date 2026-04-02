@@ -7,6 +7,7 @@ import { DemoCallout } from "@/components/content/DemoCallout";
 import { StatGroup } from "@/components/interactive/StatGroup";
 import { StoryCard } from "@/components/interactive/StoryCard";
 import { Timeline } from "@/components/interactive/Timeline";
+import { PipelineAnimation } from "@/components/interactive/PipelineAnimation";
 import { PHASE_META, STORIES } from "@/lib/constants";
 import Link from "next/link";
 
@@ -54,7 +55,7 @@ export default function Phase3Page() {
 
       <Section>
         <h2 className="text-2xl font-bold mb-6">What &ldquo;Autonomous&rdquo; Looks Like</h2>
-        <div className="grid gap-6 sm:grid-cols-3 max-w-4xl">
+        <div className="grid gap-6 sm:grid-cols-3 max-w-4xl mx-auto">
           {[
             {
               title: "CoWork Scheduled Tasks",
@@ -94,18 +95,21 @@ export default function Phase3Page() {
           title="Fully autonomous sales pipeline"
           description="End-to-end: Google Form intake \u2192 CSV \u2192 CoWork scheduled job picks up new entries \u2192 AI researches each company \u2192 saves research \u2192 second job generates personalized outreach emails. Zero manual work."
         />
-        <div className="mt-4 rounded-xl border border-sflow-glass-border bg-sflow-glass p-5 max-w-3xl">
-          <div className="flex flex-wrap items-center gap-2 text-sm">
-            {["Google Form", "\u2192", "CSV Export", "\u2192", "CoWork Job #1 (research)", "\u2192", "Research Folder", "\u2192", "CoWork Job #2 (outreach)", "\u2192", "Draft Emails"].map((step, i) => (
-              <span key={i} className={step === "\u2192" ? "text-sflow-gold" : "rounded-md bg-sflow-card px-2.5 py-1 text-sflow-cream"}>
-                {step}
-              </span>
-            ))}
-          </div>
-          <p className="mt-3 text-sm text-sflow-gold">
-            Result: Lead intake &rarr; personalized email draft &mdash; human only reviews and sends.
-          </p>
+        <div className="mt-4">
+          <PipelineAnimation
+            steps={[
+              { num: 1, text: "Google Forms intake" },
+              { num: 2, text: "CSV export" },
+              { num: 3, text: "CoWork fetches entries" },
+              { num: 4, text: "Research company" },
+              { num: 5, text: "Save to folder" },
+              { num: 6, text: "Draft outreach" },
+            ]}
+          />
         </div>
+        <p className="mt-4 text-sm text-sflow-gold max-w-3xl">
+          Result: Lead intake → personalized email draft — human only reviews and sends.
+        </p>
       </Section>
 
       <Section>

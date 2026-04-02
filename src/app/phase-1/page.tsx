@@ -8,6 +8,8 @@ import { DemoCallout } from "@/components/content/DemoCallout";
 import { StatGroup } from "@/components/interactive/StatGroup";
 import { ModelTable } from "@/components/interactive/ModelTable";
 import { EmailRaceAnimation } from "@/components/interactive/EmailRaceAnimation";
+import { LLMTokenAnimation } from "@/components/interactive/LLMTokenAnimation";
+import { ContextWindowAnimation } from "@/components/interactive/ContextWindowAnimation";
 import { PHASE_META, IMAGE_TOOLS } from "@/lib/constants";
 import Link from "next/link";
 
@@ -21,10 +23,10 @@ export default function Phase1Page() {
       {/* How LLMs Work */}
       <Section>
         <h2 className="text-2xl font-bold mb-6">How the Machine Works (in 2 minutes)</h2>
-        <p className="text-sflow-cream-muted mb-6 max-w-3xl">
+        <p className="text-sflow-cream-muted mb-6 max-w-3xl mx-auto">
           A large language model is a <strong className="text-sflow-cream">next-token prediction machine</strong>:
         </p>
-        <div className="grid gap-4 sm:grid-cols-2 max-w-3xl">
+        <div className="grid gap-4 sm:grid-cols-2 max-w-3xl mx-auto">
           {[
             { step: "1", title: "Tokenization", desc: "Text is broken into small pieces (\u201ctokens\u201d, roughly 3/4 of a word)." },
             { step: "2", title: "Pattern Recognition", desc: "Trained on massive text, it learned statistical patterns about which tokens follow others." },
@@ -39,6 +41,10 @@ export default function Phase1Page() {
               <p className="mt-1 text-sm text-sflow-cream-muted">{item.desc}</p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-8">
+          <LLMTokenAnimation />
         </div>
       </Section>
 
@@ -58,7 +64,7 @@ export default function Phase1Page() {
           Don&apos;t rely on AI &ldquo;knowing&rdquo; &mdash; it doesn&apos;t.{" "}
           <strong className="text-sflow-cream">Research first. Always. Ground it in reality.</strong>
         </p>
-        <div className="grid gap-4 sm:grid-cols-2 max-w-3xl">
+        <div className="grid gap-4 sm:grid-cols-2 max-w-3xl mx-auto">
           <div className="rounded-xl border border-red-500/30 bg-red-500/5 p-5">
             <p className="text-xs font-medium text-red-400 uppercase tracking-wide mb-2">Bad</p>
             <p className="text-sm text-sflow-cream-muted italic">&ldquo;Summarize this project&rdquo;</p>
@@ -67,6 +73,9 @@ export default function Phase1Page() {
             <p className="text-xs font-medium text-green-400 uppercase tracking-wide mb-2">Good</p>
             <p className="text-sm text-sflow-cream-muted italic">&ldquo;You are reviewing a pharma supply chain audit for a Belgian food producer. Here is the full report: [...]&rdquo;</p>
           </div>
+        </div>
+        <div className="mt-6 mb-4">
+          <ContextWindowAnimation />
         </div>
         <p className="mt-4 text-sflow-cream-muted max-w-3xl">
           The difference between a useless answer and a brilliant one is <strong className="text-sflow-gold">context</strong>.
@@ -183,7 +192,7 @@ export default function Phase1Page() {
       {/* Markdown */}
       <Section>
         <h2 className="text-2xl font-bold mb-4">Markdown: Why and How</h2>
-        <div className="grid gap-4 sm:grid-cols-2 max-w-3xl mb-6">
+        <div className="grid gap-4 sm:grid-cols-2 max-w-3xl mx-auto mb-6">
           {[
             { title: "Universal", desc: "Every AI tool reads and writes Markdown natively." },
             { title: "Portable", desc: "Works in any text editor, converts to HTML/PDF/slides." },
@@ -212,7 +221,7 @@ export default function Phase1Page() {
       {/* Google AI Studio */}
       <Section>
         <h2 className="text-2xl font-bold mb-4">Google AI Studio</h2>
-        <div className="grid gap-4 sm:grid-cols-2 max-w-3xl mb-6">
+        <div className="grid gap-4 sm:grid-cols-2 max-w-3xl mx-auto mb-6">
           {[
             { label: "Free", detail: "1,000 daily requests across all Gemini models" },
             { label: "Vibe Coding", detail: "Describe an app \u2192 get a working app \u2192 deploy to Cloud Run" },

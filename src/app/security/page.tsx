@@ -6,6 +6,8 @@ import { QuoteBlock } from "@/components/content/QuoteBlock";
 import { StatGroup } from "@/components/interactive/StatGroup";
 import { StoryCard } from "@/components/interactive/StoryCard";
 import { ComparisonBars } from "@/components/interactive/ComparisonBars";
+import { MCPDiagramAnimation } from "@/components/interactive/MCPDiagramAnimation";
+import { PromptInjectionAnimation } from "@/components/interactive/PromptInjectionAnimation";
 import { PHASE_META, STORIES } from "@/lib/constants";
 
 const meta = PHASE_META.security;
@@ -36,6 +38,9 @@ export default function SecurityPage() {
             { value: 30, suffix: "+", label: "CVEs in 6 weeks (Jan\u2013Feb 2026)" },
           ]}
         />
+        <div className="mt-8 mb-6">
+          <MCPDiagramAnimation />
+        </div>
         <p className="mt-6 text-sflow-cream-muted max-w-3xl">
           Auditing: who did what, when, and why? Traceability is non-negotiable.
         </p>
@@ -82,12 +87,15 @@ export default function SecurityPage() {
             { value: 84, suffix: "%", label: "Attack success rate (up to)" },
           ]}
         />
+        <div className="mt-6 mb-6">
+          <PromptInjectionAnimation />
+        </div>
         <p className="mt-6 text-sflow-cream-muted max-w-3xl">
           <strong className="text-sflow-gold">Good news:</strong> Layered defense reduces attack success from 73% to under 9%.
         </p>
 
         {/* Defense architecture */}
-        <div className="mt-8 grid gap-4 sm:grid-cols-3 max-w-3xl">
+        <div className="mt-8 grid gap-4 sm:grid-cols-3 max-w-3xl mx-auto">
           {[
             { title: "Least Privilege", desc: "AI can only access what it strictly needs." },
             { title: "Input Validation", desc: "Sanitize everything." },
@@ -115,7 +123,7 @@ export default function SecurityPage() {
         <h2 className="text-2xl font-bold mb-4">Cost Awareness</h2>
         <p className="text-sflow-cream-muted mb-6 max-w-3xl">The &ldquo;inference cost paradox&rdquo;:</p>
 
-        <div className="grid gap-8 sm:grid-cols-2 max-w-3xl">
+        <div className="grid gap-8 sm:grid-cols-2 max-w-3xl mx-auto">
           <ComparisonBars
             title="Per-token costs"
             bars={[

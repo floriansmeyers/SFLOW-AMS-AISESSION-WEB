@@ -76,7 +76,7 @@ export default function TakeawaysPage() {
 
       <Section>
         <h2 className="text-2xl font-bold mb-6">Resources &amp; Links</h2>
-        <div className="grid gap-4 sm:grid-cols-2 max-w-3xl">
+        <div className="grid gap-4 sm:grid-cols-2 max-w-3xl mx-auto">
           {[
             { label: "Session Form", href: "https://forms.gle/CFTFgaCKJfgZLfVd7" },
             { label: "Claude", href: "https://claude.ai" },
@@ -102,7 +102,7 @@ export default function TakeawaysPage() {
           ))}
         </div>
 
-        <div className="mt-10 rounded-xl border border-sflow-gold/30 bg-sflow-gold/5 p-6 max-w-3xl">
+        <div className="mt-10 rounded-xl border border-sflow-gold/30 bg-sflow-gold/5 p-6 max-w-3xl mx-auto">
           <h3 className="text-lg font-semibold text-sflow-gold mb-2">Get in touch</h3>
           <p className="text-sflow-cream-muted">
             <a href="mailto:florian@sflow.be" className="text-sflow-cream hover:text-sflow-gold transition-colors">

@@ -17,7 +17,7 @@ export function Section({ children, id, className = "" }: SectionProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5 }}
-      className={`mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 ${className}`}
+      className={`mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 ${className}`}
     >
       {children}
     </motion.section>

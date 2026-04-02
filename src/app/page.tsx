@@ -80,7 +80,7 @@ export default function Home() {
       </section>
 
       {/* The Email Hook */}
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
+      <section className="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -110,7 +110,7 @@ export default function Home() {
       </section>
 
       {/* Section Cards */}
-      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6">
+      <section className="mx-auto max-w-7xl px-4 pb-32 sm:px-6">
         <h2 className="text-2xl font-bold sm:text-3xl mb-8">
           Explore the Session
         </h2>

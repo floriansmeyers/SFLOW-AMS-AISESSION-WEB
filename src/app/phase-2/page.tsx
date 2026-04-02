@@ -7,6 +7,8 @@ import { ExerciseBox } from "@/components/content/ExerciseBox";
 import { DemoCallout } from "@/components/content/DemoCallout";
 import { StoryCard } from "@/components/interactive/StoryCard";
 import { DeathOfUIAnimation } from "@/components/interactive/DeathOfUIAnimation";
+import { APICallAnimation } from "@/components/interactive/APICallAnimation";
+import { PipelineAnimation } from "@/components/interactive/PipelineAnimation";
 import { PHASE_META, STORIES } from "@/lib/constants";
 import Link from "next/link";
 
@@ -58,11 +60,29 @@ export default function Phase2Page() {
       </Section>
 
       <Section>
+        <h2 className="text-2xl font-bold mb-4">How a Prompt Actually Works</h2>
+        <p className="text-sflow-cream-muted mb-6 max-w-3xl">
+          Every &ldquo;chat&rdquo; with AI is actually a structured API call. Understanding this removes the magic and gives you control.
+        </p>
+        <APICallAnimation />
+      </Section>
+
+      <Section>
         <h2 className="text-2xl font-bold mb-4">AI-to-AI Prompt Chain</h2>
         <p className="text-sflow-cream-muted mb-6 max-w-3xl">
           This is Phase 2 thinking: AI is no longer a standalone tool &mdash; it&apos;s a workflow component.
           The output of one step becomes the input for the next.
         </p>
+        <div className="mb-6">
+          <PipelineAnimation
+            steps={[
+              { num: 1, text: "Research with Claude" },
+              { num: 2, text: "Generate prompt" },
+              { num: 3, text: "Feed to AI Studio" },
+              { num: 4, text: "Get tailored app" },
+            ]}
+          />
+        </div>
         <DemoCallout
           title="Claude \u2192 Google AI Studio Prompt Chain"
           description="Use Claude to research a topic and generate a structured prompt. Copy that prompt into Google AI Studio. AI Studio builds a full interactive app from it. One AI preparing work for another."
